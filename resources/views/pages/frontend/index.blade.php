@@ -1,4 +1,4 @@
 @extends('layouts/frontend/default')
 @section('content')
-hello
+<h1>hello</h1>
 @endsection
