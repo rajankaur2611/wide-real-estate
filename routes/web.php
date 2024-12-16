@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
@@ -25,7 +25,9 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\ResetPassword;
 use App\Http\Controllers\ChangePassword;            
-            
+
+Route::get('/', [HomeController::class, 'index'])->name('index');
+           
 
 Route::get('/admin', function () {return redirect('/admin/dashboard');})->middleware('auth');
 Route::group(['prefix'=>'admin'], function() {
