@@ -11,7 +11,7 @@ $(document).ready(function () {
         arrows: false,
         speed: 300,
         slidesToShow: 1,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 2000,
     });
     /*-----End Main ----- */

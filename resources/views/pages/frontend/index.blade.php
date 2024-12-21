@@ -85,7 +85,7 @@
                                 <img src="{{ url('images/featured-prop-1.png') }}" alt="property image">
                             </div>
                             <div class="property-slide-body">
-                                <h4>Anwa by Omniyat</h4>
+                                <h3>Anwa by Omniyat</h3>
                                 <p>Developed By Al Habtoor City Real Estate Development</p>
                                 <span class="location">
                                     <i class="fa-solid fa-location-dot"></i> dubai maritime
@@ -120,7 +120,7 @@
                                 <img src="{{ url('images/featured-prop-1.png') }}" alt="property image">
                             </div>
                             <div class="property-slide-body">
-                                <h4>Anwa by Omniyat</h4>
+                                <h3>Verde by sobha</h3>
                                 <p>Developed By Al Habtoor City Real Estate Development</p>
                                 <span class="location">
                                     <i class="fa-solid fa-location-dot"></i> dubai maritime
@@ -154,7 +154,7 @@
                                 <img src="{{ url('images/featured-prop-1.png') }}" alt="property image">
                             </div>
                             <div class="property-slide-body">
-                                <h4>Anwa by Omniyat</h4>
+                                <h3>Sobha heartland villas</h3>
                                 <p>Developed By Al Habtoor City Real Estate Development</p>
                                 <span class="location">
                                     <i class="fa-solid fa-location-dot"></i> dubai maritime
@@ -400,9 +400,17 @@
             </div>
         </section>
 
-        {{-- <section class="leadership-culture padding-y">
-          <div class="leadership-culture-content container"></div>
-        </section> --}}
+        <section class="leadership-culture padding-y">
+          <div class="leadership-culture-content container">
+            <div class="leadership-sec-heading">
+                <h2>A culture of leadership</h2>
+              </div>
+              <div class="leadership-info">
+                <p>Landlords are missing out on US$40 billion in unrealised income from aging and underutilised properties in Asia Pacific. Find out how asset enhancement drives business.</p>
+                <a class="btn-primary" href="#">know more</a>
+              </div>
+          </div>
+        </section>
 
         <section class="globally-trusted padding-y">
             <div class="globally-trusted-content container">
@@ -454,6 +462,14 @@
                 </div>
             </div>
         </section>
+
+        {{-- <section class="query-form">
+            <div class="query-form-content container">
+                <div class="query-content">
+
+                </div>
+            </div>
+        </section> --}}
 
         <section class="insights padding-y">
             <div class="insights-content container">
