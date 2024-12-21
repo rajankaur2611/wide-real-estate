@@ -1,12 +1,12 @@
-<div class="px-4 pt-4">
-    @if ($message = session()->has('succes'))
+<div>
+    @if (Session::has('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <p class="text-white mb-0">{{ session()->get('succes') }}</p>
+            <p class="mb-0">{{ Session::get('success') }}</p>
         </div>
     @endif
-    @if ($message = session()->has('error'))
+    @if (Session::has('error'))
         <div class="alert alert-danger" role="alert">
-            <p class="text-white mb-0">{{ session()->get('error') }}</p>
+            <p class="text-white mb-0">{{ Session::get('error') }}</p>
         </div>
     @endif
 </div>

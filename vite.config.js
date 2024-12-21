@@ -5,6 +5,7 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
+                'resources/scss/admin/custom-admin.scss',
                 'resources/scss/home.scss',
                 'resources/scss/app.scss',
                 'resources/scss/contact.scss',
