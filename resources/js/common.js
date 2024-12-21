@@ -11,6 +11,8 @@ $(document).ready(function () {
         arrows: false,
         speed: 300,
         slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
     });
     /*-----End Main ----- */
 
@@ -84,9 +86,27 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 4000,
         slidesToShow: 1,
-       
     });
     /*-----End  Testimonials ----- */
+
+    /*----- Footer ----- */
+    const currentYear = new Date().getFullYear();
+    $("#year").text(currentYear);
+    /*----- End Footer ----- */
+
+    /*===== Contact Page   ===== */
+    /*----- End Contact Form  ----- */
+    $(".contact-form form input, .contact-form form textarea").focus(function () {
+        $(this).siblings("label").addClass("active");
+    });
+
+    $(".contact-form form input, .contact-form form textarea").blur(function () {
+        const inputLength = $(this).val().length;
+        if (inputLength === 0) {
+            $(this).siblings("label").removeClass("active");
+        }
+    });
+    /*===== End Contact Page   ===== */
 });
 
 /*----- ----- */

@@ -1,4 +1,11 @@
 @extends('layouts/frontend/default')
+@section('styles')
+    <link rel="stylesheet" href="{{ url('assets/css/slick-theme.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/slick.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/slick.min.css.map') }}">
+    {{-- JS --}}
+    @vite(['resources/scss/home.scss'])
+@endsection
 @section('content')
     <main>
 
@@ -11,12 +18,15 @@
                             <h1>Discover Your Perfect Property with Us</h1>
                         </div>
                         <div class="main-slide main-slide-image-2">
+                            <h1>Find your dream home here</h1>
                             {{-- <img src="{{ url('images/main-slide-2.png') }}" alt="main slide image"> --}}
                         </div>
                         <div class="main-slide main-slide-image-3">
+                            <h1>Let us find your dream land</h1>
                             {{-- <img src="{{ url('images/main-slide-3.png') }}" alt="main slide image"> --}}
                         </div>
                         <div class="main-slide main-slide-image-4">
+                            <h1>Come here for your best purchase</h1>
                             {{-- <img src="{{ url('images/main-slide-4.png') }}" alt="main slide image"> --}}
                         </div>
                     </div>
@@ -210,60 +220,119 @@
             </div>
         </section>
 
-        {{-- <section class="our-services padding-y">
+        <section class="our-services padding-y">
             <div class="our-services-content container">
                 <div class="sec-heading">
                     <h2>what we do</h2>
                 </div>
                 <div class="services-content">
                     <div class="service">
+                        <p class="research">Insights & Research</p>
                         <div class="service-heading">
-                            <p>Insights & Research</p>
-                            <h3>Deliver market knowledge and global insights </h3>
+                            <h3>Deliver market knowledge and global insights</h3>
                         </div>
                         <div class="service-info">
                             <p>Our 500 global researchers offer actionable intelligence and a multi-dimensional perspective
                                 that
                                 is unparalleled in the industry.</p>
-                            <a class="btn-primary" href="#">Explore Insights & Research</a>
+                            <a class="btn-secondary" href="#">Explore Insights & Research</a>
                         </div>
                     </div>
                     <div class="service">
+                        <p>Services</p>
                         <div class="service-heading">
-                            <p>Services</p>
-                            <h3>Create the real estate solutions of tomorrow </h3>
+                            <h3>Create the real estate solutions of tomorrow</h3>
                         </div>
                         <div class="service-info">
-                            <p>Our 500 global researchers offer actionable intelligence and a multi-dimensional perspective
-                                that
-                                is unparalleled in the industry.</p>
-                            <a class="btn-primary" href="#">Explore Insights & Research</a>
+                            <ul>
+                                <p>let's help you</p>
+                                <li>Invest in real estate</li>
+                                <li>Plan, lease & occupy</li>
+                                <li>Design & build</li>
+                                <li>Manage properties & portfolios</li>
+                                <li>Transform business outcomes</li>
+                            </ul>
+                            <a class="btn-secondary" href="#">Explore services</a>
                         </div>
                     </div>
                     <div class="service">
+                        <p>Careers</p>
                         <div class="service-heading">
-                            <p>Insights & Research</p>
-                            <h3>Deliver market knowledge and global insights </h3>
+                            <h3>join us</h3>
                         </div>
                         <div class="service-info">
-                            <p>Our 500 global researchers offer actionable intelligence and a multi-dimensional perspective
-                                that
-                                is unparalleled in the industry.</p>
-                            <a class="btn-primary" href="#">Explore Insights & Research</a>
+                            <p>We don't just realise the potential in real estate. We help you realise your potential.</p>
+                            <a class="btn-secondary" href="#">Explore Careers</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section> --}}
+        </section>
 
-        {{-- <section class="video padding-y">
+        <section class="video ">
             <div class="video-content">
                 <video width="" height="" controls muted>
                     <source src="{{ url('videos/Real_Estate_Video.mp4') }}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-        </section> --}}
+        </section>
+
+        <section class="services-feature padding-y">
+            <div class="services-feature-content container">
+                <div class="sec-heading">
+                    <h2>services</h2>
+                </div>
+                <div class="services-feature-info">
+                    <div class="info-headings">
+                        <h5>optimize</h5>
+                        <p>Get smart with real time data on operations and performance.</p>
+                        <ul>
+                            <li>engage</li>
+                            <li>enhance</li>
+                            <li>manage or outsource</li>
+                            <li>control</li>
+                        </ul>
+                    </div>
+                    <div class="information">
+                        <div class="information-wrapper">
+                            <h5>dynamic OP</h5>
+                            <p>A revolutionary method to manage dynamic occupancy in the built environment using digitally
+                                intense delivery.</p>
+                        </div>
+                        <div class="information-wrapper">
+                            <h5>Smart buildings</h5>
+                            <p>Introduce new technology and connect systems to enhance the productivity of buildings,
+                                workplaces, and people.</p>
+                        </div>
+                        <div class="information-wrapper">
+                            <h5>Technology optimization</h5>
+                            <p>Use technology to track and assess every facet of building management.</p>
+                        </div>
+                        <div class="information-wrapper">
+                            <h5>Portfolio planning</h5>
+                            <p>Collect and interpret real-time data on your business, markets, locations and workforce.</p>
+                        </div>
+                        <div class="information-wrapper">
+                            <h5>Workplace strategy</h5>
+                            <p>Create a vision for your workplace that fosters innovation and improves business performance.
+                            </p>
+                        </div>
+                        <div class="information-wrapper">
+                            <h5>Property & asset management</h5>
+                            <p>Optimise costs and continuously improve and innovate your property and asset management
+                                services through process improvement, deployment of disruptive technologies and changes to
+                                operating models.</p>
+                        </div>
+                        <div class="information-wrapper">
+                            <h5>Business intelligence</h5>
+                            <p>Bring all your data together with powerful overlays to visualize trends and deliver
+                                predictive insights against your real estate performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="choose-us padding-y">
             <div class="choose-us-content container">
@@ -386,19 +455,33 @@
             </div>
         </section>
 
-        <footer class="footer padding-y">
-            <div class="footer-content container">
-                <div class="sec-heading">
-                    <h2>contact us</h2>
-                    <p>We are here for you, always, even when you just want to ask question.</p>
-                    <p>Thank you for trusting us all the way to the key. to the apartment of your dreams.</p>
-                    <a class="btn-primary" href="#">explore insights & research</a>
+        <section class="insights padding-y">
+            <div class="insights-content container">
+                <div class="insignts-headings">
+                    <div class="sec-heading">
+                        <h2>trending & insights</h2>
+                    </div>
+                    <a class="btn-primary" href="#">view all</a>
                 </div>
-                <div class="footer-below">
-                  <div class="footer-below-content"></div>
+                <div class="insights-blog">
+                    <div class="blog-wrapper">
+                        <img src="{{ url('images/blog-1.png') }}" alt="blog image">
+                        <h4>Aliquam feugiat feugiat velit, in viverra nisi vulputate magna metus</h4>
+                        <a href="#">read more</a>
+                    </div>
+                    <div class="blog-wrapper">
+                        <img src="{{ url('images/blog-2.png') }}" alt="blog image">
+                        <h4>Quisque ac dolor lorem lobortis, interdum libero at, dictum odio</h4>
+                        <a href="#">read more</a>
+                    </div>
+                    <div class="blog-wrapper">
+                        <img src="{{ url('images/blog-3.png') }}" alt="blog image">
+                        <h4>Maecenas tempus, nisl ut gravida posuere urna quis eleifend libero velit</h4>
+                        <a href="#">read more</a>
+                    </div>
                 </div>
             </div>
-        </footer>
+        </section>
 
     </main>
 @endsection

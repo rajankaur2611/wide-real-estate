@@ -6,7 +6,7 @@
         <ul class="navMenus">
             <li><a href="#">our projects</a></li>
             <li><a href="#">about</a></li>
-            <li><a href="#">contact</a></li>
+            <li><a href="/contact">contact</a></li>
             {{-- <li><a href="#">about</a></li>
             <li><a href="#">communities</a></li>
             <li><a href="#">properties</a></li> --}}

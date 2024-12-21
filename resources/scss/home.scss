@@ -1,4 +1,4 @@
-@import 'common.scss';
+@import 'variables.scss';
 
 
 /*-----Main -----*/
@@ -270,39 +270,48 @@
     position: relative;
     display: flex;
     gap: 26px;
-    place-content: center;
-    border-top: 1px solid;
-    padding: 20px 0;
+    border-top: 1px solid $text-color;
+    padding: 30px 0;
 
-    .service-tagline {
-      flex-basis: 10%;
+    >p {
+      transform: rotate(-91deg);
       position: absolute;
-      top: 70px;
-      left: -75px;
-      transform: rotate(270deg);
-      width: max-content;
-      background-color: lightblue;
+      left: -10px;
+      transform-origin: bottom;
+      top: 8%;
+      color: $primary-color;
     }
 
     .service-heading {
       flex-basis: 50%;
       position: relative;
-
-      p {
-        transform: rotateZ(270deg);
-        position: absolute;
-        left: 0;
-        transform-origin: left;
-        bottom: -40px;
-      }
-
-      h3 {
-        padding-left: 20px;
-      }
+      padding-left: 40px;
     }
 
     .service-info {
       flex-basis: 50%;
+      color: $text-color;
+
+      ul {
+        margin-bottom: 20px;
+
+        p {
+          margin-bottom: 0;
+        }
+
+        li {
+          padding-left: 10px;
+
+          &::before {
+            content: "- ";
+          }
+        }
+      }
+    }
+
+    .research {
+      left: -67px;
+      top: 32%;
     }
   }
 }
@@ -324,6 +333,51 @@
 }
 
 /*----- End Video -----*/
+
+/*----- Services Feature -----*/
+.services-feature {
+  .services-feature-info {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 30% 70%;
+
+    .info-headings {
+      h5 {
+        font-family: $secondary-font;
+        font-size: 40px;
+        text-transform: capitalize;
+        font-weight: 500;
+        padding: 0 10px;
+        border-left: 2px solid;
+        margin-bottom: 26px;
+      }
+
+      ul {
+        li {
+          font-size: 32px;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  .information {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    .information-wrapper {
+      h5 {
+        font-size: 40px;
+        text-transform: capitalize;
+        font-weight: 400;
+        font-family: $secondary-font;
+      }
+    }
+  }
+}
+
+/*----- End Services Feature -----*/
 
 /*-----Choose US -----*/
 .choose-us {
@@ -413,7 +467,6 @@
 
   .globally-trusted-content {
     display: grid;
-    grid-area: 10px;
     grid-template-columns: 40% 60%;
   }
 
@@ -444,6 +497,7 @@
               font-size: 45px;
             }
           }
+
           &.slick-active {
             button {
               &:before {
@@ -461,11 +515,62 @@
 
 /*-----End Globally Trusted -----*/
 
-/*----- Footer -----*/
-.footer{
-  .sec-heading{
-    text-align: center;
+/*----- Insights -----*/
+.insights {
+  .insights-content {
+    .insignts-headings {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 60px;
+
+      .btn-primary {
+        height: max-content;
+      }
+    }
+
+    .insights-blog {
+      display: grid;
+      gap: 26px;
+      grid-template-columns: repeat(3, 1fr);
+
+      @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (max-width: 575px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .blog-wrapper {
+        box-shadow: $bShadow;
+        padding: 12px;
+        border-radius: $radius;
+
+        img {
+          border-radius: $radius;
+          margin-bottom: 16px;
+          width: 100%;
+          height: 340px;
+          object-fit: cover;
+          // box-shadow: $bShadow;
+        }
+
+        h4 {
+          font-family: $secondary-font;
+          font-size: 32px;
+          margin-bottom: 16px;
+        }
+
+        a {
+          text-transform: uppercase;
+          color: $primary-color;
+        }
+      }
+    }
   }
+
 }
-/*----- End Footer -----*/
+
+/*----- End Insights -----*/
 /*----- -----*/

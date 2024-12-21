@@ -5,12 +5,8 @@
   <link rel="icon" type="image/png" href="/img/favicon.png">  
   <title>Wide Real Estate</title>
   {{-- CSS --}}
-  <link rel="stylesheet" href="{{url('assets/css/slick-theme.css')}}">
-  <link rel="stylesheet" href="{{url('assets/css/slick.min.css')}}">
-  <link rel="stylesheet" href="{{url('assets/css/slick.min.css.map')}}">
-  {{-- JS --}}
- 
-  @vite(['resources/scss/home.scss','resources/scss/app.scss']) 
+  @vite(['resources/scss/app.scss']) 
+  @yield('styles')
   {{-- G Fonts --}}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

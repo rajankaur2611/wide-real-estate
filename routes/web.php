@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RegisterController;
@@ -27,6 +28,7 @@ use App\Http\Controllers\ResetPassword;
 use App\Http\Controllers\ChangePassword;            
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
            
 
 Route::get('/admin', function () {return redirect('/admin/dashboard');})->middleware('auth');
