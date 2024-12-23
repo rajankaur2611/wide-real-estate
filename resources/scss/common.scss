@@ -45,6 +45,7 @@ $secondary-font: "Host Grotesk", sans-serif; ---*/
 
 body {
   font-family: $secondary-font;
+  overflow-x: hidden;
 }
 
 /* -----End Body----- */
@@ -62,13 +63,13 @@ h6 {
 
 h1 {
   text-transform: capitalize;
-  font-size: clamp(48px, 6.4vw, 68px);
+  font-size: clamp(46px, 6.4vw, 68px);
   font-weight: 500;
 }
 
 h2 {
   text-transform: capitalize;
-  font-size: clamp(50px, 5.5vw, 80px);
+  font-size: clamp(46px, 5.5vw, 66px);
   font-weight: 500;
 }
 
@@ -80,8 +81,14 @@ h3 {
 
 h4 {
   text-transform: capitalize;
-  font-size: clamp(30px, 4.6vw, 32px);
+  font-size: clamp(28px, 4.5vw, 30px);
   font-weight: 400;
+}
+
+h5 {
+  text-transform: capitalize;
+  font-size: clamp(30px, 4vw, 32px);
+  font-weight: 500;
 }
 
 p {
@@ -98,6 +105,13 @@ img {
 a {
   text-decoration: none;
   display: inline-block;
+  transition: $transition;
+  color: $primary-color;
+}
+
+a:hover {
+  color: $secondary-color;
+
 }
 
 ul {
@@ -131,7 +145,7 @@ ul {
 .btn-primary,
 .btn-secondary {
   display: inline-block;
-  font-size: 20px;
+  // font-size: 18px;
   font-weight: 400;
   background: $gradient-color;
   background-size: 200% 100%;
@@ -143,6 +157,7 @@ ul {
 }
 
 .btn-primary:hover {
+  color: $white;
   background-position: 100% 0;
 }
 
@@ -161,13 +176,12 @@ ul {
 
 /* ----- Common Section ----- */
 .sec-heading {
-  max-width: 1000px;
+  max-width: 850px;
 }
 
 .sec-heading h2 {
   background: $gradient-color;
   margin-bottom: 12px;
-  ;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;

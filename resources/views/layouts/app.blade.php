@@ -19,6 +19,9 @@
     <link href="{{url('/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="{{url('/assets/css/argon-dashboard.css')}}" rel="stylesheet" />
+    {{-- AOS --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+    
     @vite(['resources/scss/admin/custom-admin.scss']) 
 </head>
 
@@ -65,7 +68,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{url('/assets/js/argon-dashboard.js')}}"></script>
-    @stack('js');
+    @stack('js')
 </body>
 
 </html>

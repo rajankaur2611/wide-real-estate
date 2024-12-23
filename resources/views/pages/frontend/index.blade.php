@@ -3,13 +3,12 @@
     <link rel="stylesheet" href="{{ url('assets/css/slick-theme.css') }}">
     <link rel="stylesheet" href="{{ url('assets/css/slick.min.css') }}">
     <link rel="stylesheet" href="{{ url('assets/css/slick.min.css.map') }}">
-    {{-- JS --}}
     @vite(['resources/scss/home.scss'])
 @endsection
 @section('content')
     <main>
 
-        <section class="hero-banner">
+        <section class="hero-banner" data-aos="zoom-i">
             <div class="hero-content">
                 <div class="hero-slider">
                     <div class="hero-slides">
@@ -34,7 +33,7 @@
             </div>
         </section>
 
-        <section class="sponsers padding-y">
+        <section class="sponsers padding-y" data-aos="zoom-ou">
             <div class="sponsers-content">
                 <div class="sponsers-slider">
                     <div class="sponser-slide">
@@ -109,7 +108,7 @@
                                 </div>
                             </div>
                             <div class="property-slide-footer">
-                                <a class="btn-primary" href="#">reauest info</a>
+                                <a class="btn-primary" href="#">request info</a>
                                 <a class="btn-secondary" href="#">view more</a>
                             </div>
                         </div>
@@ -117,7 +116,7 @@
                     <div class="property-slider">
                         <div class="property-slide-content">
                             <div class="property-slide-header">
-                                <img src="{{ url('images/featured-prop-1.png') }}" alt="property image">
+                                <img src="{{ url('images/featured-prop-2.png') }}" alt="property image">
                             </div>
                             <div class="property-slide-body">
                                 <h3>Verde by sobha</h3>
@@ -143,7 +142,7 @@
                                 </div>
                             </div>
                             <div class="property-slide-footer">
-                                <a class="btn-primary" href="#">reauest info</a>
+                                <a class="btn-primary" href="#">request info</a>
                                 <a class="btn-secondary" href="#">view more</a>
                             </div>
                         </div>
@@ -151,7 +150,7 @@
                     <div class="property-slider">
                         <div class="property-slide-content">
                             <div class="property-slide-header">
-                                <img src="{{ url('images/featured-prop-1.png') }}" alt="property image">
+                                <img src="{{ url('images/featured-prop-3.png') }}" alt="property image">
                             </div>
                             <div class="property-slide-body">
                                 <h3>Sobha heartland villas</h3>
@@ -177,7 +176,7 @@
                                 </div>
                             </div>
                             <div class="property-slide-footer">
-                                <a class="btn-primary" href="#">reauest info</a>
+                                <a class="btn-primary" href="#">request info</a>
                                 <a class="btn-secondary" href="#">view more</a>
                             </div>
                         </div>
@@ -188,7 +187,7 @@
                                 <img src="{{ url('images/featured-prop-1.png') }}" alt="property image">
                             </div>
                             <div class="property-slide-body">
-                                <h4>Anwa by Omniyat</h4>
+                                <h3>Anwa by Omniyat</h3>
                                 <p>Developed By Al Habtoor City Real Estate Development</p>
                                 <span class="location">
                                     <i class="fa-solid fa-location-dot"></i> dubai maritime
@@ -245,7 +244,7 @@
                         </div>
                         <div class="service-info">
                             <ul>
-                                <p>let's help you</p>
+                                <p>Let's help you:</p>
                                 <li>Invest in real estate</li>
                                 <li>Plan, lease & occupy</li>
                                 <li>Design & build</li>
@@ -269,7 +268,7 @@
             </div>
         </section>
 
-        <section class="video ">
+        <section class="video">
             <div class="video-content">
                 <video width="" height="" controls muted>
                     <source src="{{ url('videos/Real_Estate_Video.mp4') }}" type="video/mp4">
@@ -285,7 +284,7 @@
                 </div>
                 <div class="services-feature-info">
                     <div class="info-headings">
-                        <h5>optimize</h5>
+                        <h4>optimize</h4>
                         <p>Get smart with real time data on operations and performance.</p>
                         <ul>
                             <li>engage</li>
@@ -296,36 +295,36 @@
                     </div>
                     <div class="information">
                         <div class="information-wrapper">
-                            <h5>dynamic OP</h5>
+                            <h4>dynamic OP</h4>
                             <p>A revolutionary method to manage dynamic occupancy in the built environment using digitally
                                 intense delivery.</p>
                         </div>
                         <div class="information-wrapper">
-                            <h5>Smart buildings</h5>
+                            <h4>Smart buildings</h4>
                             <p>Introduce new technology and connect systems to enhance the productivity of buildings,
                                 workplaces, and people.</p>
                         </div>
                         <div class="information-wrapper">
-                            <h5>Technology optimization</h5>
+                            <h4>Technology optimization</h4>
                             <p>Use technology to track and assess every facet of building management.</p>
                         </div>
                         <div class="information-wrapper">
-                            <h5>Portfolio planning</h5>
+                            <h4>Portfolio planning</h4>
                             <p>Collect and interpret real-time data on your business, markets, locations and workforce.</p>
                         </div>
                         <div class="information-wrapper">
-                            <h5>Workplace strategy</h5>
+                            <h4>Workplace strategy</h4>
                             <p>Create a vision for your workplace that fosters innovation and improves business performance.
                             </p>
                         </div>
                         <div class="information-wrapper">
-                            <h5>Property & asset management</h5>
+                            <h4>Property & asset management</h4>
                             <p>Optimise costs and continuously improve and innovate your property and asset management
                                 services through process improvement, deployment of disruptive technologies and changes to
                                 operating models.</p>
                         </div>
                         <div class="information-wrapper">
-                            <h5>Business intelligence</h5>
+                            <h4>Business intelligence</h4>
                             <p>Bring all your data together with powerful overlays to visualize trends and deliver
                                 predictive insights against your real estate performance.</p>
                         </div>
@@ -345,50 +344,51 @@
                 <div class="choose-feature-wrappers">
                     <div class="choose-feature-wrapper">
                         <img src="{{ url('images/hand.svg') }}" alt="feature icon">
-                        <h4>no additional fees</h4>
+                        <h5>no additional fees</h5>
                         <p>We help property investors purchase property, we guide you all the way through the process and
                             the best thing of all, it’s a completely FREE service, there is no commission or admin fees</p>
                     </div>
                     <div class="choose-feature-wrapper">
-                        <img src="{{ url('images/hand.svg') }}" alt="feature icon">
-                        <h4>no additional fees</h4>
-                        <p>We help property investors purchase property, we guide you all the way through the process and
-                            the best thing of all, it’s a completely FREE service, there is no commission or admin fees</p>
+                        <img src="{{ url('images/Industry_Regulated.svg') }}" alt="feature icon">
+                        <h5>Industry Regulated</h5>
+                        <p>We are proudly regulated by the Dubai Real Estate Regulatory Authority. Our ORN is 28382. Rest
+                            assured you’re dealing with a qualified team with strict standards. </p>
                     </div>
                     <div class="choose-feature-wrapper">
-                        <img src="{{ url('images/hand.svg') }}" alt="feature icon">
-                        <h4>no additional fees</h4>
-                        <p>We help property investors purchase property, we guide you all the way through the process and
-                            the best thing of all, it’s a completely FREE service, there is no commission or admin fees</p>
+                        <img src="{{ url('images/Extensive_Due.svg') }}" alt="feature icon">
+                        <h5>Extensive Due Diligence</h5>
+                        <p>We have a due diligence process to evaluate chosen development companies, aiming to reduce
+                            construction risk and boost financial security for our clients.</p>
                     </div>
                     <div class="choose-feature-wrapper">
-                        <img src="{{ url('images/hand.svg') }}" alt="feature icon">
-                        <h4>no additional fees</h4>
-                        <p>We help property investors purchase property, we guide you all the way through the process and
-                            the best thing of all, it’s a completely FREE service, there is no commission or admin fees</p>
+                        <img src="{{ url('images/After-Sales.svg') }}" alt="feature icon">
+                        <h5>After-Sales Support</h5>
+                        <p>Following your purchase, our customer service team are here every step of the way offering
+                            construction updates and assistance with site visits, as well as any questions on handover of
+                            the property.</p>
                     </div>
                     <div class="choose-feature-wrapper">
-                        <img src="{{ url('images/hand.svg') }}" alt="feature icon">
-                        <h4>no additional fees</h4>
-                        <p>We help property investors purchase property, we guide you all the way through the process and
-                            the best thing of all, it’s a completely FREE service, there is no commission or admin fees</p>
+                        <img src="{{ url('images/High_Performing.svg') }}" alt="feature icon">
+                        <h5>High Performing</h5>
+                        <p>The properties that we focus on are handpicked to ensure above-average rental yields and strong
+                            capital growth, an attractive ROI is our core objective, whilst balancing risk.</p>
                     </div>
                     <div class="choose-feature-wrapper">
-                        <img src="{{ url('images/hand.svg') }}" alt="feature icon">
-                        <h4>no additional fees</h4>
-                        <p>We help property investors purchase property, we guide you all the way through the process and
-                            the best thing of all, it’s a completely FREE service, there is no commission or admin fees</p>
+                        <img src="{{ url('images/Fully_Managed.svg') }}" alt="feature icon">
+                        <h5>Fully Managed</h5>
+                        <p>Regardless of whether you’re based in or out of Dubai, we ensure there are property management
+                            companies to handle everything on your behalf. Ensuring a hands-off experience.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="safe-workplace">
+        <section class="safe-workplace padding-y">
             <div class="safe-workplace-content container">
                 <div class="safe-workplace-image">
                     <img src="{{ url('images/safe-workplace.png') }}" alt="image">
                 </div>
-                <div class="safe-workplace-content">
+                <div class="safe-workplace-info">
                     <div class="sec-heading">
                         <h2>(re)creating safe workplaces</h2>
                         <p>Creating safe workplaces involves developing an environment where employees feel physically,
@@ -401,15 +401,16 @@
         </section>
 
         <section class="leadership-culture padding-y">
-          <div class="leadership-culture-content container">
-            <div class="leadership-sec-heading">
-                <h2>A culture of leadership</h2>
-              </div>
-              <div class="leadership-info">
-                <p>Landlords are missing out on US$40 billion in unrealised income from aging and underutilised properties in Asia Pacific. Find out how asset enhancement drives business.</p>
-                <a class="btn-primary" href="#">know more</a>
-              </div>
-          </div>
+            <div class="leadership-culture-content container">
+                <div class="leadership-sec-heading">
+                    <h2>A culture of leadership</h2>
+                </div>
+                <div class="leadership-info">
+                    <p>Landlords are missing out on US$40 billion in unrealised income from aging and underutilised
+                        properties in Asia Pacific. Find out how asset enhancement drives business.</p>
+                    <a class="btn-primary" href="#">know more</a>
+                </div>
+            </div>
         </section>
 
         <section class="globally-trusted padding-y">
@@ -428,7 +429,7 @@
                                     <img src="{{ url('images/testimonial-1.png') }}" alt="image">
                                 </div> --}}
                                 <div class="info-name">
-                                    <h5><span>Rishabh Arora</span> <span> Happy Customer</span></h5>
+                                    <h5><span>Rishabh Arora</span> <br> <span> Happy Customer</span></h5>
                                 </div>
                             </div>
                         </div>
@@ -441,7 +442,7 @@
                                     <img src="{{ url('images/testimonial-1.png') }}" alt="image">
                                 </div> --}}
                                 <div class="info-name">
-                                    <h5><span>Rishabh Arora</span> <span> Happy Customer</span></h5>
+                                    <h5><span>Rishabh Arora</span> <br> <span> Happy Customer</span></h5>
                                 </div>
                             </div>
                         </div>
@@ -454,7 +455,7 @@
                                     <img src="{{ url('images/testimonial-1.png') }}" alt="image">
                                 </div> --}}
                                 <div class="info-name">
-                                    <h5><span>Rishabh Arora</span> <span> Happy Customer</span></h5>
+                                    <h5><span>Rishabh Arora</span> <br> <span> Happy Customer</span></h5>
                                 </div>
                             </div>
                         </div>
@@ -481,23 +482,39 @@
                 </div>
                 <div class="insights-blog">
                     <div class="blog-wrapper">
-                        <img src="{{ url('images/blog-1.png') }}" alt="blog image">
-                        <h4>Aliquam feugiat feugiat velit, in viverra nisi vulputate magna metus</h4>
-                        <a href="#">read more</a>
+                        <div class="blog-wrapper-image">
+                            <img src="{{ url('images/blog-1.png') }}" alt="blog image">
+                        </div>
+                        <div class="blog-wrapper-info">
+                            <h4>Aliquam feugiat feugiat velit, in viverra nisi vulputate magna metus</h4>
+                            <a href="#">read more</a>
+                        </div>
                     </div>
                     <div class="blog-wrapper">
-                        <img src="{{ url('images/blog-2.png') }}" alt="blog image">
-                        <h4>Quisque ac dolor lorem lobortis, interdum libero at, dictum odio</h4>
-                        <a href="#">read more</a>
+                        <div class="blog-wrapper-image">
+                            <img src="{{ url('images/blog-2.png') }}" alt="blog image">
+                        </div>
+                        <div class="blog-wrapper-info">
+                            <h4>Quisque ac dolor lorem lobortis, interdum libero at, dictum odio.</h4>
+                            <a href="#">read more</a>
+                        </div>
                     </div>
                     <div class="blog-wrapper">
-                        <img src="{{ url('images/blog-3.png') }}" alt="blog image">
-                        <h4>Maecenas tempus, nisl ut gravida posuere urna quis eleifend libero velit</h4>
-                        <a href="#">read more</a>
+                        <div class="blog-wrapper-image">
+                            <img src="{{ url('images/blog-3.png') }}" alt="blog image">
+                        </div>
+                        <div class="blog-wrapper-info">
+                            <h4>Maecenas tempus, nisl ut gravida posuere urna quis eleifend libero velit</h4>
+                            <a href="#">read more</a>
+                        </div>
                     </div>
+                </div>
+                <div class="insights-btn">
+                    <a class="btn-primary" href="#">view all</a>
                 </div>
             </div>
         </section>
 
     </main>
+
 @endsection

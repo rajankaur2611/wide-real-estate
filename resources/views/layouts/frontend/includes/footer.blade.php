@@ -47,7 +47,9 @@
                 <li><a href="#">terms & conditions</a></li>
                 <li><a href="#">privacy policy</a></li>
             </ul>
-            </ul>
+            <div class="go-top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </div>
         </div>
     </div>
 </footer>
