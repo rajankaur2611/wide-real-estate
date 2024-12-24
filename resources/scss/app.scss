@@ -137,9 +137,8 @@ header {
         place-items: center;
         grid-template-columns: 100%;
       }
-
-      @media screen and (max-width: 575px) {
-        place-items: start;
+      @media screen and (max-width: 480px) {
+        margin-bottom: 34px;
       }
 
       .footer-wrapper {
@@ -159,10 +158,10 @@ header {
             width: 2px;
             height: 100%;
             background-color: $secondary-color;
-            right: -8%;
+            right: -15%;
 
             @media screen and (max-width: 1024px) {
-              right: -10%;
+              right: -25%;
             }
 
             @media screen and (max-width: 960px) {
@@ -186,11 +185,6 @@ header {
             text-align: center;
           }
 
-          @media screen and (max-width: 575px) {
-            align-items: flex-start;
-            text-align: left;
-          }
-
           .footer-logo {
             img {
               max-width: 160px;
@@ -203,13 +197,13 @@ header {
 
           .footer-contact-info {
             p {
-              font-size: 22px;
 
               i {
                 background: linear-gradient(89.29deg, #ECBF65 8.13%, #E4BF74 39.52%, #F3C66A 118.64%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                margin-inline-end: 8px;
               }
 
               a {
@@ -225,11 +219,15 @@ header {
           column-gap: 40px;
           row-gap: 8px;
           margin-bottom: 30px;
+          justify-content: center;
+          @media screen and (max-width: 480px) {
+            flex-direction: column;
+            align-items: center;
+          }
 
           li {
             a {
               color: $white;
-              font-size: 22px;
               text-transform: uppercase;
             }
           }
@@ -241,10 +239,6 @@ header {
 
           @media screen and (max-width: 768px) {
             justify-content: center;
-          }
-
-          @media screen and (max-width: 575px) {
-            justify-content: flex-start;
           }
 
           li {

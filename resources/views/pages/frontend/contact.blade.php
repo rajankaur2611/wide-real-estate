@@ -14,11 +14,28 @@
             </div>
         </section>
 
-        <section class="in-touch">
-            <div class="in-touch-content ">
+        <section class="in-touch padding-y">
+            <div class="in-touch-content container">
                 <div class="contact-form">
                     <h2>get in touch</h2>
                     <form action="#">
+                        <div>
+                            <p>What are you looking for?</p>
+                            <div class="property-type">
+                                <div>
+                                    <p> <input type="radio" name="property" id="villa" value="villa"> </p>
+                                    <p><label for="villa">Villa</label></p>
+                                </div>
+                                <div>
+                                    <p><input type="radio" name="property" id="apartment" value="apartment"></p>
+                                    <p><label for="apartment">apartment</label></p>
+                                </div>
+                                <div>
+                                   <p> <input type="radio" name="property" id="comerical" value="comercial"></p>
+                                   <p> <label for="comerical">comerical</label></p>
+                                </div>
+                            </div>
+                        </div>
                         <div>
                             <label for="name">full name</label>
                             <input type="text" name="name" id="name">

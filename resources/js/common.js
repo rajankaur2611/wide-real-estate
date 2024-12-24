@@ -102,7 +102,7 @@ $(document).ready(function () {
     /*-----End  Testimonials ----- */
 
     /*===== Contact Page   ===== */
-    /*----- End Contact Form  ----- */
+    /*-----Contact Form  ----- */
     $(".contact-form form input, .contact-form form textarea").focus(
         function () {
             $(this).siblings("label").addClass("active");
@@ -117,6 +117,7 @@ $(document).ready(function () {
             }
         }
     );
+    /*----- End Contact Form  ----- */
     /*===== End Contact Page   ===== */
 });
 

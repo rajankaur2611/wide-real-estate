@@ -2,7 +2,7 @@
     <div class="container">
         <nav class="navbar">
             <div class="logo">
-                <a href="#"><img src="{{url('images/wide_logo_header.svg')}}" alt="logo"></a>
+                <a href="/"><img src="{{url('images/wide_logo_header.svg')}}" alt="logo"></a>
             </div>
             <ul class="navMenus">
                 <li><a href="#">our projects</a></li>

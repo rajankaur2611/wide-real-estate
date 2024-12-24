@@ -52,11 +52,17 @@
 .in-touch {
   .in-touch-content {
     display: grid;
+    gap: 20px;
     grid-template-columns: 1fr 1fr;
+
+    @media screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+
+    }
 
     .contact-form {
       display: flex;
-      padding: 50px 50px 0;
+      padding: 20px 20px 0 0;
       flex-direction: column;
       justify-content: flex-end;
 
@@ -67,6 +73,47 @@
       form {
         div {
           margin-bottom: 20px;
+
+          p {
+            font-size: 20px;
+            color: $black;
+            margin-bottom: 12px;
+          }
+
+          .property-type {
+            display: flex;
+            align-items: center;
+            gap: 120px;
+            margin-bottom: 10px;
+
+            @media screen and (max-width: 575px) {
+              align-items: flex-start;
+              flex-direction: column;
+              gap: 10px;
+
+            }
+
+            div {
+              margin-bottom: 0;
+              display: flex;
+              align-items: center;
+              grid-area: 3px;
+
+              p {
+                color: $black;
+                margin-bottom: 0;
+
+                label {
+                  cursor: pointer;
+                  top: 0;
+                }
+
+                input[type="radio"] {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
 
           label {
             margin-left: 10px;
@@ -99,16 +146,6 @@
             margin-bottom: 30px;
           }
 
-          // input[type="submit"] {
-          //   cursor: pointer;
-          //   background: $input-gradient;
-          //   color: $white;
-          //   text-transform: uppercase;
-          //   transition: $transition;
-          //   &:hover{
-          //     background: #111;
-          //   }
-          // }
           button {
             cursor: pointer;
             font-size: 18px;
@@ -123,6 +160,11 @@
         .user-info {
           display: flex;
           gap: 10px;
+          margin-bottom: 0;
+
+          @media screen and (max-width: 992px) {
+            flex-direction: column;
+          }
 
           div {
             width: 100%;
