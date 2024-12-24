@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Contact extends Model
 {
     use HasFactory;
+    protected function getAll()
+    {
+        return Contact::select('id','fullname','email','phone','status')->get();
+    }
 }

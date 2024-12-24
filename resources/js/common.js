@@ -96,6 +96,10 @@ $(document).ready(function () {
 
     /*===== Contact Page   ===== */
     /*----- End Contact Form  ----- */
+    $(".contact-form form label").click(function () {
+        $(this).addClass("active");
+        $(this).next().focus();
+    });
     $(".contact-form form input, .contact-form form textarea").focus(function () {
         $(this).siblings("label").addClass("active");
     });

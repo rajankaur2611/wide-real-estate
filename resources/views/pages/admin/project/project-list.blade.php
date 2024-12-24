@@ -1,7 +1,9 @@
 @extends('layouts.app')
-
+@section('styles')
+<link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
+@endsection
 @section('content')
-    @include('layouts.navbars.auth.topnav', ['title' => 'User Management'])
+    @include('layouts.navbars.auth.topnav', ['title' => 'Project Management'])
     <div class="row mt-4 mx-4">
         <div class="col-12">
             <div id="alert">
@@ -21,7 +23,7 @@
                 </div>
                 <div class="card-body px-0 pt-0 pb-2">
                     <div class="table-responsive p-0">
-                        <table class="table align-items-center mb-0">
+                        <table class="table align-items-center mb-0" id="projectlist">
                             <thead>
                                 <tr>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Title</th>
@@ -62,3 +64,12 @@
         </div>
     </div>
 @endsection
+@push('js')
+<script src="{{url('assets/js/plugins/jquery-3.7.1.min.js')}}"></script>
+<script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        let table = new DataTable('#projectlist');
+    });
+</script>
+@endpush

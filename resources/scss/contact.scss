@@ -98,7 +98,7 @@
             margin-bottom: 30px;
           }
 
-          input[type="submit"] {
+          input[type="submit"], button {
             cursor: pointer;
             background: $input-gradient;
             color: $white;
