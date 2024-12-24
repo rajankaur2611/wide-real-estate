@@ -22,7 +22,9 @@
 //   --primary-font: "Gilda Display", serif;
 //   --secondary-font: "Host Grotesk", sans-serif;
 // }
-$primary-color: #4F3D30;
+
+
+/*--- $primary-color: #4F3D30;
 $secondary-color: #CD9E68;
 $border-color: #e8c172;
 $white: #ffffff;
@@ -36,13 +38,14 @@ $transition: .3s all ease-in-out;
 $radius: 10px;
 $bShadow: 0px 0px 34px 0px #0000001F;
 $primary-font: "Gilda Display", serif;
-$secondary-font: "Host Grotesk", sans-serif;
+$secondary-font: "Host Grotesk", sans-serif; ---*/
 /* ----- End Variables ----- */
 
 /* -----Body----- */
 
 body {
   font-family: $secondary-font;
+  overflow-x: hidden;
 }
 
 /* -----End Body----- */
@@ -55,38 +58,44 @@ h5,
 h6 {
   line-height: 1.2;
   font-family: $primary-font;
+  margin-bottom: 14px;
 }
 
 h1 {
   text-transform: capitalize;
-  font-size: clamp(48px, 6.5vw, 68px);
-  font-weight: 400;
+  font-size: clamp(46px, 6.4vw, 68px);
+  font-weight: 500;
 }
 
 h2 {
   text-transform: capitalize;
-  font-size: clamp(50px, 5.5vw, 100px);
-  font-weight: 400;
+  font-size: clamp(46px, 5.5vw, 66px);
+  font-weight: 500;
 }
 
 h3 {
   text-transform: capitalize;
-  font-size: clamp(40px, 3.5vw, 70px);
-  font-weight: 400;
+  font-size: clamp(22px, 4.5vw, 24px);
+  font-weight: 600;
 }
 
 h4 {
   text-transform: capitalize;
-  font-size: clamp(30px, 4.6vw, 32px);
+  font-size: clamp(28px, 4.5vw, 30px);
   font-weight: 400;
+}
+
+h5 {
+  text-transform: capitalize;
+  font-size: clamp(30px, 4vw, 32px);
+  font-weight: 500;
 }
 
 p {
   color: $text-color;
-  font-size: clamp(18px, 4vw, 22px);
-  line-height: 34px;
-  line-height: clamp(26px, 4vw, 34px);
-  margin-bottom: 20px;
+  font-size: clamp(16px, 4vw, 18px);
+  line-height: clamp(24px, 4vw, 26px);
+  margin-bottom: 16px;
 }
 
 img {
@@ -96,6 +105,13 @@ img {
 a {
   text-decoration: none;
   display: inline-block;
+  transition: $transition;
+  color: $primary-color;
+}
+
+a:hover {
+  color: $secondary-color;
+
 }
 
 ul {
@@ -129,18 +145,19 @@ ul {
 .btn-primary,
 .btn-secondary {
   display: inline-block;
-  font-size: 20px;
+  // font-size: 18px;
   font-weight: 400;
   background: $gradient-color;
   background-size: 200% 100%;
   color: $link-color;
   padding: 10px 20px;
-  border-radius: $radius;
+  border-radius: calc($radius - 2px);
   transition: $transition;
   text-transform: capitalize;
 }
 
 .btn-primary:hover {
+  color: $white;
   background-position: 100% 0;
 }
 
@@ -148,7 +165,6 @@ ul {
   background: transparent;
   border: 1px solid $primary-color;
   color: $primary-color;
-  border-radius: 0;
 }
 
 .btn-secondary:hover {
@@ -160,13 +176,12 @@ ul {
 
 /* ----- Common Section ----- */
 .sec-heading {
-  max-width: 1000px;
+  max-width: 850px;
 }
 
 .sec-heading h2 {
   background: $gradient-color;
   margin-bottom: 12px;
-  ;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -178,7 +193,8 @@ ul {
 input[type="text"],
 input[type="email"],
 input[type="number"],
-input[type="submit"], textarea {
+input[type="submit"],
+textarea {
   width: 100%;
   font-size: 20px;
   font-family: inherit;
@@ -187,7 +203,8 @@ input[type="submit"], textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="number"]:focus,
-input[type="sumbit"]:focus, textarea:focus {
+input[type="sumbit"]:focus,
+textarea:focus {
   outline: none;
 }
 

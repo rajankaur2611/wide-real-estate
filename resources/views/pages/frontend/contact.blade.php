@@ -39,7 +39,7 @@
                             <textarea name="message" id="contact_message" cols="30" rows="10"></textarea>
                         </div>
                         <div class="submit">
-                            <button type="submit">Submit</button>
+                            <button type="submit" class="btn-primary">submit</button>
                         </div>
                     </form>
                 </div>
