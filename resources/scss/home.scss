@@ -373,7 +373,8 @@ main {
 
       @media screen and (max-width: 575px) {
         flex-direction: column;
-        padding: 30px 40px;
+        gap: 0;
+        padding: 50px 0px;
       }
 
       >p {
@@ -383,6 +384,12 @@ main {
         transform-origin: bottom;
         top: 10%;
         color: $primary-color;
+
+        @media screen and (max-width: 575px) {
+          transform: rotate(0deg);
+          top: 10px;
+          left: 0;
+        }
       }
 
       .service-heading {
@@ -426,7 +433,9 @@ main {
         top: 32%;
 
         @media screen and (max-width: 575px) {
-          top: 20%;
+          transform: rotate(0deg);
+          top: 10px;
+          left: 0;
         }
       }
     }
@@ -562,12 +571,14 @@ main {
         }
 
         .choose-feature-wrapper {
-          padding: 40px;
+          padding: 30px;
           border-radius: calc($radius + 10px);
           box-shadow: $bShadow;
+          border: 1px solid transparent;
           background: $white url('/public/images/choose-us-ftrs-bg.svg');
           transition: $transition;
-          border: 1px solid transparent;
+          transform-origin: center;
+          will-change: transform;
 
           &:hover {
             background: linear-gradient(390deg, rgb(217 157 113 / 10%) 0%, rgb(175 103 20 / 0%) 100%);
@@ -732,6 +743,7 @@ main {
         .slick-dots {
           position: absolute;
           left: -44%;
+
           @media screen and (max-width: 768px) {
             left: 0;
           }
@@ -768,6 +780,7 @@ main {
         align-items: center;
         justify-content: space-between;
         margin-bottom: 26px;
+
         @media screen and (max-width: 768px) {
           justify-content: center;
 
