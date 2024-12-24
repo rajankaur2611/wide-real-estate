@@ -7,7 +7,6 @@
 @endsection
 @section('content')
     <main>
-
         <section class="hero-banner" data-aos="zoom-i">
             <div class="hero-content">
                 <div class="hero-slider">
@@ -36,38 +35,38 @@
         <section class="sponsers padding-y" data-aos="zoom-ou">
             <div class="sponsers-content">
                 <div class="sponsers-slider">
-                    <div class="sponser-slide">
+                    <a href="/contact" class="sponser-slide">
                         <div class="slide-content">
                             {{-- <img src="{{ url('images/DLF.png') }}" alt="sponser slide image"> --}}
                             <img src="{{ url('images/PRESTIGE.png') }}" alt="sponser slide image">
                         </div>
-                    </div>
-                    <div class="sponser-slide">
+                    </a>
+                    <a href="/contact" class="sponser-slide">
                         <div class="slide-content">
                             <img src="{{ url('images/Lodha.png') }}" alt="sponser slide image">
                         </div>
-                    </div>
-                    <div class="sponser-slide">
+                    </a>
+                    <a href="/contact" class="sponser-slide">
                         <div class="slide-content">
                             <img src="{{ url('images/DLF.png') }}" alt="sponser slide image">
                             {{-- <img src="{{ url('images/PRESTIGE.png') }}" alt="sponser slide image"> --}}
                         </div>
-                    </div>
-                    <div class="sponser-slide">
+                    </a>
+                    <a href="/contact" class="sponser-slide">
                         <div class="slide-content">
                             <img src="{{ url('images/brigade.png') }}" alt="sponser slide image">
                         </div>
-                    </div>
-                    <div class="sponser-slide">
+                    </a>
+                    <a href="/contact" class="sponser-slide">
                         <div class="slide-content">
                             <img src="{{ url('images/OBEROIRLTY.png') }}" alt="sponser slide image">
                         </div>
-                    </div>
-                    <div class="sponser-slide">
+                    </a>
+                    <a href="/contact" class="sponser-slide">
                         <div class="slide-content">
                             <img src="{{ url('images/DLF.png') }}" alt="sponser slide image">
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -108,8 +107,8 @@
                                 </div>
                             </div>
                             <div class="property-slide-footer">
-                                <a class="btn-primary" href="#">request info</a>
-                                <a class="btn-secondary" href="#">view more</a>
+                                <a class="btn-primary" href="/contact">request info</a>
+                                <a class="btn-secondary" href="/contact">view more</a>
                             </div>
                         </div>
                     </div>
@@ -142,8 +141,8 @@
                                 </div>
                             </div>
                             <div class="property-slide-footer">
-                                <a class="btn-primary" href="#">request info</a>
-                                <a class="btn-secondary" href="#">view more</a>
+                                <a class="btn-primary" href="/contact">request info</a>
+                                <a class="btn-secondary" href="/contact">view more</a>
                             </div>
                         </div>
                     </div>
@@ -176,8 +175,8 @@
                                 </div>
                             </div>
                             <div class="property-slide-footer">
-                                <a class="btn-primary" href="#">request info</a>
-                                <a class="btn-secondary" href="#">view more</a>
+                                <a class="btn-primary" href="/contact">request info</a>
+                                <a class="btn-secondary" href="/contact">view more</a>
                             </div>
                         </div>
                     </div>
@@ -210,8 +209,8 @@
                                 </div>
                             </div>
                             <div class="property-slide-footer">
-                                <a class="btn-primary" href="#">reauest info</a>
-                                <a class="btn-secondary" href="#">view more</a>
+                                <a class="btn-primary" href="/contact">reauest info</a>
+                                <a class="btn-secondary" href="/contact">view more</a>
                             </div>
                         </div>
                     </div>
@@ -268,16 +267,16 @@
             </div>
         </section>
 
-        <section class="video">
+        <!-- <section class="video">
             <div class="video-content">
                 <video width="" height="" controls muted>
                     <source src="{{ url('videos/Real_Estate_Video.mp4') }}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-        </section>
+        </section> -->
 
-        <section class="services-feature padding-y">
+        <!-- <section class="services-feature padding-y">
             <div class="services-feature-content container">
                 <div class="sec-heading">
                     <h2>services</h2>
@@ -331,7 +330,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="choose-us padding-y">
             <div class="choose-us-content container">

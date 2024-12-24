@@ -1,9 +1,16 @@
 <head>
     <meta charset="utf-8" />
+    <title>Wide Real Estate</title>
+    <meta name="title" content="Wide real estate: Best Real Estate Agency"/>
+    <meta name="description" content="Wide real estate">
+    <meta name="keywords" content="Wide real estate, Real estate,Real estate agents,Luxury homes ">
+    <meta name="author" content="Wide Real Estae">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="alternate" hreflang="en" href="{{env('APP_URL')}}">
+    <link rel="canonical" href="{{env('APP_URL')}}" />
     <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png">
     <link rel="icon" type="image/png" href="/img/favicon.png">
-    <title>Wide Real Estate</title>
+    
     {{-- CSS --}}
     @vite(['resources/scss/app.scss'])
     @yield('styles')

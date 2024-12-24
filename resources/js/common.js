@@ -22,10 +22,12 @@ $(document).ready(function () {
     $(".sponsers-slider").slick({
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 2000,
         centerMode: true,
         centerPadding: "80px",
         slidesToShow: 5,
+        autoplaySpeed: 0,
+        speed: 3000,
+        easing: 'linear',
         responsive: [
             {
                 breakpoint: 1025,
