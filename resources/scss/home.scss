@@ -10,6 +10,9 @@ main {
     width: 100%;
     height: 100vh;
     min-height: $hero-min-height;
+    overflow: hidden;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
 
     .hero-content {
       .hero-slider {
@@ -114,7 +117,7 @@ main {
 
       .slide-content {
         position: relative;
-        width: 286px;
+        width: 250px;
         height: 90px;
         margin: 20px;
         padding: 10px;
@@ -124,13 +127,13 @@ main {
         justify-content: center;
         border-radius: $radius;
 
-        @media screen and (max-width: 480px) {
-          height: 110px;
+        @media screen and (max-width: 575px) {
+          margin: 14px;
         }
 
         img {
-          position: absolute;
-          padding: 20px;
+          // position: absolute;
+          padding: 10px;
           width: 100%;
           height: 100%;
           object-fit: contain;
@@ -147,7 +150,7 @@ main {
     .properties-slider {
       margin-top: 30px;
 
-      @media screen and (max-width: 575px) {
+      @media screen and (max-width: 768px) {
         margin-top: 60px;
       }
 
@@ -156,13 +159,14 @@ main {
         right: 0;
         position: absolute;
         top: -9%;
+        right: 0;
         background: transparent;
         border: 1px solid $primary-color;
         width: 32px;
         height: 32px;
         border-radius: $radius;
 
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 768px) {
           top: -4%;
         }
 
@@ -183,46 +187,8 @@ main {
         }
       }
 
-      .slick-next {
-        @media screen and (max-width: 575px) {
-          right: 4%;
-        }
-      }
-
       .slick-prev {
-        left: 94%;
-
-        @media screen and (max-width: 1024px) {
-          left: 93%;
-        }
-
-        @media screen and (max-width: 991px) {
-          left: 92.3%;
-        }
-
-        @media screen and (max-width: 768px) {
-          left: 90.5%;
-        }
-
-        @media screen and (max-width: 575px) {
-          left: 82.5%;
-        }
-
-        @media screen and (max-width: 480px) {
-          left: 79.5%;
-        }
-
-        @media screen and (max-width: 425px) {
-          left: 78%;
-        }
-
-        @media screen and (max-width: 375px) {
-          left: 75%;
-        }
-
-        @media screen and (max-width: 320px) {
-          left: 70%;
-        }
+        left: calc(100% - 72px);
 
         &::before {
           content: "\f060";
@@ -235,7 +201,7 @@ main {
           margin: 14px;
           padding: 16px;
           border-radius: calc($radius + 4px);
-          box-shadow: $bShadow;
+          box-shadow: $b-shadow1;
           border: 1px solid transparent;
           transition: $transition;
 
@@ -273,11 +239,11 @@ main {
 
           .property-slide-body {
 
-            .location,
+            .location a,
             .amenities,
             .status {
               color: $text-color;
-              font-size: 20px;
+              font-size: 18px;
               text-transform: capitalize;
             }
 
@@ -285,6 +251,16 @@ main {
               display: inline-block;
               text-transform: capitalize;
               margin-bottom: 16px;
+
+              a {
+                display: flex;
+                align-items: flex-end;
+                gap: 6px;
+
+                img {
+                  width: 16px;
+                }
+              }
             }
 
             .amenities {
@@ -336,95 +312,104 @@ main {
   /*-----End Our Featured Properties -----*/
 
 
-  /*----- Our Services-----*/
-  .our-services-content {
-    display: grid;
-    gap: 5px;
-    grid-template-columns: 25% 75%;
+  /*----- Our Services (What We Do)-----*/
+  .our-services {
+    padding: 130px 20px;
 
     @media screen and (max-width: 991px) {
-      grid-template-columns: 100%;
-      gap: 40px;
+      padding: 100px 20px;
     }
 
-    .service {
-      position: relative;
-      display: flex;
-      gap: 20px;
-      border-top: 1px solid $text-color;
-      padding: 30px 0;
+    .our-services-content {
+      display: grid;
+      gap: 5px;
+      grid-template-columns: 25% 75%;
 
-      @media screen and (max-width: 575px) {
-        flex-direction: column;
-        gap: 0;
-        padding: 50px 0px;
+      @media screen and (max-width: 991px) {
+        grid-template-columns: 100%;
+        gap: 40px;
       }
 
-      >p {
-        transform: rotate(-91deg);
-        position: absolute;
-        left: -10px;
-        transform-origin: bottom;
-        top: 10%;
-        color: $primary-color;
-
-        @media screen and (max-width: 575px) {
-          transform: rotate(0deg);
-          top: 10px;
-          left: 0;
-        }
-      }
-
-      .service-heading {
-        flex-basis: 50%;
+      .service {
         position: relative;
-        padding-left: 40px;
+        display: flex;
+        gap: 20px;
+        border-top: 1px solid rgba($color: #000000, $alpha: .3);
+        padding: 30px 0;
 
         @media screen and (max-width: 575px) {
-          padding-left: 0;
+          flex-direction: column;
+          gap: 0;
+          padding: 50px 0px;
         }
 
-        h3 {
-          font-size: clamp(36px, 4.4vw, 44px);
-          font-weight: 400;
+        >p {
+          transform: rotate(-90deg);
+          position: absolute;
+          left: -10px;
+          transform-origin: bottom;
+          top: 10%;
+          color: $primary-color;
+
+          @media screen and (max-width: 575px) {
+            transform: rotate(0deg);
+            top: 10px;
+            left: 0;
+          }
         }
-      }
 
-      .service-info {
-        flex-basis: 50%;
-        color: $text-color;
+        .service-heading {
+          flex-basis: 50%;
+          position: relative;
+          padding-left: 40px;
 
-        ul {
-          margin-bottom: 20px;
-
-          p {
-            margin-bottom: 0;
+          @media screen and (max-width: 575px) {
+            padding-left: 0;
           }
 
-          li {
-            padding-left: 10px;
+          h3 {
+            font-size: clamp(36px, 4.4vw, 40px);
+            font-weight: 400;
+          }
+        }
 
-            &::before {
-              content: "- ";
+        .service-info {
+          flex-basis: 50%;
+          color: $text-color;
+
+          ul {
+            margin-bottom: 20px;
+
+            p {
+              margin-bottom: 0;
+            }
+
+            li {
+              padding-left: 10px;
+
+              &::before {
+                content: "- ";
+              }
             }
           }
         }
-      }
 
-      .research {
-        left: -58px;
-        top: 32%;
+        .research {
+          left: -56px;
+          top: 32%;
 
-        @media screen and (max-width: 575px) {
-          transform: rotate(0deg);
-          top: 10px;
-          left: 0;
+          @media screen and (max-width: 575px) {
+            transform: rotate(0deg);
+            top: 10px;
+            left: 0;
+          }
         }
       }
     }
   }
 
-  /*----- End Our Services-----*/
+
+  /*----- End Our Services (What We Do)-----*/
 
   /*----- Video -----*/
   .video-content {
@@ -554,9 +539,10 @@ main {
         }
 
         .choose-feature-wrapper {
-          padding: 30px;
+          padding: 28px;
           border-radius: calc($radius + 10px);
           box-shadow: $bShadow;
+          box-shadow: $b-shadow2;
           border: 1px solid transparent;
           background: $white url('/public/images/choose-us-ftrs-bg.svg');
           transition: $transition;
@@ -564,9 +550,11 @@ main {
           will-change: transform;
 
           &:hover {
-            background: linear-gradient(390deg, rgb(217 157 113 / 10%) 0%, rgb(175 103 20 / 0%) 100%);
-            border-color: $link-hover-color;
             transform: scale(1.02);
+          }
+
+          &:hover p {
+            color: $black;
           }
 
           img {
@@ -793,14 +781,16 @@ main {
         }
 
         .blog-wrapper {
-          box-shadow: $bShadow;
           padding: 12px;
           border-radius: $radius;
           border: 1px solid transparent;
           transition: $transition;
+          box-shadow: $b-shadow2;
+          transform-origin: center;
+          will-change: transform;
 
           &:hover {
-            border-color: rgba($color: #000000, $alpha: .3);
+            transform: scale(1.02);
           }
 
           &:hover img {

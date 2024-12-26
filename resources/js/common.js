@@ -5,6 +5,14 @@ $(document).ready(function () {
         $(this).toggleClass("fa-bars");
         $(this).toggleClass("fa-xmark");
     });
+
+    $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 100) {
+            $(".header").addClass("sticky");
+        } else {
+            $(".header").removeClass("sticky");
+        }
+    });
     /*-----End Header ----- */
 
     /*----- Main ----- */
@@ -28,34 +36,58 @@ $(document).ready(function () {
         slidesToShow: 5,
         responsive: [
             {
+                breakpoint: 1601,
+                settings: {
+                    centerMode: true,
+                    centerPadding: "70px",
+                    slidesToShow: 5,
+                },
+            },
+            {
                 breakpoint: 1025,
                 settings: {
                     centerMode: true,
-                    centerPadding: "40px",
+                    centerPadding: "80px",
                     slidesToShow: 4,
+                },
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    centerMode: true,
+                    centerPadding: "90px",
+                    slidesToShow: 3,
                 },
             },
             {
                 breakpoint: 769,
                 settings: {
                     centerMode: true,
-                    centerPadding: "40px",
-                    slidesToShow: 3,
+                    centerPadding: "80px",
+                    slidesToShow: 2,
                 },
             },
             {
                 breakpoint: 576,
                 settings: {
                     centerMode: true,
-                    centerPadding: "50px",
+                    centerPadding: "40px",
                     slidesToShow: 2,
                 },
             },
             {
-                breakpoint: 480,
+                breakpoint: 481,
                 settings: {
                     centerMode: true,
-                    centerPadding: "50px",
+                    centerPadding: "70px",
+                    slidesToShow: 1,
+                },
+            },
+            {
+                breakpoint: 380,
+                settings: {
+                    centerMode: true,
+                    centerPadding: "40px",
                     slidesToShow: 1,
                 },
             },

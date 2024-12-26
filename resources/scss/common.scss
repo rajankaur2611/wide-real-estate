@@ -69,7 +69,7 @@ h1 {
 
 h2 {
   text-transform: capitalize;
-  font-size: clamp(46px, 5.5vw, 66px);
+  font-size: clamp(46px, 5.5vw, 60px);
   font-weight: 500;
 }
 
@@ -159,6 +159,7 @@ ul {
 .btn-primary:hover {
   color: $white;
   background-position: 100% 0;
+  border-color: $white;
 }
 
 .btn-secondary {
@@ -170,6 +171,7 @@ ul {
 .btn-secondary:hover {
   background: $gradient-color;
   color: $white;
+  border-color: $white;
 }
 
 /* -----End Common Classes ----- */

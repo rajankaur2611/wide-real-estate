@@ -87,8 +87,9 @@
                                 <h3>Anwa by Omniyat</h3>
                                 <p>Developed By Al Habtoor City Real Estate Development</p>
                                 <span class="location">
-                                    <i class="fa-solid fa-location-dot"></i> dubai maritime
-                                    city
+                                    
+                                    {{-- <i class="fa-solid fa-location-dot"></i> dubai maritime city --}}
+                                    <a href="#"><img src="{{ url('images/location.png') }}" alt="" width="20px">dubai maritime city</a>
                                 </span>
                                 <div class="amenities">
                                     <ul>
@@ -122,8 +123,9 @@
                                 <h3>Verde by sobha</h3>
                                 <p>Developed By Al Habtoor City Real Estate Development</p>
                                 <span class="location">
-                                    <i class="fa-solid fa-location-dot"></i> dubai maritime
-                                    city
+                                    {{-- <i class="fa-solid fa-location-dot"></i> dubai maritime
+                                    city --}}
+                                    <a href="#"><img src="{{ url('images/location.png') }}" alt="" width="20px">dubai maritime city</a>
                                 </span>
                                 <div class="amenities">
                                     <ul class="bed-bth">
@@ -156,8 +158,9 @@
                                 <h3>Sobha heartland villas</h3>
                                 <p>Developed By Al Habtoor City Real Estate Development</p>
                                 <span class="location">
-                                    <i class="fa-solid fa-location-dot"></i> dubai maritime
-                                    city
+                                    {{-- <i class="fa-solid fa-location-dot"></i> dubai maritime
+                                    city --}}
+                                    <a href="#"><img src="{{ url('images/location.png') }}" alt="" width="20px">dubai maritime city</a>
                                 </span>
                                 <div class="amenities">
                                     <ul class="bed-bth">
@@ -190,8 +193,9 @@
                                 <h3>Anwa by Omniyat</h3>
                                 <p>Developed By Al Habtoor City Real Estate Development</p>
                                 <span class="location">
-                                    <i class="fa-solid fa-location-dot"></i> dubai maritime
-                                    city
+                                    {{-- <i class="fa-solid fa-location-dot"></i> dubai maritime
+                                    city --}}
+                                    <a href="#"><img src="{{ url('images/location.png') }}" alt="" width="20px">dubai maritime city</a>
                                 </span>
                                 <div class="amenities">
                                     <ul class="bed-bth">
@@ -219,7 +223,7 @@
             </div>
         </section>
 
-        <section class="our-services padding-y">
+        <section class="our-services">
             <div class="our-services-content container">
                 <div class="sec-heading">
                     <h2>what we do</h2>
