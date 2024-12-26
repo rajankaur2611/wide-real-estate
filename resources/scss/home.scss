@@ -63,19 +63,19 @@ main {
 
 
           .main-slide-image-1 {
-            background-image: url("/public/images/main-slide-1.png");
+            background-image: url("/public/images/slide-1.webp");
           }
 
           .main-slide-image-2 {
-            background-image: url("/public/images/main-slide-2.png");
+            background-image: url("/public/images/slide-1.webp");
           }
 
           .main-slide-image-3 {
-            background-image: url("/public/images/main-slide-3.png");
+            background-image: url("/public/images/slide-1.webp");
           }
 
           .main-slide-image-4 {
-            background-image: url("/public/images/main-slide-4.png");
+            background-image: url("/public/images/slide-1.webp");
           }
 
           .slick-dots {
@@ -701,7 +701,7 @@ main {
 
     .globally-trusted-content {
       display: grid;
-      grid-template-columns: 40% 60%;
+      grid-template-columns: 38% 62%;
 
       @media screen and (max-width: 768px) {
         grid-template-columns: 100%;
@@ -869,3 +869,14 @@ main {
 
 /*----- End Insights -----*/
 /*----- -----*/
+.fade-up {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(100px); /* Start slightly lower */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition */
+  
+}
+
+.fade-up.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Reset position */
+}

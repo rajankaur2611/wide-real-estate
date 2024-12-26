@@ -16,10 +16,9 @@
                         <img src="{{ url('images/wide_logo_header.svg') }}" alt="image">
                     </div>
                     <div class="footer-contact-info">
-                        <p>
-                            <a href="mailto:email@mygmail.com"><i class="fa-solid fa-envelope"></i> widerealestate@gmail.com</a>
+                        <p><a href="mailto:email@mygmail.com"><i class="fa-solid fa-envelope"></i>widerealestate@gmail.com</a>
                         </p>
-                        <p> <a href="tel:+919876543210"><i class="fa-solid fa-phone-volume"></i> +91 987 654 3210</a>
+                        <p><a href="tel:+919876543210"><i class="fa-solid fa-phone-volume"></i>+91 987 654 3210</a>
                         </p>
                     </div>
                 </div>

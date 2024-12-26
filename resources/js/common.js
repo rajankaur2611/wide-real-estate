@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     /*-----Header ----- */
     $(".nav-btn i").click(function () {
         $(".navMenus").toggleClass("active");
@@ -143,7 +144,34 @@ $(window).scroll(function () {
 $(".go-top").click(function () {
     $("html, body").animate({ scrollTop: 0 }, 600);
 });
+// const text = "Discover Your Perfect Property with Us";
+// let i = 0;
+// const typewriter = document.getElementById("abc");
 
+// function type() {
+//     if (i < text.length) {
+//         typewriter.innerHTML += text.charAt(i);
+//         i++;
+//         setTimeout(type, 100); // Typing speed
+//     }
+// }
+// type();
+document.addEventListener("DOMContentLoaded", () => {
+    const fadeUpSections = document.querySelectorAll(".fade-up");
+
+    const handleScroll = () => {
+        fadeUpSections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 150 && rect.bottom > 0) {
+                section.classList.add("visible");
+            }
+        });
+    };
+
+    // Trigger the scroll handler on page load and during scroll
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Run on page load
+});
 /*----- End Footer ----- */
 
 /*----- ----- */

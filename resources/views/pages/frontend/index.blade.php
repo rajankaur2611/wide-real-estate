@@ -7,32 +7,28 @@
 @endsection
 @section('content')
     <main>
-        <section class="hero-banner" data-aos="zoom-i">
+        <section class="hero-banner">
             <div class="hero-content">
                 <div class="hero-slider">
                     <div class="hero-slides">
                         <div class="main-slide main-slide-image-1">
-                            {{-- <img src="{{ url('images/main-slide-1.png') }}" alt="main slide image"> --}}
-                            <h1>Discover Your Perfect Property with Us</h1>
+                            <h1 id="abc">Discover Your Perfect Property with Us</h1>
                         </div>
                         <div class="main-slide main-slide-image-2">
                             <h1>Find your dream home here</h1>
-                            {{-- <img src="{{ url('images/main-slide-2.png') }}" alt="main slide image"> --}}
                         </div>
                         <div class="main-slide main-slide-image-3">
                             <h1>Let us find your dream land</h1>
-                            {{-- <img src="{{ url('images/main-slide-3.png') }}" alt="main slide image"> --}}
                         </div>
                         <div class="main-slide main-slide-image-4">
                             <h1>Come here for your best purchase</h1>
-                            {{-- <img src="{{ url('images/main-slide-4.png') }}" alt="main slide image"> --}}
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="sponsers padding-y" data-aos="zoom-ou">
+        <section class="sponsers padding-y fade-up">
             <div class="sponsers-content">
                 <div class="sponsers-slider">
                     <a href="/contact" class="sponser-slide">
@@ -71,7 +67,7 @@
             </div>
         </section>
 
-        <section class="featured-properties">
+        <section class="featured-properties fade-up">
             <div class="featured-properties-content container">
                 <div class="sec-heading">
                     <h2>our featured properties</h2>
@@ -80,7 +76,7 @@
                     <div class="property-slider">
                         <div class="property-slide-content">
                             <div class="property-slide-header">
-                                <img src="{{ url('images/featured-prop-1.png') }}" alt="property image">
+                                <img src="{{ url('images/featured-prop-1.webp') }}" alt="property image">
                             </div>
                             <div class="property-slide-body">
                                 <h3>Anwa by Omniyat</h3>
@@ -115,7 +111,7 @@
                     <div class="property-slider">
                         <div class="property-slide-content">
                             <div class="property-slide-header">
-                                <img src="{{ url('images/featured-prop-2.png') }}" alt="property image">
+                                <img src="{{ url('images/featured-prop-1.webp') }}" alt="property image">
                             </div>
                             <div class="property-slide-body">
                                 <h3>Verde by sobha</h3>
@@ -149,7 +145,7 @@
                     <div class="property-slider">
                         <div class="property-slide-content">
                             <div class="property-slide-header">
-                                <img src="{{ url('images/featured-prop-3.png') }}" alt="property image">
+                                <img src="{{ url('images/featured-prop-1.webp') }}" alt="property image">
                             </div>
                             <div class="property-slide-body">
                                 <h3>Sobha heartland villas</h3>
@@ -183,7 +179,7 @@
                     <div class="property-slider">
                         <div class="property-slide-content">
                             <div class="property-slide-header">
-                                <img src="{{ url('images/featured-prop-1.png') }}" alt="property image">
+                                <img src="{{ url('images/featured-prop-1.webp') }}" alt="property image">
                             </div>
                             <div class="property-slide-body">
                                 <h3>Anwa by Omniyat</h3>
@@ -218,7 +214,7 @@
             </div>
         </section>
 
-        <section class="our-services padding-y">
+        <section class="our-services padding-y fade-up">
             <div class="our-services-content container">
                 <div class="sec-heading">
                     <h2>what we do</h2>
@@ -332,7 +328,7 @@
             </div>
         </section> -->
 
-        <section class="choose-us padding-y">
+        <section class="choose-us padding-y fade-up">
             <div class="choose-us-content container">
                 <div class="sec-heading">
                     <h2>why choose us</h2>
@@ -382,7 +378,7 @@
             </div>
         </section>
 
-        <section class="safe-workplace padding-y">
+        <section class="safe-workplace padding-y fade-up">
             <div class="safe-workplace-content container">
                 <div class="safe-workplace-image">
                     <img src="{{ url('images/safe-workplace.png') }}" alt="image">
@@ -399,7 +395,7 @@
             </div>
         </section>
 
-        <section class="leadership-culture padding-y">
+        <section class="leadership-culture padding-y fade-up">
             <div class="leadership-culture-content container">
                 <div class="leadership-sec-heading">
                     <h2>A culture of leadership</h2>
@@ -412,7 +408,7 @@
             </div>
         </section>
 
-        <section class="globally-trusted padding-y">
+        <section class="globally-trusted padding-y fade-up">
             <div class="globally-trusted-content container">
                 <div class="sec-heading">
                     <h2>trusted by investors globally</h2>
@@ -471,7 +467,7 @@
             </div>
         </section> --}}
 
-        <section class="insights padding-y">
+        <section class="insights padding-y fade-up">
             <div class="insights-content container">
                 <div class="insignts-headings">
                     <div class="sec-heading">
