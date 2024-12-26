@@ -46,6 +46,12 @@ $secondary-font: "Host Grotesk", sans-serif; ---*/
 body {
   font-family: $secondary-font;
   overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  overflow-x: hidden;
 }
 
 /* -----End Body----- */
@@ -63,7 +69,7 @@ h6 {
 
 h1 {
   text-transform: capitalize;
-  font-size: clamp(46px, 6.4vw, 68px);
+  font-size: clamp(36px, 6vw, 62px);
   font-weight: 500;
 }
 
@@ -87,7 +93,7 @@ h4 {
 
 h5 {
   text-transform: capitalize;
-  font-size: clamp(30px, 4vw, 32px);
+  font-size: clamp(28px, 4vw, 30px);
   font-weight: 500;
 }
 
@@ -154,6 +160,10 @@ ul {
   border-radius: calc($radius - 2px);
   transition: $transition;
   text-transform: capitalize;
+  @media (max-width: 767px) {
+    padding: 10px;
+  }
+  
 }
 
 .btn-primary:hover {

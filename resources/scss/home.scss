@@ -1,6 +1,5 @@
 @import 'variables.scss';
 
-
 /*-----Main -----*/
 main {
   // position: relative;
@@ -87,33 +86,17 @@ main {
             li {
               button {
                 &:before {
-                  font-size: 20px;
+                  font-size: 12px;
                   opacity: 1;
                   color: $white;
-                  // content: ''; /* Ensure ::before is visible */
-                  // display: inline-block; /* Treat as a block-level element */
-                  // width: 10px; /* Default width for all dots */
-                  // height: 10px; /* Default height for all dots */
-                  // background-color: $white; /* Default background color for inactive dots */
-                  // border-radius: 50%; /* Make them circular */
-                  // transition: all 0.3s ease;
                 }
               }
 
               &.slick-active {
                 button {
                   &:before {
-                    color: $primary-color;
-                    font-size: 20px;
-                    // opacity: 1;
-                    // // color: $white;
-                    // content: ''; /* Ensure ::before is visible */
-                    // display: inline-block; /* Treat as a block-level element */
-                    // width: 20px; /* Default width for all dots */
-                    // height: 10px; /* Default height for all dots */
-                    // background-color: $primary-color; /* Default background color for inactive dots */
-                    // border-radius: 5px; /* Make them circular */
-                    // transition: all 0.3s ease;
+                    color: $secondary-color;
+                    font-size: 16px;
                   }
                 }
               }
@@ -149,7 +132,6 @@ main {
         }
 
         img {
-          // position: absolute;
           padding: 10px;
           width: 100%;
           height: 100%;
@@ -331,10 +313,10 @@ main {
 
   /*----- Our Services (What We Do)-----*/
   .our-services {
-    padding: 130px 20px;
+    padding: 130px 0px 60px;
 
     @media screen and (max-width: 991px) {
-      padding: 100px 20px;
+      padding: 100px 0;
     }
 
     .our-services-content {
@@ -562,9 +544,9 @@ main {
           box-shadow: $b-shadow2;
           border: 1px solid transparent;
           background: $white url('/public/images/choose-us-ftrs-bg.svg');
-          transition: $transition;
+          transition: transform 0.6s ease-in, opacity 0.6s ease;
           transform-origin: center;
-          will-change: transform;
+          will-change: transform, opacity;
 
           &:hover {
             transform: scale(1.02);
@@ -747,7 +729,6 @@ main {
               button {
                 &:before {
                   color: $primary-color;
-                  // background: $gradient-color;
                 }
               }
             }
@@ -859,14 +840,3 @@ main {
 
 /*----- End Insights -----*/
 /*----- -----*/
-.fade-up {
-  opacity: 0; /* Initially hidden */
-  transform: translateY(100px); /* Start slightly lower */
-  transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition */
-  
-}
-
-.fade-up.visible {
-  opacity: 1; /* Fully visible */
-  transform: translateY(0); /* Reset position */
-}

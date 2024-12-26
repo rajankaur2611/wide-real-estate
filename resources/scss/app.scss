@@ -3,8 +3,8 @@
 /*----- Header -----*/
 header {
   &.header {
-    // position: absolute;
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 9;
     background-color: rgba($color: #000000, $alpha: 0.3);
@@ -13,7 +13,7 @@ header {
     transition: $transition;
 
     &.sticky {
-      // background-color: $secondary-color;
+      top: -$header-height;
     }
 
     @media(max-width:991px) {
@@ -52,30 +52,6 @@ header {
           gap: 0;
           transition: $transition;
           overflow-y: scroll;
-
-          //   &::before {
-          //     content: "";
-          //     // content: url('/public/images/wide_logo_header.svg');
-          //     // display: flex;
-          //     // align-items: center;
-          //     // justify-content: center;
-          //     // background: $gradient-color;
-          //     // background-repeat: no-repeat;
-          //     // background-position: center;
-          //     // background-size: cover;
-          //     // width: 100%;
-          //     // height: 100%;
-          //     // position: fixed;
-          //     // left: 100%;
-
-          //   // @media(max-width:575px) {
-          //   //   display: none;
-          //   // }
-          // }
-
-          // @media(max-width:575px) {
-          //   width: 100%;
-          // }
         }
 
         &.active {
@@ -138,7 +114,6 @@ header {
   .footer-content {
     .footer-wrappers {
       display: grid;
-      place-items: center;
       grid-template-columns: 45% 55%;
       margin-bottom: 50px;
 
@@ -152,7 +127,7 @@ header {
       }
 
       .footer-wrapper {
-        padding: 18px;
+        padding: 18px 0;
 
         @media screen and (max-width: 575px) {
           padding: 18px 0;
@@ -184,6 +159,7 @@ header {
           display: flex;
           gap: 20px;
           align-items: center;
+          justify-content: space-between;
 
           @media screen and (max-width: 1024px) {
             flex-direction: column;
@@ -230,7 +206,7 @@ header {
           column-gap: 40px;
           row-gap: 8px;
           margin-bottom: 30px;
-          justify-content: center;
+          justify-content: flex-end;
 
           @media screen and (max-width: 480px) {
             flex-direction: column;
@@ -251,6 +227,7 @@ header {
 
         .footer-social {
           display: flex;
+          justify-content: flex-end;
           gap: 12px;
 
           @media screen and (max-width: 768px) {
@@ -258,13 +235,6 @@ header {
           }
 
           li {
-            // position: relative;
-            // width: 40px;
-            // height: 40px;
-            // line-height: 40px;
-            // border: 1px solid $border-color;
-            // border-radius: 50%;
-
             a {
               color: $white;
               border: 1px solid $border-color;
@@ -283,23 +253,7 @@ header {
               img {
                 width: 20px;
                 height: 20px;
-                // line-height: 40px;
                 object-fit: contain;
-                // position: absolute;
-                // display: block;
-                // text-align: center;
-                // width: 20px;
-                // height: 20px;
-                // line-height: 40px;
-                // object-fit: contain;
-                // color: $white;
-                // border: 1px solid $border-color;
-                // width: 40px;
-                // height: 40px;
-                // text-align: center;
-                // border-radius: 50%;
-                // transition: $transition;
-                // padding: 6px;
               }
             }
           }
@@ -359,34 +313,33 @@ header {
           }
         }
       }
-
-      .go-top {
-        position: fixed;
-        bottom: 2%;
-        right: 1%;
-
-        img {
-          cursor: pointer;
-          color: $white;
-          background-color: $secondary-color;
-          // background: $gradient-color;
-          width: 36px;
-          height: 36px;
-          line-height: 36px;
-          padding: 5px;
-          text-align: center;
-          border-radius: 50%;
-          transition: $transition;
-          box-shadow: $bShadow;
-
-          &:hover {
-            background-color: $primary-color;
-          }
-        }
-      }
     }
   }
+}
 
+.go-top {
+  position: fixed;
+  bottom: 2%;
+  right: 1%;
+  display: none;
+
+  img {
+    cursor: pointer;
+    color: $white;
+    background-color: $secondary-color;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 50%;
+    transition: $transition;
+    box-shadow: $bShadow;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
 }
 
 /*----- End Footer -----*/

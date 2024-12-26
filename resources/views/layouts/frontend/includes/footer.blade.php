@@ -13,7 +13,7 @@
                                 <img src="{{ url('images/email.png') }}" alt="email">widerealestate@gmail.com
                             </a>
                         </p>
-                        <p> 
+                        <p>
                             <a href="tel:+919876543210">
                                 <img src="{{ url('images/phone.png') }}" alt="phone">+91 987 654 3210
                             </a>
@@ -50,10 +50,6 @@
                 <li><a href="#">terms & conditions</a></li>
                 <li><a href="#">privacy policy</a></li>
             </ul>
-            <div class="go-top">
-                {{-- <i class="fa-solid fa-arrow-up"></i> --}}
-                <img src="{{ url('images/arrow-up.png') }}" alt="arrow up">
-            </div>
         </div>
     </div>
 </footer>

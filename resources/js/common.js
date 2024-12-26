@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    
     /*-----Header ----- */
     $(".nav-btn i").click(function () {
         $(".navMenus").toggleClass("active");
@@ -7,12 +6,18 @@ $(document).ready(function () {
         $(this).toggleClass("fa-xmark");
     });
 
-    $(window).on("scroll", function () {
-        if ($(this).scrollTop() > 100) {
+    var lastScrollTop = 0;
+
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop();
+
+        if (scrollTop > lastScrollTop) {
             $(".header").addClass("sticky");
         } else {
             $(".header").removeClass("sticky");
         }
+
+        lastScrollTop = scrollTop;
     });
     /*-----End Header ----- */
 
@@ -36,7 +41,7 @@ $(document).ready(function () {
         slidesToShow: 5,
         autoplaySpeed: 0,
         speed: 3000,
-        easing: 'linear',
+        easing: "linear",
         responsive: [
             {
                 breakpoint: 1601,
@@ -143,7 +148,7 @@ $(document).ready(function () {
         $(this).addClass("active");
         $(this).next().focus();
     });
-    
+
     $(".contact-form form input, .contact-form form textarea").focus(
         function () {
             $(this).siblings("label").addClass("active");
@@ -188,8 +193,13 @@ $(".go-top").click(function () {
 //     }
 // }
 // type();
+
+/*----- End Footer ----- */
+/*----- Animations ----- */
 document.addEventListener("DOMContentLoaded", () => {
-    const fadeUpSections = document.querySelectorAll(".fade-up");
+    const fadeUpSections = document.querySelectorAll(
+        ".fade-up, .fade-down, .fade-down-smooth, .fade-left, .fade-right, .fade-in , .scale"
+    );
 
     const handleScroll = () => {
         fadeUpSections.forEach((section) => {
@@ -204,6 +214,5 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // Run on page load
 });
-/*----- End Footer ----- */
-
+/*----- End Animations ----- */
 /*----- ----- */
