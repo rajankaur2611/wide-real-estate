@@ -13,19 +13,19 @@ class ProjectController extends Controller
     public function index()
     {   
         $projects = Project::getAll();
-        return view('pages.admin.project-list',compact("projects"));
+        return view('pages.admin.project.project-list',compact("projects"));
     }
     public function add()
     {
         $project = new Project();
-        return view('pages.admin.add-edit', compact("project"));
+        return view('pages.admin.project.add-edit', compact("project"));
     }
     public function edit($id)
     {   
        
         $projectid = base64_decode($id);
         $project = Project::find($projectid);
-        return view('pages.admin.add-edit', compact("project"));
+        return view('pages.admin.project.add-edit', compact("project"));
     }
     public function save(Request $request)
     {
@@ -73,7 +73,7 @@ class ProjectController extends Controller
         }
         $project->save();
         return redirect()->route('project-list')->with('success', 'Project '.$projectstatus.' successfully');
-        //return redirect()->route('project-list')->with('message', 'Project created successfully.');
+    
     }
     public function destroy($id)
     {

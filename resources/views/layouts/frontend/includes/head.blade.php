@@ -1,9 +1,16 @@
 <head>
     <meta charset="utf-8" />
+    <title>Wide Real Estate</title>
+    <meta name="title" content="Wide real estate: Best Real Estate Agency"/>
+    <meta name="description" content="Wide real estate">
+    <meta name="keywords" content="Wide real estate, Real estate,Real estate agents,Luxury homes ">
+    <meta name="author" content="Wide Real Estae">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="alternate" hreflang="en" href="{{env('APP_URL')}}">
+    <link rel="canonical" href="{{env('APP_URL')}}" />
     <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png">
     <link rel="icon" type="image/png" href="/img/favicon.png">
-    <title>Wide Real Estate</title>
+    
     {{-- CSS --}}
     @vite(['resources/scss/app.scss'])
     @yield('styles')
@@ -23,15 +30,5 @@
         rel="stylesheet">
 
     {{-- F Awe --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    {{-- AOS --}}
-    {{-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> --}}
-    {{-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script> --}}
-
-    {{-- <script>
-      AOS.init();
-    </script> --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
 </head>

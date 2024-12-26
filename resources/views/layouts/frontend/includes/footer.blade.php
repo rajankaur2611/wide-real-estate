@@ -10,10 +10,13 @@
                     <div class="footer-contact-info">
                         <p>
                             <a href="mailto:email@mygmail.com">
-                                <img src="{{ url('images/email.png') }}" alt="email">widerealestate@gmail.com </a>
+                                <img src="{{ url('images/email.png') }}" alt="email">widerealestate@gmail.com
+                            </a>
                         </p>
-                        <p> <a href="tel:+919876543210">
-                                <img src="{{ url('images/phone.png') }}" alt="phone"> +91 987 654 3210</a>
+                        <p> 
+                            <a href="tel:+919876543210">
+                                <img src="{{ url('images/phone.png') }}" alt="phone">+91 987 654 3210
+                            </a>
                         </p>
                     </div>
                 </div>

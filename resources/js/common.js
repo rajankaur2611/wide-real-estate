@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     /*-----Header ----- */
     $(".nav-btn i").click(function () {
         $(".navMenus").toggleClass("active");
@@ -30,10 +31,12 @@ $(document).ready(function () {
     $(".sponsers-slider").slick({
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 2000,
         centerMode: true,
         centerPadding: "80px",
         slidesToShow: 5,
+        autoplaySpeed: 0,
+        speed: 3000,
+        easing: 'linear',
         responsive: [
             {
                 breakpoint: 1601,
@@ -134,7 +137,13 @@ $(document).ready(function () {
     /*-----End  Testimonials ----- */
 
     /*===== Contact Page   ===== */
-    /*-----Contact Form  ----- */
+    /*----- End Contact Form  ----- */
+
+    $(".contact-form form label").click(function () {
+        $(this).addClass("active");
+        $(this).next().focus();
+    });
+    
     $(".contact-form form input, .contact-form form textarea").focus(
         function () {
             $(this).siblings("label").addClass("active");
@@ -149,7 +158,6 @@ $(document).ready(function () {
             }
         }
     );
-    /*----- End Contact Form  ----- */
     /*===== End Contact Page   ===== */
 });
 
@@ -168,7 +176,34 @@ $(window).scroll(function () {
 $(".go-top").click(function () {
     $("html, body").animate({ scrollTop: 0 }, 600);
 });
+// const text = "Discover Your Perfect Property with Us";
+// let i = 0;
+// const typewriter = document.getElementById("abc");
 
+// function type() {
+//     if (i < text.length) {
+//         typewriter.innerHTML += text.charAt(i);
+//         i++;
+//         setTimeout(type, 100); // Typing speed
+//     }
+// }
+// type();
+document.addEventListener("DOMContentLoaded", () => {
+    const fadeUpSections = document.querySelectorAll(".fade-up");
+
+    const handleScroll = () => {
+        fadeUpSections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 150 && rect.bottom > 0) {
+                section.classList.add("visible");
+            }
+        });
+    };
+
+    // Trigger the scroll handler on page load and during scroll
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Run on page load
+});
 /*----- End Footer ----- */
 
 /*----- ----- */

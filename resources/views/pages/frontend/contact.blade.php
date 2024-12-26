@@ -17,8 +17,9 @@
         <section class="in-touch padding-y">
             <div class="in-touch-content container">
                 <div class="contact-form">
-                    <h2>get in touch</h2>
-                    <form action="#">
+                    <h2>Get in touch</h2>
+                    <form method="post" id="contact" action="{{route('contact-submit')}}">
+                        @csrf
                         <div>
                             <p>What are you looking for?</p>
                             <div class="property-type">
@@ -38,24 +39,24 @@
                         </div>
                         <div>
                             <label for="name">full name</label>
-                            <input type="text" name="name" id="name">
+                            <input type="text" name="name" id="contact_name">
                         </div>
                         <div class="user-info">
                             <div>
                                 <label for="email">email address <span>*</span></label>
-                                <input type="email" name="email" id="email" required>
+                                <input type="email" name="email" id="contact_email" required>
                             </div>
                             <div>
                                 <label for="number">phone number <span>*</span></label>
-                                <input type="number" name="number" id="number">
+                                <input type="number" name="number" id="contact_number">
                             </div>
                         </div>
                         <div>
                             <label for="message">message</label>
-                            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                            <textarea name="message" id="contact_message" cols="30" rows="10"></textarea>
                         </div>
                         <div class="submit">
-                            <button class="btn-primary">submit</button>
+                            <button type="submit" class="btn-primary">submit</button>
                         </div>
                     </form>
                 </div>
@@ -80,4 +81,7 @@
         </section>
 
     </main>
+@endsection
+@section('js')
+@vite(['resources/js/contact.js'])
 @endsection

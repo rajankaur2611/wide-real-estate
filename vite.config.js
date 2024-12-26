@@ -10,7 +10,8 @@ export default defineConfig({
                 'resources/scss/app.scss',
                 'resources/scss/contact.scss',
                 'resources/js/app.js',
-                'resources/js/common.js'
+                'resources/js/common.js',
+                'resources/js/contact.js'
             ],
             refresh: true,
         }),

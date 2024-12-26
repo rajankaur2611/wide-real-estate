@@ -52,10 +52,11 @@ main {
               position: absolute;
               color: $white;
               text-align: center;
-              max-width: 700px;
+              max-width: 740px;
               margin-top: 100px;
               text-shadow: 1px 1px 9px rgba($color: #000000, $alpha: 0.8);
               letter-spacing: 1px;
+              text-transform: uppercase;
 
               @media screen and (max-width: 575px) {
                 padding: 10px;
@@ -65,19 +66,19 @@ main {
 
 
           .main-slide-image-1 {
-            background-image: url("/public/images/main-slide-1.png");
+            background-image: url("/public/images/slide-1.webp");
           }
 
           .main-slide-image-2 {
-            background-image: url("/public/images/main-slide-2.png");
+            background-image: url("/public/images/slide-1.webp");
           }
 
           .main-slide-image-3 {
-            background-image: url("/public/images/main-slide-3.png");
+            background-image: url("/public/images/slide-1.webp");
           }
 
           .main-slide-image-4 {
-            background-image: url("/public/images/main-slide-4.png");
+            background-image: url("/public/images/slide-1.webp");
           }
 
           .slick-dots {
@@ -86,9 +87,16 @@ main {
             li {
               button {
                 &:before {
-                  font-size: 30px;
+                  font-size: 20px;
                   opacity: 1;
                   color: $white;
+                  // content: ''; /* Ensure ::before is visible */
+                  // display: inline-block; /* Treat as a block-level element */
+                  // width: 10px; /* Default width for all dots */
+                  // height: 10px; /* Default height for all dots */
+                  // background-color: $white; /* Default background color for inactive dots */
+                  // border-radius: 50%; /* Make them circular */
+                  // transition: all 0.3s ease;
                 }
               }
 
@@ -96,7 +104,16 @@ main {
                 button {
                   &:before {
                     color: $primary-color;
-                    font-size: 30px;
+                    font-size: 20px;
+                    // opacity: 1;
+                    // // color: $white;
+                    // content: ''; /* Ensure ::before is visible */
+                    // display: inline-block; /* Treat as a block-level element */
+                    // width: 20px; /* Default width for all dots */
+                    // height: 10px; /* Default height for all dots */
+                    // background-color: $primary-color; /* Default background color for inactive dots */
+                    // border-radius: 5px; /* Make them circular */
+                    // transition: all 0.3s ease;
                   }
                 }
               }
@@ -672,7 +689,7 @@ main {
 
     .globally-trusted-content {
       display: grid;
-      grid-template-columns: 40% 60%;
+      grid-template-columns: 38% 62%;
 
       @media screen and (max-width: 768px) {
         grid-template-columns: 100%;
@@ -722,7 +739,7 @@ main {
           li {
             button {
               &::before {
-                font-size: 45px;
+                font-size: 18px;
               }
             }
 
@@ -842,3 +859,14 @@ main {
 
 /*----- End Insights -----*/
 /*----- -----*/
+.fade-up {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(100px); /* Start slightly lower */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition */
+  
+}
+
+.fade-up.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Reset position */
+}
