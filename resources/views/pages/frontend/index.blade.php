@@ -80,9 +80,8 @@
                                 <h3>Anwa by Omniyat</h3>
                                 <p>Developed By Al Habtoor City Real Estate Development</p>
                                 <span class="location">
-                                    
-                                    {{-- <i class="fa-solid fa-location-dot"></i> dubai maritime city --}}
-                                    <a href="#"><img src="{{ url('images/location.png') }}" alt="" width="20px">dubai maritime city</a>
+                                    <a href="#"><img src="{{ url('images/location.png') }}" alt=""
+                                            width="20px">dubai maritime city</a>
                                 </span>
                                 <div class="amenities">
                                     <ul>
@@ -102,10 +101,24 @@
                                 </div>
                             </div>
                             <div class="property-slide-footer">
-                                <a class="btn-primary" href="/contact">request info</a>
+                                <a class="btn-primary">request info</a>
                                 <a class="btn-secondary" href="/contact">view more</a>
+                                {{-- <div class="request-info-popup">
+                                    <div class="request-info-popup-overlay">
+                                        <div class="popup-form">
+                                            <h3>hello form</h3>
+                                        </div>
+                                    </div>
+                                </div> --}}
                             </div>
                         </div>
+                        {{-- <div class="request-info-popup">
+                            <div class="request-info-popup-overlay">
+                                <div class="popup-form">
+                                    <h3>hello form</h3>
+                                </div>
+                            </div>
+                        </div> --}}
                     </div>
                     <div class="property-slider">
                         <div class="property-slide-content fade-down">
@@ -118,7 +131,8 @@
                                 <span class="location">
                                     {{-- <i class="fa-solid fa-location-dot"></i> dubai maritime
                                     city --}}
-                                    <a href="#"><img src="{{ url('images/location.png') }}" alt="" width="20px">dubai maritime city</a>
+                                    <a href="#"><img src="{{ url('images/location.png') }}" alt=""
+                                            width="20px">dubai maritime city</a>
                                 </span>
                                 <div class="amenities">
                                     <ul class="bed-bth">
@@ -137,7 +151,7 @@
                                 </div>
                             </div>
                             <div class="property-slide-footer">
-                                <a class="btn-primary" href="/contact">request info</a>
+                                <a class="btn-primary">request info</a>
                                 <a class="btn-secondary" href="/contact">view more</a>
                             </div>
                         </div>
@@ -153,7 +167,8 @@
                                 <span class="location">
                                     {{-- <i class="fa-solid fa-location-dot"></i> dubai maritime
                                     city --}}
-                                    <a href="#"><img src="{{ url('images/location.png') }}" alt="" width="20px">dubai maritime city</a>
+                                    <a href="#"><img src="{{ url('images/location.png') }}" alt=""
+                                            width="20px">dubai maritime city</a>
                                 </span>
                                 <div class="amenities">
                                     <ul class="bed-bth">
@@ -172,7 +187,7 @@
                                 </div>
                             </div>
                             <div class="property-slide-footer">
-                                <a class="btn-primary" href="/contact">request info</a>
+                                <a class="btn-primary">request info</a>
                                 <a class="btn-secondary" href="/contact">view more</a>
                             </div>
                         </div>
@@ -188,7 +203,8 @@
                                 <span class="location">
                                     {{-- <i class="fa-solid fa-location-dot"></i> dubai maritime
                                     city --}}
-                                    <a href="#"><img src="{{ url('images/location.png') }}" alt="" width="20px">dubai maritime city</a>
+                                    <a href="#"><img src="{{ url('images/location.png') }}" alt=""
+                                            width="20px">dubai maritime city</a>
                                 </span>
                                 <div class="amenities">
                                     <ul class="bed-bth">
@@ -207,7 +223,7 @@
                                 </div>
                             </div>
                             <div class="property-slide-footer">
-                                <a class="btn-primary" href="/contact">reauest info</a>
+                                <a class="btn-primary">request info</a>
                                 <a class="btn-secondary" href="/contact">view more</a>
                             </div>
                         </div>
@@ -266,69 +282,69 @@
         </section>
 
         <!-- <section class="video">
-            <div class="video-content">
-                <video width="" height="" controls muted>
-                    <source src="{{ url('videos/Real_Estate_Video.mp4') }}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </section> -->
+                <div class="video-content">
+                    <video width="" height="" controls muted>
+                        <source src="{{ url('videos/Real_Estate_Video.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section> -->
 
         <!-- <section class="services-feature padding-y">
-            <div class="services-feature-content container">
-                <div class="sec-heading">
-                    <h2>services</h2>
-                </div>
-                <div class="services-feature-info">
-                    <div class="info-headings">
-                        <h4>optimize</h4>
-                        <p>Get smart with real time data on operations and performance.</p>
-                        <ul>
-                            <li>engage</li>
-                            <li>enhance</li>
-                            <li>manage or outsource</li>
-                            <li>control</li>
-                        </ul>
+                <div class="services-feature-content container">
+                    <div class="sec-heading">
+                        <h2>services</h2>
                     </div>
-                    <div class="information">
-                        <div class="information-wrapper">
-                            <h4>dynamic OP</h4>
-                            <p>A revolutionary method to manage dynamic occupancy in the built environment using digitally
-                                intense delivery.</p>
+                    <div class="services-feature-info">
+                        <div class="info-headings">
+                            <h4>optimize</h4>
+                            <p>Get smart with real time data on operations and performance.</p>
+                            <ul>
+                                <li>engage</li>
+                                <li>enhance</li>
+                                <li>manage or outsource</li>
+                                <li>control</li>
+                            </ul>
                         </div>
-                        <div class="information-wrapper">
-                            <h4>Smart buildings</h4>
-                            <p>Introduce new technology and connect systems to enhance the productivity of buildings,
-                                workplaces, and people.</p>
-                        </div>
-                        <div class="information-wrapper">
-                            <h4>Technology optimization</h4>
-                            <p>Use technology to track and assess every facet of building management.</p>
-                        </div>
-                        <div class="information-wrapper">
-                            <h4>Portfolio planning</h4>
-                            <p>Collect and interpret real-time data on your business, markets, locations and workforce.</p>
-                        </div>
-                        <div class="information-wrapper">
-                            <h4>Workplace strategy</h4>
-                            <p>Create a vision for your workplace that fosters innovation and improves business performance.
-                            </p>
-                        </div>
-                        <div class="information-wrapper">
-                            <h4>Property & asset management</h4>
-                            <p>Optimise costs and continuously improve and innovate your property and asset management
-                                services through process improvement, deployment of disruptive technologies and changes to
-                                operating models.</p>
-                        </div>
-                        <div class="information-wrapper">
-                            <h4>Business intelligence</h4>
-                            <p>Bring all your data together with powerful overlays to visualize trends and deliver
-                                predictive insights against your real estate performance.</p>
+                        <div class="information">
+                            <div class="information-wrapper">
+                                <h4>dynamic OP</h4>
+                                <p>A revolutionary method to manage dynamic occupancy in the built environment using digitally
+                                    intense delivery.</p>
+                            </div>
+                            <div class="information-wrapper">
+                                <h4>Smart buildings</h4>
+                                <p>Introduce new technology and connect systems to enhance the productivity of buildings,
+                                    workplaces, and people.</p>
+                            </div>
+                            <div class="information-wrapper">
+                                <h4>Technology optimization</h4>
+                                <p>Use technology to track and assess every facet of building management.</p>
+                            </div>
+                            <div class="information-wrapper">
+                                <h4>Portfolio planning</h4>
+                                <p>Collect and interpret real-time data on your business, markets, locations and workforce.</p>
+                            </div>
+                            <div class="information-wrapper">
+                                <h4>Workplace strategy</h4>
+                                <p>Create a vision for your workplace that fosters innovation and improves business performance.
+                                </p>
+                            </div>
+                            <div class="information-wrapper">
+                                <h4>Property & asset management</h4>
+                                <p>Optimise costs and continuously improve and innovate your property and asset management
+                                    services through process improvement, deployment of disruptive technologies and changes to
+                                    operating models.</p>
+                            </div>
+                            <div class="information-wrapper">
+                                <h4>Business intelligence</h4>
+                                <p>Bring all your data together with powerful overlays to visualize trends and deliver
+                                    predictive insights against your real estate performance.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section> -->
+            </section> -->
 
         <section class="choose-us padding-y">
             <div class="choose-us-content container">
@@ -513,5 +529,4 @@
         </section>
 
     </main>
-
 @endsection

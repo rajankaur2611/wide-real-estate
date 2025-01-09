@@ -25,4 +25,13 @@ class HomeController extends Controller
     {
         return view('pages.frontend.index');
     }
+
+    public function about()
+    {
+        return view('pages.frontend.about');
+    }
+    public function list()
+    {
+        return view('pages.frontend.ourprojects');
+    }
 }

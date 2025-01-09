@@ -18,7 +18,7 @@
             <div class="in-touch-content container">
                 <div class="contact-form fade-left">
                     <h2>Get in touch</h2>
-                    <form method="post" id="contact" action="{{route('contact-submit')}}">
+                    <form method="post" id="contact" action="{{ route('contact-submit') }}">
                         @csrf
                         <div>
                             <p>What are you looking for?</p>
@@ -32,8 +32,8 @@
                                     <p><label for="apartment">apartment</label></p>
                                 </div>
                                 <div>
-                                   <p> <input type="radio" name="property" id="comerical" value="comercial"></p>
-                                   <p> <label for="comerical">comerical</label></p>
+                                    <p> <input type="radio" name="property" id="comerical" value="comercial"></p>
+                                    <p> <label for="comerical">comerical</label></p>
                                 </div>
                             </div>
                         </div>
@@ -80,8 +80,15 @@
             </div>
         </section>
 
+       
+
+
+
+
+
+
     </main>
 @endsection
 @section('js')
-@vite(['resources/js/contact.js'])
+    @vite(['resources/js/contact.js'])
 @endsection

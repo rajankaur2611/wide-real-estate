@@ -15,6 +15,8 @@
     <div class="go-top">
         <img src="{{ url('images/arrow-up.png') }}" alt="arrow up">
     </div>
+    @include('components/popup')
+    
 </body>
 
 </html>

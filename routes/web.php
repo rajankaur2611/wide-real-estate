@@ -27,22 +27,10 @@ use App\Http\Controllers\admin\ProjectController;
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact-submit', [ContactController::class, 'save'])->name('contact-submit');
-Route::get('/test-email', function () {
-    try {
-        \Mail::raw('This is a test email from Laravel.', function ($message) {
-            $message->to('rajandeepkaur2611@gmail.com')->subject('Test Email');
-        });
-        return 'Email sent successfully!';
-    } catch (\Exception $e) {
-        return 'Error: ' . $e->getMessage();
-    }
-}); 
-Route::get('/check-mail-config', function () {
-    return config('mail');
-}); 
-Route::get('/test-env', function () {
-    return env('MAIL_HOST');
-});     
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/our-project', [HomeController::class, 'list'])->name('our-project');
+
+    
 
 Route::get('/admin/', function () {return redirect('/admin/dashboard');})->middleware('auth');
 Route::group(['prefix'=>'admin'], function() {

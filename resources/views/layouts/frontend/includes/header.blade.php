@@ -5,8 +5,8 @@
                 <a href="/"><img src="{{url('images/wide_logo_header.svg')}}" alt="logo"></a>
             </div>
             <ul class="navMenus">
-                <li><a href="#">Our projects</a></li>
-                <li><a href="#">About us</a></li>
+                <li><a href="about">About us</a></li>
+                <li><a href="/our-project">Our projects</a></li>
                 <li><a href="/contact">Contact</a></li>
                 {{-- <li><a href="#">about</a></li>
                 <li><a href="#">communities</a></li>
