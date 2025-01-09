@@ -16,4 +16,11 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    css: {
+        preprocessorOptions: {
+            scss: {
+                additionalData: `@use "resources/scss/variables" as *;`,
+            },
+        },
+    },
 });

@@ -1,5 +1,4 @@
-@import 'variables.scss';
-
+@use 'variables.scss' as v;
 * {
   padding: 0;
   margin: 0;
@@ -24,7 +23,7 @@
 // }
 
 
-/*--- $primary-color: #4F3D30;
+/*--- v.$primary-color: #4F3D30;
 $secondary-color: #CD9E68;
 $border-color: #e8c172;
 $white: #ffffff;
@@ -44,7 +43,7 @@ $secondary-font: "Host Grotesk", sans-serif; ---*/
 /* -----Body----- */
 
 body {
-  font-family: $secondary-font;
+  font-family: v.$secondary-font;
   overflow-x: hidden;
 }
 
@@ -57,7 +56,7 @@ h4,
 h5,
 h6 {
   line-height: 1.2;
-  font-family: $primary-font;
+  font-family: v.$primary-font;
   margin-bottom: 14px;
 }
 
@@ -92,7 +91,7 @@ h5 {
 }
 
 p {
-  color: $text-color;
+  color: v.$text-color;
   font-size: clamp(16px, 4vw, 18px);
   line-height: clamp(24px, 4vw, 26px);
   margin-bottom: 16px;
@@ -105,12 +104,12 @@ img {
 a {
   text-decoration: none;
   display: inline-block;
-  transition: $transition;
-  color: $primary-color;
+  transition: v.$transition;
+  color: v.$primary-color;
 }
 
 a:hover {
-  color: $secondary-color;
+  color: v.$secondary-color;
 
 }
 
@@ -147,29 +146,29 @@ ul {
   display: inline-block;
   // font-size: 18px;
   font-weight: 400;
-  background: $gradient-color;
+  background: v.$gradient-color;
   background-size: 200% 100%;
-  color: $link-color;
+  color: v.$link-color;
   padding: 10px 20px;
-  border-radius: calc($radius - 2px);
-  transition: $transition;
+  border-radius: calc(v.$radius - 2px);
+  transition: v.$transition;
   text-transform: capitalize;
 }
 
 .btn-primary:hover {
-  color: $white;
+  color: v.$white;
   background-position: 100% 0;
 }
 
 .btn-secondary {
   background: transparent;
-  border: 1px solid $primary-color;
-  color: $primary-color;
+  border: 1px solid v.$primary-color;
+  color: v.$primary-color;
 }
 
 .btn-secondary:hover {
-  background: $gradient-color;
-  color: $white;
+  background: v.$gradient-color;
+  color: v.$white;
 }
 
 /* -----End Common Classes ----- */
@@ -180,7 +179,7 @@ ul {
 }
 
 .sec-heading h2 {
-  background: $gradient-color;
+  background: v.$gradient-color;
   margin-bottom: 12px;
   -webkit-text-fill-color: transparent;
   background-clip: text;

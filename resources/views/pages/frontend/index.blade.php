@@ -80,7 +80,7 @@
                             </div>
                             <div class="property-slide-body">
                                 <h3>Anwa by Omniyat</h3>
-                                <p>Developed By Al Habtoor City Real Estate Development</p>
+                                <!-- <p>Developed By Al Habtoor City Real Estate Development</p>
                                 <span class="location">
                                     <i class="fa-solid fa-location-dot"></i> dubai maritime
                                     city
@@ -100,7 +100,7 @@
                                 <div class="price">
                                     <strong> price : <span><i class="fa-solid fa-indian-rupee-sign"></i> 100
                                             Cr</span></strong>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="property-slide-footer">
                                 <a class="btn-primary" href="/contact">request info</a>
@@ -115,7 +115,7 @@
                             </div>
                             <div class="property-slide-body">
                                 <h3>Verde by sobha</h3>
-                                <p>Developed By Al Habtoor City Real Estate Development</p>
+                                <!-- <p>Developed By Al Habtoor City Real Estate Development</p>
                                 <span class="location">
                                     <i class="fa-solid fa-location-dot"></i> dubai maritime
                                     city
@@ -134,7 +134,7 @@
                                 </div>
                                 <div class="price">
                                     <strong>price : <span>98 lacs</span></strong>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="property-slide-footer">
                                 <a class="btn-primary" href="/contact">request info</a>
@@ -149,7 +149,7 @@
                             </div>
                             <div class="property-slide-body">
                                 <h3>Sobha heartland villas</h3>
-                                <p>Developed By Al Habtoor City Real Estate Development</p>
+                                <!-- <p>Developed By Al Habtoor City Real Estate Development</p>
                                 <span class="location">
                                     <i class="fa-solid fa-location-dot"></i> dubai maritime
                                     city
@@ -168,7 +168,7 @@
                                 </div>
                                 <div class="price">
                                     <strong>price : <span>37 Cr</span></strong>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="property-slide-footer">
                                 <a class="btn-primary" href="/contact">request info</a>
@@ -183,7 +183,7 @@
                             </div>
                             <div class="property-slide-body">
                                 <h3>Anwa by Omniyat</h3>
-                                <p>Developed By Al Habtoor City Real Estate Development</p>
+                                <!-- <p>Developed By Al Habtoor City Real Estate Development</p>
                                 <span class="location">
                                     <i class="fa-solid fa-location-dot"></i> dubai maritime
                                     city
@@ -202,7 +202,7 @@
                                 </div>
                                 <div class="price">
                                     <strong>price : <span>100 Cr</span></strong>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="property-slide-footer">
                                 <a class="btn-primary" href="/contact">reauest info</a>

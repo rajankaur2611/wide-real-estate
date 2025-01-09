@@ -22,7 +22,9 @@ use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\ResetPassword;
 use App\Http\Controllers\ChangePassword;  
 use App\Http\Controllers\admin\AdminController;
-use App\Http\Controllers\admin\ProjectController;          
+use App\Http\Controllers\admin\ProjectController;
+use App\Http\Controllers\admin\NewsController;
+
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
@@ -63,6 +65,12 @@ Route::group(['prefix'=>'admin'], function() {
 		Route::get('/project-edit/{id}', [ProjectController::class, 'edit'])->name('edit-project');
 		Route::get('/project-delete/{id}', [ProjectController::class, 'destroy'])->name('delete-project');
 		
+		Route::get('/news-listing', [NewsController::class, 'index'])->name('news-list');
+		Route::get('/news-add', [NewsController::class, 'add'])->name('add-news');
+		Route::post('/news-save', [NewsController::class, 'save'])->name('create-news');
+		Route::get('/news-edit/{id}', [NewsController::class, 'edit'])->name('edit-news');
+		Route::get('/news-delete/{id}', [NewsController::class, 'destroy'])->name('delete-news');
+
 		Route::get('/user-delete/{id}', [AdminController::class, 'destroy'])->name('delete-contact');
 		Route::get('/user-management', [AdminController::class, 'contact_list'])->name('user-list');
 		Route::get('/user-edit/{id}', [AdminController::class, 'edit'])->name('edit-contact');

@@ -47,6 +47,13 @@
             </ul>
             <div class="go-top">
                 <i class="fa-solid fa-arrow-up"></i>
+                <a href="https://web.whatsapp.com/send?phone=+918847669016&text=Hello" 
+                target="_blank" 
+                style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+                        alt="WhatsApp" 
+                        style="width: 50px; height: 50px;">
+                </a>
             </div>
         </div>
     </div>
