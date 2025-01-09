@@ -4,7 +4,7 @@
 @endsection
 @section('content')
     <main>
-        <section class="section-top">
+        <section class="section-top fade-down-smooth">
             <div class="section-top-content container">
                 <div class="top-headings">
                     <p>looking for help?</p>
@@ -16,9 +16,9 @@
 
         <section class="in-touch padding-y">
             <div class="in-touch-content container">
-                <div class="contact-form">
+                <div class="contact-form fade-left">
                     <h2>Get in touch</h2>
-                    <form method="post" id="contact" action="{{route('contact-submit')}}">
+                    <form method="post" id="contact" action="{{ route('contact-submit') }}">
                         @csrf
                         <div>
                             <p>What are you looking for?</p>
@@ -32,8 +32,8 @@
                                     <p><label for="apartment">apartment</label></p>
                                 </div>
                                 <div>
-                                   <p> <input type="radio" name="property" id="comerical" value="comercial"></p>
-                                   <p> <label for="comerical">comerical</label></p>
+                                    <p> <input type="radio" name="property" id="comerical" value="comercial"></p>
+                                    <p> <label for="comerical">comerical</label></p>
                                 </div>
                             </div>
                         </div>
@@ -60,13 +60,13 @@
                         </div>
                     </form>
                 </div>
-                <div class="contact-image">
+                <div class="contact-image fade-right">
                     <img src="{{ url('images/contact-form.png') }}" alt="contact image">
                 </div>
             </div>
         </section>
 
-        <section class="map">
+        <section class="map fade-up">
             <div class="map-content ">
                 <div class="sec-heading">
                     <h2>find us on map</h2>
@@ -80,8 +80,15 @@
             </div>
         </section>
 
+       
+
+
+
+
+
+
     </main>
 @endsection
 @section('js')
-@vite(['resources/js/contact.js'])
+    @vite(['resources/js/contact.js'])
 @endsection

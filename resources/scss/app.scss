@@ -3,13 +3,19 @@
 /*----- Header -----*/
 header {
   &.header {
-    // position: absolute;
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 9;
-    background-color: rgba(v.$color: #000000, v.$alpha: 0.5);
+    background-color: rgba(v.$color: #000000, v.$alpha: 0.3);
+
     backdrop-filter: blur(12px);
     border-radius: 0 0 60px 60px;
+    transition: v.$transition;
+
+    &.sticky {
+      top: -v.$header-height;
+    }
 
     @media(max-width:991px) {
       border-radius: 0;
@@ -23,50 +29,30 @@ header {
       font-family: v.$secondary-font;
 
       .logo {
-        width: 160px;
+        width: 150px;
       }
 
       .navMenus {
         display: flex;
+        align-items: center;
+        justify-content: center;
+        // height: 100vh;
         gap: 30px;
 
         @media(max-width:991px) {
-          background-color: rgba(v.$color: #000000, v.$alpha: .5);
+
+          background: $gradient-color;
+          border-top: 1px solid rgba(v.$color: #000000, v.$alpha: .2);
           backdrop-filter: blur(25px);
           flex-direction: column;
           position: fixed;
           top: v.$header-height;
           left: -100%;
-          width: 50%;
-          height: 100vh;
+          width: 100%;
+          height: calc(100vh - $header-height);
           gap: 0;
           transition: v.$transition;
-
-          // padding: 0 10px;
-          &::before {
-            content: "";
-            content: url('/public/images/wide_logo_header.svg');
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: v.$gradient-color;
-            // background-image: url('/public/images/featured-prop-1.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            left: 100%;
-
-            @media(max-width:575px) {
-              display: none;
-            }
-          }
-
-          @media(max-width:575px) {
-            width: 100%;
-          }
+          overflow-y: scroll;
         }
 
         &.active {
@@ -129,7 +115,6 @@ header {
   .footer-content {
     .footer-wrappers {
       display: grid;
-      place-items: center;
       grid-template-columns: 45% 55%;
       margin-bottom: 50px;
 
@@ -137,12 +122,13 @@ header {
         place-items: center;
         grid-template-columns: 100%;
       }
+
       @media screen and (max-width: 480px) {
         margin-bottom: 34px;
       }
 
       .footer-wrapper {
-        padding: 18px;
+        padding: 18px 0;
 
         @media screen and (max-width: 575px) {
           padding: 18px 0;
@@ -174,6 +160,7 @@ header {
           display: flex;
           gap: 20px;
           align-items: center;
+          justify-content: space-between;
 
           @media screen and (max-width: 1024px) {
             flex-direction: column;
@@ -198,16 +185,16 @@ header {
           .footer-contact-info {
             p {
 
-              i {
-                background: linear-gradient(89.29deg, #ECBF65 8.13%, #E4BF74 39.52%, #F3C66A 118.64%);
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+              img {
                 margin-inline-end: 8px;
+                width: 20px;
               }
 
               a {
                 color: v.$white;
+                &:hover {
+                  color: v.$secondary-color;
+                }
               }
             }
           }
@@ -219,7 +206,8 @@ header {
           column-gap: 40px;
           row-gap: 8px;
           margin-bottom: 30px;
-          justify-content: center;
+          justify-content: flex-end;
+
           @media screen and (max-width: 480px) {
             flex-direction: column;
             align-items: center;
@@ -229,12 +217,17 @@ header {
             a {
               color:v.$white;
               text-transform: uppercase;
+
+              &:hover {
+                color: $secondary-color;
+              }
             }
           }
         }
 
         .footer-social {
           display: flex;
+          justify-content: flex-end;
           gap: 12px;
 
           @media screen and (max-width: 768px) {
@@ -247,13 +240,20 @@ header {
               border: 1px solid v.$border-color;
               width: 40px;
               height: 40px;
-              line-height: 40px;
-              text-align: center;
               border-radius: 50%;
               transition: v.$transition;
+              display: flex;
+              align-items: center;
+              justify-content: center;
 
               &:hover {
                 background: v.$border-color;
+              }
+
+              img {
+                width: 20px;
+                height: 20px;
+                object-fit: contain;
               }
             }
           }
@@ -313,33 +313,33 @@ header {
           }
         }
       }
-
-      .go-top {
-        position: fixed;
-        bottom: 2%;
-        right: 1%;
-
-        i {
-          cursor: pointer;
-          color: v.$white;
-          background-color: v.$secondary-color;
-          // background: v.$gradient-color;
-          width: 40px;
-          height: 40px;
-          line-height: 40px;
-          text-align: center;
-          border-radius: 50%;
-          transition: v.$transition;
-          box-shadow: v.$bShadow;
-
-          &:hover {
-            background-color: v.$primary-color;
-          }
-        }
-      }
     }
   }
+}
 
+.go-top {
+  position: fixed;
+  bottom: 2%;
+  right: 1%;
+  display: none;
+
+  img {
+    cursor: pointer;
+    color: $white;
+    background-color: $secondary-color;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 50%;
+    transition: $transition;
+    box-shadow: $bShadow;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
 }
 
 /*----- End Footer -----*/

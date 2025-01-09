@@ -1,14 +1,6 @@
 <footer class="footer">
     <div class="footer-content container">
-        {{-- <div class="sec-heading">
-          <h2>contact us</h2>
-          <p>We are here for you, always, even when you just want to ask question.</p>
-          <p>Thank you for trusting us all the way to the key. to the apartment of your dreams.</p>
-          <a class="btn-primary" href="#">explore insights & research</a>
-      </div> --}}
-        {{-- <div class="footer-below">
-        <div class="footer-below-content"></div>
-      </div> --}}
+
         <div class="footer-wrappers">
             <div class="footer-wrapper">
                 <div class="footer-info">
@@ -16,9 +8,15 @@
                         <img src="{{ url('images/wide_logo_header.svg') }}" alt="image">
                     </div>
                     <div class="footer-contact-info">
-                        <p><a href="mailto:email@mygmail.com"><i class="fa-solid fa-envelope"></i>widerealestate@gmail.com</a>
+                        <p>
+                            <a href="mailto:email@mygmail.com">
+                                <img src="{{ url('images/email.png') }}" alt="email">widerealestate@gmail.com
+                            </a>
                         </p>
-                        <p><a href="tel:+919876543210"><i class="fa-solid fa-phone-volume"></i>+91 987 654 3210</a>
+                        <p>
+                            <a href="tel:+919876543210">
+                                <img src="{{ url('images/phone.png') }}" alt="phone">+91 987 654 3210
+                            </a>
                         </p>
                     </div>
                 </div>
@@ -30,12 +28,19 @@
                     <li><a href="/contact">contact</a></li>
                 </ul>
                 <ul class="footer-social">
-                    <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <li><a href="https://www.facebook.com" target="_blank">
+                            <img src="{{ url('images/facebook.png') }}" alt="footer social link"></a>
                     </li>
-                    <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <li><a href="https://www.instagram.com" target="_blank">
+                            <img src="{{ url('images/instagram.png') }}" alt="footer social link"></a>
                     </li>
-                    <li><a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <li><a href="https://www.twitter.com" target="_blank">
+                            <img src="{{ url('images/twitter.png') }}" alt="footer social link"></a>
                     </li>
+                    <li><a href="https://www.linkedin.com" target="_blank">
+                            <img src="{{ url('images/you-tube.png') }}" alt="footer social link"></a>
+                    </li>
+
                 </ul>
             </div>
         </div>
@@ -45,16 +50,6 @@
                 <li><a href="#">terms & conditions</a></li>
                 <li><a href="#">privacy policy</a></li>
             </ul>
-            <div class="go-top">
-                <i class="fa-solid fa-arrow-up"></i>
-                <a href="https://web.whatsapp.com/send?phone=+918847669016&text=Hello" 
-                target="_blank" 
-                style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-                        alt="WhatsApp" 
-                        style="width: 50px; height: 50px;">
-                </a>
-            </div>
         </div>
     </div>
 </footer>

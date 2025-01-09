@@ -1,10 +1,23 @@
 $(document).ready(function () {
-    
     /*-----Header ----- */
     $(".nav-btn i").click(function () {
         $(".navMenus").toggleClass("active");
         $(this).toggleClass("fa-bars");
         $(this).toggleClass("fa-xmark");
+    });
+
+    var lastScrollTop = 0;
+
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop();
+
+        if (scrollTop > lastScrollTop) {
+            $(".header").addClass("sticky");
+        } else {
+            $(".header").removeClass("sticky");
+        }
+
+        lastScrollTop = scrollTop;
     });
     /*-----End Header ----- */
 
@@ -28,37 +41,61 @@ $(document).ready(function () {
         slidesToShow: 5,
         autoplaySpeed: 0,
         speed: 3000,
-        easing: 'linear',
+        easing: "linear",
         responsive: [
+            {
+                breakpoint: 1601,
+                settings: {
+                    centerMode: true,
+                    centerPadding: "70px",
+                    slidesToShow: 5,
+                },
+            },
             {
                 breakpoint: 1025,
                 settings: {
                     centerMode: true,
-                    centerPadding: "40px",
+                    centerPadding: "80px",
                     slidesToShow: 4,
+                },
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    centerMode: true,
+                    centerPadding: "90px",
+                    slidesToShow: 3,
                 },
             },
             {
                 breakpoint: 769,
                 settings: {
                     centerMode: true,
-                    centerPadding: "40px",
-                    slidesToShow: 3,
+                    centerPadding: "80px",
+                    slidesToShow: 2,
                 },
             },
             {
                 breakpoint: 576,
                 settings: {
                     centerMode: true,
-                    centerPadding: "50px",
+                    centerPadding: "40px",
                     slidesToShow: 2,
                 },
             },
             {
-                breakpoint: 480,
+                breakpoint: 481,
                 settings: {
                     centerMode: true,
-                    centerPadding: "50px",
+                    centerPadding: "70px",
+                    slidesToShow: 1,
+                },
+            },
+            {
+                breakpoint: 380,
+                settings: {
+                    centerMode: true,
+                    centerPadding: "40px",
                     slidesToShow: 1,
                 },
             },
@@ -67,6 +104,27 @@ $(document).ready(function () {
     /*----- End Sponsers ----- */
 
     /*----- Featured Property---- */
+
+    $(document).ready(function () {
+        $(".property-slide-footer .btn-primary").click(function () {
+            $(".request-info-popup-overlay").addClass("show-popup");
+            $("body").addClass("show-popup");
+        });
+
+        $(".request-info-popup-overlay").click(function () {
+            $(this).removeClass("show-popup");
+            $("body").removeClass("show-popup");
+        });
+        $(".close-icon p").click(function () {
+            $(".request-info-popup-overlay").removeClass("show-popup");
+            $("body").removeClass("show-popup");
+        });
+
+        $(".popup-form").click(function (event) {
+            event.stopPropagation();
+        });
+    });
+
     $(".properties-slider").slick({
         slidesToShow: 3,
         // autoplay: true,
@@ -107,11 +165,13 @@ $(document).ready(function () {
     /*===== Contact Page   ===== */
     /*----- End Contact Form  ----- */
 
-    $(".contact-form form label").click(function () {
+    $(
+        ".contact-form form label:not(:contains('Villa')):not(:contains('apartment')):not(:contains('comerical'))"
+    ).click(function () {
         $(this).addClass("active");
         $(this).next().focus();
     });
-    
+
     $(".contact-form form input, .contact-form form textarea").focus(
         function () {
             $(this).siblings("label").addClass("active");
@@ -156,8 +216,13 @@ $(".go-top").click(function () {
 //     }
 // }
 // type();
+
+/*----- End Footer ----- */
+/*----- Animations ----- */
 document.addEventListener("DOMContentLoaded", () => {
-    const fadeUpSections = document.querySelectorAll(".fade-up");
+    const fadeUpSections = document.querySelectorAll(
+        ".fade-up, .fade-down, .fade-down-smooth, .fade-left, .fade-right, .fade-in , .scale"
+    );
 
     const handleScroll = () => {
         fadeUpSections.forEach((section) => {
@@ -172,6 +237,5 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // Run on page load
 });
-/*----- End Footer ----- */
-
+/*----- End Animations ----- */
 /*----- ----- */

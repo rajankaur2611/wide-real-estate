@@ -15,6 +15,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  overflow: hidden;
 
   &::before {
     content: "";
@@ -47,6 +50,7 @@
 
 /*----- End Section Top ----- */
 
+/*======Page Contact Us======*/
 /*----- In Touch ----- */
 .in-touch {
   .in-touch-content {
@@ -56,7 +60,6 @@
 
     @media screen and (max-width: 991px) {
       grid-template-columns: 1fr;
-
     }
 
     .contact-form {
@@ -65,18 +68,27 @@
       flex-direction: column;
       justify-content: flex-end;
 
+      @media screen and (max-width: 991px) {
+        padding: 0;
+      }
+
       h2 {
         margin-bottom: 28px;
       }
 
       form {
         div {
+          position: relative;
           margin-bottom: 20px;
 
           p {
             font-size: 20px;
             color: v.$black;
             margin-bottom: 12px;
+
+            @media screen and (max-width: 575px) {
+              font-size: 16px;
+            }
           }
 
           .property-type {
@@ -109,6 +121,9 @@
 
                 input[type="radio"] {
                   cursor: pointer;
+                  accent-color: $primary-color;
+                  width: 15px;
+                  height: 15px;
                 }
               }
             }
@@ -121,6 +136,10 @@
             position: absolute;
             top: 10px;
             text-transform: capitalize;
+
+            @media screen and (max-width: 575px) {
+              font-size: 16px;
+            }
 
             &.active {
               top: -10px;
@@ -135,6 +154,7 @@
 
           input,
           textarea {
+            padding: 10px;
             border: none;
             border-bottom: 1px solid rgba(v.$color: #000000, v.$alpha: .2);
           }
@@ -144,6 +164,7 @@
             height: 130px;
             margin-bottom: 30px;
           }
+
           button {
             cursor: pointer;
             font-size: 18px;
@@ -170,6 +191,12 @@
         }
       }
     }
+
+    .contact-image img {
+      border-radius: 50px;
+      border: 1px solid rgba($color: #000000, $alpha: .5);
+      padding: 2px;
+    }
   }
 }
 
@@ -192,20 +219,298 @@
   }
 }
 
-.in-touch {
-  .in-touch-content {
-    .contact-form {
-      form {
-        div {
-          position: relative;
+// .in-touch {
+//   .in-touch-content {
+//     .contact-form {
+//       form {
+//         div {
+//           position: relative;
 
-          label {
+//           label {
+//             position: absolute;
+//             transition: $transition;
+//           }
+
+//           input {
+//             padding: 10px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+/*----- End Map ----- */
+/*-----  ----- */
+
+/*======End Page Contact Us======*/
+
+/*====== Page Our Projects======*/
+.our-projects {
+  .our-projects-content {
+    .sec-heading {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .projects-list {
+      margin-top: 70px;
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+
+      .property-slide-content {
+        max-width: 498px;
+        padding: 16px;
+        border-radius: calc($radius + 4px);
+        box-shadow: $b-shadow1;
+        border: 1px solid transparent;
+        transition: $transition;
+
+        @media screen and (max-width: 480px) {
+          margin: 10px 0;
+        }
+
+        &:hover {
+          border-color: $link-hover-color;
+        }
+
+        &:hover {
+          .property-slide-header {
+            img {
+              transform: scale(1.2);
+            }
+          }
+        }
+
+        .property-slide-header {
+          position: relative;
+          border-radius: 6px;
+          margin-bottom: 16px;
+          height: 220px;
+          overflow: hidden;
+
+          img {
             position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             transition: v.$transition;
           }
+        }
 
-          input {
-            padding: 10px;
+        .property-slide-body {
+
+          .location a,
+          .amenities,
+          .status {
+            color: $text-color;
+            font-size: 18px;
+            text-transform: capitalize;
+          }
+
+          .location {
+            display: inline-block;
+            text-transform: capitalize;
+            margin-bottom: 16px;
+
+            a {
+              display: flex;
+              align-items: flex-end;
+              gap: 6px;
+
+              img {
+                width: 16px;
+              }
+            }
+          }
+
+          .amenities {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 16px;
+
+            ul {
+              display: flex;
+            }
+
+            li {
+              border-right: 1px solid $text-color;
+              padding: 0 6px;
+
+              &:last-child {
+                border-right: 0;
+              }
+            }
+
+          }
+
+          .status {
+            margin-bottom: 18px;
+          }
+
+          .price {
+            color: $primary-color;
+            font-size: 24px;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+          }
+        }
+
+        .property-slide-footer {
+          display: flex;
+          gap: 18px;
+
+          a {
+            width: 216px;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .btn {
+      margin: 70px 0 0;
+      text-align: center;
+    }
+  }
+}
+
+/*====== End Page Our Projects======*/
+
+/*====== Page About US ======*/
+/*----- About Us-----*/
+.about-us {
+  .about-us-content {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+
+    .about-us-image {
+      figure {
+        overflow: hidden;
+
+        img {
+          border: 1px solid $primary-color;
+          border-radius: 30px;
+          padding: 4px;
+          border-radius: 40px;
+        }
+      }
+    }
+  }
+}
+
+/*----- End About Us-----*/
+
+/*----- Our Work -----*/
+.our-work {
+  .our-work-content {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+
+    .our-work-image {
+      order: 2;
+
+      figure {
+        overflow: hidden;
+
+        img {
+          border: 1px solid $primary-color;
+          border-radius: 30px;
+          padding: 4px;
+          border-radius: 40px;
+        }
+      }
+    }
+
+    .our-work-info {
+      .sec-heading {
+        text-align: right;
+      }
+    }
+  }
+}
+
+/*----- End Our Work -----*/
+
+/*----- Our Approach -----*/
+.our-approach {
+  .our-approach-content {
+    .sec-heading {
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 60px;
+    }
+
+    .our-approach-wrappers {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 2px solid;
+      place-items: center;
+
+      .our-approach-wrapper {
+        border: 4px solid $primary-color;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 20px;
+
+        span {
+          font-size: 20px;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
+
+/*----- End Our Approach -----*/
+
+/*----- Founder -----*/
+.founders {
+  .founders-content {
+    .team-wrappers {
+      display: grid;
+      gap: 50px;
+      grid-template-columns: repeat(3, 1fr);
+      place-items: center;
+
+      .team-wrapper {
+        .team-image {
+          margin-bottom: 20px;
+        }
+      }
+
+      .team-wrapper {
+        .sec-heading {
+          text-align: center;
+        }
+
+        .team-info {
+          h5 {
+            margin-bottom: 8px;
+            color: $primary-color;
+          }
+
+          h6 {
+            font-size: 18px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+          }
+        }
+
+        &:last-child {
+          .team-info {
+            text-align: right;
           }
         }
       }
@@ -213,7 +518,5 @@
   }
 }
 
-/*----- End Map ----- */
-/*-----  ----- */
-
-/*======End Page Contact Us======*/
+/*----- End Founder -----*/
+/*====== End Page About US ======*/
