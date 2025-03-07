@@ -30,6 +30,17 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Title</label>
+                                        <select class="form-control" name="category" value="{{ old('category', $project->category) }}">
+                                            <option value="1">Residential</option>
+                                            <option value="2">Commercial</option>
+                                            <option value="3">Farmhouse/Villas</option>
+                                            <option value="4">Investments</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="example-text-input" class="form-control-label">Title</label>
                                         <input class="form-control" type="text" name="title" value="{{ old('title', $project->title) }}">
                                         @if($errors->has('title'))
                                             <div class="text-danger ps-1 pt-1">{{ $errors->first('title') }}</div>

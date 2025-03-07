@@ -13,8 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Http\Controllers\admin\ProjectController;
+use App\Http\Controllers\admin\NewsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
@@ -22,17 +25,16 @@ use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\ResetPassword;
 use App\Http\Controllers\ChangePassword;  
 use App\Http\Controllers\admin\AdminController;
-use App\Http\Controllers\admin\ProjectController;
-use App\Http\Controllers\admin\NewsController;
+
 
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact-submit', [ContactController::class, 'save'])->name('contact-submit');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
-Route::get('/our-project', [HomeController::class, 'list'])->name('our-project');
-
-    
+Route::get('/our-project', [ProjectsController::class, 'index'])->name('our-project');
+Route::get('/our-project/{category}', [ProjectsController::class, 'index'])->name('our-project');
+Route::get('/project/commerical/{id}', [ProjectsController::class, 'single'])->name('single-project');
 
 Route::get('/admin/', function () {return redirect('/admin/dashboard');})->middleware('auth');
 Route::group(['prefix'=>'admin'], function() {

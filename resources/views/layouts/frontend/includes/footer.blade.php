@@ -23,6 +23,7 @@
             </div>
             <div class="footer-wrapper">
                 <ul class="navMenus">
+                    <li><a href="#">Home</a></li>
                     <li><a href="#">our projects</a></li>
                     <li><a href="#">about</a></li>
                     <li><a href="/contact">contact</a></li>
@@ -45,7 +46,7 @@
             </div>
         </div>
         <div class="footer-below">
-            <p>&copy; <span id="year"></span> <a href="#">widerealestate.com</a>. All right reserved</p>
+            <p>&copy; <span id="year"><?php echo date("Y"); ?></span> <a href="#">widerealestate.com</a>. All right reserved</p>
             <ul class="footer-below-links">
                 <li><a href="#">terms & conditions</a></li>
                 <li><a href="#">privacy policy</a></li>

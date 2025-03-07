@@ -7,6 +7,9 @@ export default defineConfig({
             input: [
                 'resources/scss/admin/custom-admin.scss',
                 'resources/scss/home.scss',
+                'resources/scss/about.scss',
+                'resources/scss/our_projects.scss',
+                'resources/scss/single_estate.scss',
                 'resources/scss/app.scss',
                 'resources/scss/animations.scss',
                 'resources/scss/contact.scss',

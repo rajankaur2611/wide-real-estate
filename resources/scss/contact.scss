@@ -22,7 +22,7 @@
   &::before {
     content: "";
     position: absolute;
-    background-color: rgba(v.$color: #000000, v.$alpha: .5);
+    background-color: rgba($color: #000000, $alpha: .5);
     width: 100%;
     height: 100%;
     top: 0;
@@ -30,19 +30,38 @@
   }
 
   .section-top-content {
+    position: relative;
+    color: $white;
+
     .top-headings {
-      position: relative;
       text-align: center;
 
       p {
-        color: v.$white;
+        color: $white;
         margin-bottom: 0;
         text-transform: uppercase;
         text-decoration: underline;
       }
 
       h1 {
-        color: v.$white;
+        color: $white;
+      }
+    }
+
+    .locate {
+      text-align: center;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        color: $white;
+        text-transform: capitalize;
+
+        &.active {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -60,6 +79,28 @@
 
     @media screen and (max-width: 991px) {
       grid-template-columns: 1fr;
+    }
+
+    .get-in-touch {
+      h3 {
+        margin-bottom: 6px;
+        text-decoration: underline;
+        color: $text-color;
+      }
+
+      p {
+        max-width: 450px;
+      }
+
+      address {
+        font-style: normal;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      a {
+        margin-bottom: 20px;
+      }
     }
 
     .contact-form {
@@ -83,12 +124,8 @@
 
           p {
             font-size: 20px;
-            color: v.$black;
+            color: $black;
             margin-bottom: 12px;
-
-            @media screen and (max-width: 575px) {
-              font-size: 16px;
-            }
           }
 
           .property-type {
@@ -111,7 +148,7 @@
               grid-area: 3px;
 
               p {
-                color: v.$black;
+                color: $black;
                 margin-bottom: 0;
 
                 label {
@@ -132,7 +169,7 @@
           label {
             margin-left: 10px;
             font-size: 20px;
-            transition: v.$transition;
+            transition: $transition;
             position: absolute;
             top: 10px;
             text-transform: capitalize;
@@ -144,7 +181,7 @@
             &.active {
               top: -10px;
               font-size: 15px;
-              color: rgba(v.$color: #000000, v.$alpha: .5);
+              color: rgba($color: #000000, $alpha: .5);
             }
 
             span {
@@ -156,7 +193,7 @@
           textarea {
             padding: 10px;
             border: none;
-            border-bottom: 1px solid rgba(v.$color: #000000, v.$alpha: .2);
+            border-bottom: 1px solid rgba($color: #000000, $alpha: .2);
           }
 
           textarea {
@@ -190,12 +227,6 @@
           }
         }
       }
-    }
-
-    .contact-image img {
-      border-radius: 50px;
-      border: 1px solid rgba($color: #000000, $alpha: .5);
-      padding: 2px;
     }
   }
 }
@@ -244,279 +275,3 @@
 /*-----  ----- */
 
 /*======End Page Contact Us======*/
-
-/*====== Page Our Projects======*/
-.our-projects {
-  .our-projects-content {
-    .sec-heading {
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .projects-list {
-      margin-top: 70px;
-      display: grid;
-      gap: 30px;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-
-      .property-slide-content {
-        max-width: 498px;
-        padding: 16px;
-        border-radius: calc($radius + 4px);
-        box-shadow: $b-shadow1;
-        border: 1px solid transparent;
-        transition: $transition;
-
-        @media screen and (max-width: 480px) {
-          margin: 10px 0;
-        }
-
-        &:hover {
-          border-color: $link-hover-color;
-        }
-
-        &:hover {
-          .property-slide-header {
-            img {
-              transform: scale(1.2);
-            }
-          }
-        }
-
-        .property-slide-header {
-          position: relative;
-          border-radius: 6px;
-          margin-bottom: 16px;
-          height: 220px;
-          overflow: hidden;
-
-          img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: v.$transition;
-          }
-        }
-
-        .property-slide-body {
-
-          .location a,
-          .amenities,
-          .status {
-            color: $text-color;
-            font-size: 18px;
-            text-transform: capitalize;
-          }
-
-          .location {
-            display: inline-block;
-            text-transform: capitalize;
-            margin-bottom: 16px;
-
-            a {
-              display: flex;
-              align-items: flex-end;
-              gap: 6px;
-
-              img {
-                width: 16px;
-              }
-            }
-          }
-
-          .amenities {
-            display: flex;
-            gap: 6px;
-            margin-bottom: 16px;
-
-            ul {
-              display: flex;
-            }
-
-            li {
-              border-right: 1px solid $text-color;
-              padding: 0 6px;
-
-              &:last-child {
-                border-right: 0;
-              }
-            }
-
-          }
-
-          .status {
-            margin-bottom: 18px;
-          }
-
-          .price {
-            color: $primary-color;
-            font-size: 24px;
-            text-transform: capitalize;
-            margin-bottom: 20px;
-          }
-        }
-
-        .property-slide-footer {
-          display: flex;
-          gap: 18px;
-
-          a {
-            width: 216px;
-            text-align: center;
-          }
-        }
-      }
-    }
-
-    .btn {
-      margin: 70px 0 0;
-      text-align: center;
-    }
-  }
-}
-
-/*====== End Page Our Projects======*/
-
-/*====== Page About US ======*/
-/*----- About Us-----*/
-.about-us {
-  .about-us-content {
-    display: grid;
-    gap: 50px;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-
-    .about-us-image {
-      figure {
-        overflow: hidden;
-
-        img {
-          border: 1px solid $primary-color;
-          border-radius: 30px;
-          padding: 4px;
-          border-radius: 40px;
-        }
-      }
-    }
-  }
-}
-
-/*----- End About Us-----*/
-
-/*----- Our Work -----*/
-.our-work {
-  .our-work-content {
-    display: grid;
-    gap: 50px;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-
-    .our-work-image {
-      order: 2;
-
-      figure {
-        overflow: hidden;
-
-        img {
-          border: 1px solid $primary-color;
-          border-radius: 30px;
-          padding: 4px;
-          border-radius: 40px;
-        }
-      }
-    }
-
-    .our-work-info {
-      .sec-heading {
-        text-align: right;
-      }
-    }
-  }
-}
-
-/*----- End Our Work -----*/
-
-/*----- Our Approach -----*/
-.our-approach {
-  .our-approach-content {
-    .sec-heading {
-      text-align: center;
-      margin: 0 auto;
-      margin-bottom: 60px;
-    }
-
-    .our-approach-wrappers {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border: 2px solid;
-      place-items: center;
-
-      .our-approach-wrapper {
-        border: 4px solid $primary-color;
-        width: 200px;
-        height: 200px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        padding: 20px;
-
-        span {
-          font-size: 20px;
-          text-transform: capitalize;
-        }
-      }
-    }
-  }
-}
-
-/*----- End Our Approach -----*/
-
-/*----- Founder -----*/
-.founders {
-  .founders-content {
-    .team-wrappers {
-      display: grid;
-      gap: 50px;
-      grid-template-columns: repeat(3, 1fr);
-      place-items: center;
-
-      .team-wrapper {
-        .team-image {
-          margin-bottom: 20px;
-        }
-      }
-
-      .team-wrapper {
-        .sec-heading {
-          text-align: center;
-        }
-
-        .team-info {
-          h5 {
-            margin-bottom: 8px;
-            color: $primary-color;
-          }
-
-          h6 {
-            font-size: 18px;
-            font-weight: 400;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-          }
-        }
-
-        &:last-child {
-          .team-info {
-            text-align: right;
-          }
-        }
-      }
-    }
-  }
-}
-
-/*----- End Founder -----*/
-/*====== End Page About US ======*/

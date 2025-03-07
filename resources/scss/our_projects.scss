@@ -1,0 +1,186 @@
+@use 'variables.scss' as v;
+.section-top {
+  position: relative;
+  background-image: url('/public/images/contact-top-section.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: rgba($color: #000000, $alpha: .5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .section-top-content {
+    position: relative;
+    color: $white;
+
+    .top-headings {
+      text-align: center;
+
+      p {
+        color: $white;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        text-decoration: underline;
+      }
+
+      h1 {
+        color: $white;
+      }
+    }
+
+    .locate {
+      text-align: center;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        color: $white;
+        text-transform: capitalize;
+
+        &.active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+/*----- End Section Top ----- */
+/*====== Page Our Projects======*/
+.our-projects {
+  background-color: #f7f8f9;
+  .our-projects-content {
+    .sec-heading {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .projects-list-widgets {
+      display: grid;
+      margin-top: 52px;
+      grid-template-columns: repeat(3, 1fr);
+
+      @media screen and (max-width: 991px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (max-width: 575px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .project-list-widget-content {
+        border-radius: 8px;
+        overflow: hidden;
+        max-width: 498px;
+        margin: 10px;
+        // box-shadow: $b-shadow2;
+        transition: $transition;
+        background-color: #fff;
+
+        @media screen and (max-width: 480px) {
+          margin: 10px 0;
+        }
+
+        &:hover {
+          border-color: $link-hover-color;
+        }
+
+        &:hover {
+          .project-list-header {
+            img {
+              transform: scale(1.2);
+            }
+          }
+        }
+
+        .project-list-header {
+          position: relative;
+          margin-bottom: 16px;
+          height: 220px;
+          overflow: hidden;
+
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: $transition;
+          }
+        }
+
+        .project-list-body {
+          padding: 18px;
+
+          .property-title {
+            text-align: center;
+            text-transform: capitalize;
+            border-bottom: 1px solid $border-color;
+          }
+
+          .area {
+            padding: 12px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            justify-content: space-between;
+            font-size: 14px;
+            border-bottom: 1px solid $border-color;
+          }
+
+
+          .project-list-footer {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 8px;
+            row-gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0 0;
+
+            .price {
+              color: $primary-color;
+              font-size: 18px;
+              text-transform: capitalize;
+            }
+
+            .button {
+              .btn-secondary {
+                padding: 8px 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .btn {
+      margin: 40px 0 0;
+      text-align: center;
+
+      .btn-primary {
+        width: 180px;
+        padding: 14px;
+      }
+    }
+  }
+}
+
+/*====== End Page Our Projects======*/

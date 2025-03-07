@@ -1,3 +1,9 @@
+$(window).on('load', function(){
+    $(".property-slide-footer .btn-primary").click(function(){
+        $(".request-info-popup-overlay").addClass("show-popup");
+        $("body").addClass("show-popup");
+    })
+})
 $(document).ready(function () {
     /*-----Header ----- */
     $(".nav-btn i").click(function () {
@@ -5,7 +11,20 @@ $(document).ready(function () {
         $(this).toggleClass("fa-bars");
         $(this).toggleClass("fa-xmark");
     });
+    
+    $(".request-info-popup-overlay").click(function () {
+        $(this).removeClass("show-popup");
+        $("body").removeClass("show-popup");
+    });
+    $(".close-icon p").click(function () {
+        $(".request-info-popup-overlay").removeClass("show-popup");
+        $("body").removeClass("show-popup");
+    });
 
+    $(".popup-form").click(function (event) {
+        event.stopPropagation();
+    });
+    
     var lastScrollTop = 0;
 
     $(window).scroll(function () {
@@ -25,7 +44,7 @@ $(document).ready(function () {
     $(".hero-slides").slick({
         dots: true,
         arrows: false,
-        speed: 300,
+        speed: 1500,
         slidesToShow: 1,
         // autoplay: true,
         autoplaySpeed: 2000,
@@ -105,26 +124,7 @@ $(document).ready(function () {
 
     /*----- Featured Property---- */
 
-    $(document).ready(function () {
-        $(".property-slide-footer .btn-primary").click(function () {
-            $(".request-info-popup-overlay").addClass("show-popup");
-            $("body").addClass("show-popup");
-        });
-
-        $(".request-info-popup-overlay").click(function () {
-            $(this).removeClass("show-popup");
-            $("body").removeClass("show-popup");
-        });
-        $(".close-icon p").click(function () {
-            $(".request-info-popup-overlay").removeClass("show-popup");
-            $("body").removeClass("show-popup");
-        });
-
-        $(".popup-form").click(function (event) {
-            event.stopPropagation();
-        });
-    });
-
+    
     $(".properties-slider").slick({
         slidesToShow: 3,
         // autoplay: true,
@@ -151,22 +151,52 @@ $(document).ready(function () {
         ],
     });
     /*----- End Featured Property---- */
-
+    /*----- News Slider ----- */
+    $(".news-slides").slick({
+        arrows: false,
+        dots: false,
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplaySpeed: 0,
+        speed: 3000,
+        easing: "easeInOut",
+        infinite: true,
+        vertical: true,
+        verticalSwiping: true
+    });
+    /*----- End News Slider ----- */
     /*----- Testimonials ----- */
-    $(".testimonials-slider").slick({
+    $(".testimonials").slick({
         arrows: false,
         dots: true,
         autoplay: true,
         autoplaySpeed: 4000,
         slidesToShow: 1,
+        slidesToScroll: 1,
     });
     /*-----End  Testimonials ----- */
+
+    /*----- Blog Slider ----- */
+    $(".blog-slides").slick({
+        arrows: false,
+        dots: false,
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplaySpeed: 0,
+        speed: 3000,
+        easing: "linear",
+        infinite: true,
+        vertical: true,
+        verticalSwiping: true,
+    });
+    /*----- End Blog Slider ----- */
 
     /*===== Contact Page   ===== */
     /*----- End Contact Form  ----- */
 
-    $(
-        ".contact-form form label:not(:contains('Villa')):not(:contains('apartment')):not(:contains('comerical'))"
+    $(".contact-form form label:not(:contains('Villa')):not(:contains('apartment')):not(:contains('comerical'))"
     ).click(function () {
         $(this).addClass("active");
         $(this).next().focus();
@@ -187,11 +217,31 @@ $(document).ready(function () {
         }
     );
     /*===== End Contact Page   ===== */
+    /*----- Featured Property---- */
+    $(".property-type ul li").click(function () {
+        $(".property-type ul li").removeClass("active");
+        $(this).addClass("active");
+    });
+
+    $(".property-type li").click(function () {
+        var type = $(this).data("type");
+
+        // Remove active class from all list items and content
+        $(".property-type li").removeClass("active");
+        $(".content").removeClass("active");
+
+        // Add active class to clicked list item and corresponding content
+        $(this).addClass("active");
+        $("#" + type).addClass("active");
+    });
+
+    // Set the first list item and content as active by default
+    $(".property-type li").first().addClass("active");
+    $(".content").first().addClass("active");
+    /*----- End Featured Property---- */
 });
 
 /*----- Footer ----- */
-const currentYear = new Date().getFullYear();
-$("#year").text(currentYear);
 
 $(window).scroll(function () {
     if ($(this).scrollTop() > 350) {
@@ -239,3 +289,32 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 /*----- End Animations ----- */
 /*----- ----- */
+/*===== Single Property Detail Page=====*/
+
+/*----- Single Property Slider ----- */
+$(document).ready(function () {
+    $(".single-property-detail-slider").slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        autoplaySpeed: 2000,
+    });
+    /*----- End Single Property Slider ----- */
+
+    /*-----Enquire Popup ----- */
+    $(".contact-form").click(function (e) {
+        e.stopPropagation();
+    });
+    $(".enquire-now").click(function () {
+        $(".enquire-popup-overlay").addClass("active");
+        $("body").addClass("no-scroll");
+    });
+    $(".enquire-popup-overlay, .popup-closer").click(function () {
+        $(".enquire-popup-overlay").removeClass("active");
+        $("body").removeClass("no-scroll");
+    });
+    /*-----End Enquire Popup ----- */
+});
+/*===== End Single Property Detail Page=====*/

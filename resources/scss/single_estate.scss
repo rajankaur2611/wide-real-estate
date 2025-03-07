@@ -1,0 +1,301 @@
+@use 'variables.scss' as v;
+/*====== Page Single Property Detail   ======*/
+
+/*----- Enquire Popup -----*/
+.enquire-popup-overlay {
+    background-color: rgba($color: #000000, $alpha: .6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+    transition: $transition;
+    opacity: 0;
+    visibility: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+  
+    &.active {
+      opacity: 1;
+      visibility: visible;
+  
+      body {
+        overflow-y: hidden;
+      }
+    }
+  
+    .enquire-popup {
+      border: 2px solid;
+      width: 100%;
+      max-width: 500px;
+      background-color: $primary-color;
+      background-color: $white;
+      margin:40px 10px;
+  
+      .popup-closer {
+        float: right;
+        padding: 8px;
+        cursor: pointer;
+      }
+  
+      .pop-up-content {
+  
+        .contact-form {
+          padding: 20px;
+        }
+  
+        form {
+          input, textarea {
+            padding: 8px;
+            font-weight: normal;
+            line-height: normal;
+            font-size: 16px;
+            font-family: inherit;
+            border: 1px solid rgba($color: #000000, $alpha: .4);
+            border-radius: 5px;
+            &:focus{
+              border: 1px solid $primary-color;
+            }
+          }
+  
+          .heading {
+            p {
+              color: $black;
+              font-weight: 600;
+            }
+  
+            .property-type {
+              display: flex;
+              gap: 20px;
+              align-items: center;
+  
+              @media screen and (max-width: 575px) {
+                gap: 8px;
+              }
+  
+              .item-name {
+                text-transform: capitalize;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+  
+              }
+            }
+          }
+  
+          .input-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 10px 0;
+  
+            @media screen and (max-width: 575px) {
+              margin: 4px 0;
+            }
+  
+            label {
+              text-transform: capitalize;
+            }
+          }
+  
+          .user-info {
+            display: flex;
+  
+            @media screen and (max-width: 575px) {
+              flex-wrap: wrap;
+              gap: 0;
+            }
+  
+            gap: 10px;
+  
+            .input-item {
+              width: 100%;
+            }
+          }
+          .input-item-submit{
+            margin-top: 20px;
+            .btn-primary{
+              border: transparent;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+  
+    }
+  }
+  
+  /*----- End Enquire Popup -----*/
+  
+  /*----- Single property slider -----*/
+  .single-property-detail {
+    .single-property-detail-data {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      height: 550px;
+  
+      @media screen and (max-width: 991px) {
+        height: auto;
+      }
+  
+      .single-property-detail-slider {
+        width: 70%;
+  
+        @media screen and (max-width: 991px) {
+          width: 100%;
+        }
+  
+        .slick-prev,
+        .slick-next {
+          background: $gradient-color;
+          top: calc(50% - 40px);
+          width: 40px;
+          height: 40px;
+          z-index: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 4px;
+          opacity: .8;
+          @media screen and (max-width: 991px) {
+            top: calc(50%);
+          }
+        }
+  
+        .slick-prev {
+          left: 10px;
+        }
+  
+        .slick-next {
+          right: 10px;
+        }
+      }
+  
+      .single-property-detail {
+        width: 30%;
+  
+        @media screen and (max-width: 991px) {
+          width: 100%;
+        }
+  
+        .single-property-detail-content {
+          padding: 50px 30px;
+  
+          .heading {
+            .owner {
+              color: $primary-color;
+              font-weight: 600;
+              font-size: 20px;
+            }
+          }
+  
+          .location {
+            text-transform: capitalize;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+  
+            i {
+              color: $primary-color;
+            }
+          }
+  
+          .amenities {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+  
+            li {
+              display: flex;
+              gap: 8px;
+              align-items: center;
+              text-transform: capitalize;
+              border-bottom: 1px solid rgba($color: #000000, $alpha: .2);
+              padding: 10px 0;
+  
+              i {
+                color: $primary-color;
+              }
+  
+              &:last-of-type {
+                text-align: center;
+                justify-content: center;
+                color: $secondary-color;
+                font-weight: 600;
+              }
+            }
+          }
+  
+          .btn {
+            margin-top: 42px;
+            text-align: center;
+            .enquire-now{
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /*----- End Single property slider -----*/
+  
+  /*----- Overview -----*/
+  .overview {
+    background-color: $grayBg;
+  
+    .overview-content {
+      h2 {
+        text-align: center;
+        padding-bottom: 12px;
+        margin-bottom: 42px;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: .2);
+      }
+  
+      .overview-features {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        column-gap: 30px;
+        row-gap: 20px;
+  
+        @media screen and (max-width: 991px) {
+          grid-template-columns: 100%;
+        }
+  
+        .features-text {
+          p {
+            text-align: justify;
+          }
+        }
+  
+        .feature-items {
+          ul {
+            margin-top: 20px;
+            list-style: disc;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding-left: 20px;
+  
+            li {
+              &::marker {
+                color: $primary-color;
+              }
+            }
+          }
+        }
+      }
+  
+    }
+  }
+  
+  /*----- End Overview -----*/
+  
+  
+  
+  /*====== End Page Single Property Detail   ======*/

@@ -1,0 +1,344 @@
+@use 'variables.scss' as v;
+.section-top {
+  position: relative;
+  background-image: url('/public/images/contact-top-section.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: rgba($color: #000000, $alpha: .5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .section-top-content {
+    position: relative;
+    color: $white;
+
+    .top-headings {
+      text-align: center;
+
+      p {
+        color: $white;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        text-decoration: underline;
+      }
+
+      h1 {
+        color: $white;
+      }
+    }
+
+    .locate {
+      text-align: center;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        color: $white;
+        text-transform: capitalize;
+
+        &.active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+/*----- End Section Top ----- */
+/*====== Page About US ======*/
+/*----- About Us-----*/
+.about-us {
+  .about-us-content {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+
+    @media screen and (max-width: 769px) {
+      grid-template-columns: 1fr;
+    }
+
+    .about-us-image {
+      @media screen and (max-width: 769px) {
+        order: 2;
+      }
+      figure {
+        overflow: hidden;
+
+        img {
+          border: 1px solid $primary-color;
+          border-radius: 30px;
+          padding: 4px;
+          border-radius: 40px;
+        }
+      }
+    }
+  }
+}
+
+/*----- End About Us-----*/
+
+/*----- Our Work -----*/
+.our-work {
+  .our-work-content {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+
+    @media screen and (max-width: 769px) {
+      grid-template-columns: 100%;
+    }
+
+    .our-work-image {
+      order: 2;
+
+      figure {
+        overflow: hidden;
+
+        img {
+          border: 1px solid $primary-color;
+          border-radius: 30px;
+          padding: 4px;
+          border-radius: 40px;
+        }
+      }
+    }
+
+    .our-work-info {
+      .sec-heading {
+        text-align: right;
+        @media screen and (max-width: 769px) {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+/*----- End Our Work -----*/
+
+/*----- About Company -----*/
+.about-company {
+  .about-company-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+
+    @media screen and (max-width: 769px) {
+      grid-template-columns: repeat(1, 1fr)
+    }
+
+    .about-company-image {
+      img {
+        border: 1px solid;
+        padding: 3px;
+      }
+    }
+
+    .about-company-text {
+      .features {
+        list-style: disc;
+        padding-left: 30px;
+
+        li {
+          padding: 4px 0;
+          color: $text-color;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+/*----- End About Company -----*/
+
+/*----- Call US -----*/
+.call-us {
+  position: relative;
+  background-image: url('/public/images/call-us.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: .7);
+
+  }
+
+  .call-us-content {
+    position: relative;
+
+    p {
+      color: $white;
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    .button {
+      text-align: center;
+    }
+  }
+}
+
+/*----- End Call US -----*/
+
+
+
+/*----- Our Approach -----*/
+// .our-approach {
+//   .our-approach-content {
+//     .sec-heading {
+//       text-align: center;
+//       margin: 0 auto;
+//       margin-bottom: 60px;
+//     }
+
+//     .our-approach-wrappers {
+//       display: grid;
+//       grid-template-columns: repeat(4, 1fr);
+//       border: 2px solid;
+//       place-items: center;
+
+//       .our-approach-wrapper {
+//         border: 4px solid $primary-color;
+//         width: 200px;
+//         height: 200px;
+//         text-align: center;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         border-radius: 50%;
+//         padding: 20px;
+
+//         span {
+//           font-size: 20px;
+//           text-transform: capitalize;
+//         }
+//       }
+//     }
+//   }
+// }
+
+/*----- End Our Approach -----*/
+
+/*-----Founder Message -----*/
+.founder-message {
+  .founder-message-content {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (max-width: 769px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .founder-image{
+      img{
+        border: 1px solid $primary-color;
+        padding: 2px;
+        border-radius: 40px;
+        height: 550px;
+        object-fit: cover;
+        object-position: top;
+        @media screen and (max-width: 769px) {
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+/*-----End Founder Message -----*/
+
+/*----- Founder -----*/
+.founders {
+  .founders-content {
+    .team-wrappers {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: 20% 40% 40%;
+      place-items: center;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width: 769px) {
+        flex-wrap: wrap;
+      }
+
+      .team-wrapper {
+        width: calc(100% / 3);
+        @media screen and (max-width: 769px) {
+          width: calc(100%);
+        }
+        .team-image {
+          margin-bottom: 20px;
+          img{
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            object-position: top;
+          }
+        }
+      }
+
+      .team-wrapper {
+        .sec-heading {
+          text-align: center;
+        }
+
+        .team-info {
+          h5 {
+            margin-bottom: 8px;
+            color: $primary-color;
+          }
+
+          h6 {
+            font-size: 18px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+          }
+        }
+
+        &:last-child {
+          .team-info {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*----- End Founder -----*/
+/*====== End Page About US ======*/
