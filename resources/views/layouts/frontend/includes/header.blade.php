@@ -28,7 +28,7 @@
                 </li>
                 <li><a href="/contact">Contact us</a></li>
                 <li><a href="/our-project">Projects</a></li>
-                <li><a href="/our-project">Trending</a></li>
+                <li><a href="#">Trending</a></li>
             </ul>
             <div class="nav-btn">
                 <span><i class="fa-solid fa-bars"></i></span>

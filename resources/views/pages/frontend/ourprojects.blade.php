@@ -170,6 +170,3 @@
       </div>
    </main>
 @endsection
-@section('js')
-    @vite(['resources/js/ourprojects.js'])
-@endsection

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->integer('category')->nullable();
+            $table->string('prime_category')->nullable();
             $table->string('title')->nullable();
             $table->longText('description')->nullable();
             $table->string('image')->nullable();

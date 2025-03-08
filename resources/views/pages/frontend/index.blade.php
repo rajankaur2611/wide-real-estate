@@ -526,7 +526,7 @@
                         </div>
                 </div>
                 <div class="customers-say">
-                    <h3>customer saying</h3>
+                    <h3>Testimonials</h3>
                     <div class="testimonials">
                         <div class="testimonial-slide">
                             <div class="slide-content">
@@ -571,7 +571,7 @@
                     
                 </div>
                 <div class="property-blogs">
-                    <h3>property blogs</h3>
+                    <h3>Important Links</h3>
                         <div class="blog-slides">
                         <div class="property-blog-widget">
                             <div class="blog-image">

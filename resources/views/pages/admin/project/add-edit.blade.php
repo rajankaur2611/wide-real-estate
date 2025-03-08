@@ -29,12 +29,25 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">Title</label>
+                                        <label for="example-text-input" class="form-control-label">Categories</label>
                                         <select class="form-control" name="category" value="{{ old('category', $project->category) }}">
                                             <option value="1">Residential</option>
                                             <option value="2">Commercial</option>
                                             <option value="3">Farmhouse/Villas</option>
                                             <option value="4">Investments</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="example-text-input" class="form-control-label">Prime Categories</label>
+                                        <select class="form-control" name="category" value="{{ old('category', $project->category) }}">
+                                            <option value="new-projects">New Projects</option>
+                                            <option value="Ready-to-Move">Ready to Move</option>
+                                            <option value="luxury">Luxury</option>
+                                            <option value="independent-villas">Independent Villas</option>
+                                            <option value="plots">Plots</option>
+                                            <option value="commercial">Commercial</option>
                                         </select>
                                     </div>
                                 </div>
