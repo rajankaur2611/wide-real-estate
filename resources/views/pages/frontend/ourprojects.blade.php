@@ -22,10 +22,33 @@
                </div>
          </section>
 
+        
          <section class="our-projects padding-y">
                <div class="our-projects-content container">
                   <div class="sec-heading">
                      <h2>properties</h2>
+                  </div>
+                  <div class="prop-catgs">
+                  <div class="select-cat">
+                     <div class="select">
+                     <select name="prop-catg" id="prop-catg">
+                     <option value="" hidden>select</option>
+                     <option value="residential">residential</option>
+                     <option value="commercial">commercial</option>
+                     <option value="villas">villas</option>
+                     <option value="lnvestments">investments</option>
+                  </select>
+                     </div>
+                  
+               </div>
+               <div class="call-req">
+                  <div class="call-btns">
+                     <a class="btn-primary" href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+                     <a class="btn-primary" href="tel:+9876543211"><i class="fa-solid fa-phone"></i></i></a>
+                     <a class="btn-primary" href="tel:+9876543210"> request callback</a>
+                  </div>
+               </div>
+
                   </div>
                   <div class="projects-list-widgets">
                         <div class="project-list-widget">
@@ -169,4 +192,5 @@
          </section>
       </div>
    </main>
+   
 @endsection

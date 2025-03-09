@@ -92,6 +92,10 @@ header {
             &:hover{
               background-color: $secondary-color;
             }
+            &.active{
+              // background: $gradient-color;
+              background-color: $secondary-color;
+            }
 
             @media (max-width: 1100px) {
               display: block;
@@ -105,7 +109,7 @@ header {
           }
 
           .dropdown {
-            // background-color: rgba($color: #000000, $alpha: 0.8);
+            overflow: hidden;
             background: $gradient-color;
             border-bottom-left-radius: $radius;
             border-bottom-right-radius: $radius;
@@ -163,7 +167,73 @@ header {
   }
 }
 
-/*----- End Header -----*/
+/*----- End Header -----*/  
+
+/*-----Section Top ----- */
+.section-top {
+  position: relative;
+  background-image: url('/public/images/contact-top-section.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  // height: 100vh;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: rgba($color: #000000, $alpha: .5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .section-top-content {
+    position: relative;
+    color: $white;
+
+    .top-headings {
+      text-align: center;
+
+      p {
+        color: $white;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        text-decoration: underline;
+      }
+
+      h1 {
+        color: $white;
+      }
+    }
+
+    .locate {
+      text-align: center;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        color: $white;
+        text-transform: capitalize;
+
+        &.active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+/*----- End Section Top ----- */
+
 /*----- Footer -----*/
 .footer {
   padding: 60px 0;

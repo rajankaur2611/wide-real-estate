@@ -21,7 +21,8 @@
             <div class="about-company-content container">
                 <div class="about-company-image">
                     <figure>
-                        <img src="{{ url('images/about-company.webp') }}" alt="image">
+                        <!-- <img src="{{ url('images/about-company.webp') }}" alt="image"> -->
+                        <img src="{{ url('https://images.pexels.com/photos/3801167/pexels-photo-3801167.jpeg') }}" alt="image">
                     </figure>
                 </div>
                 <div class="about-company-text">
@@ -39,14 +40,7 @@
                             sure there isn't anything. </p>
                             
                             <p>For buying, we truly aspire to get you:</p>
-                            <ul class="features">
-                            <li>The Right property at</li>
-                            <li>The Right Location at</li>
-                            <li>The Right Price</li>
-                            <li>The Right property at</li>
-                            <li>The Right Location at</li>
-                            <li>The Right Price</li>                            
-                            </ul>
+                            
                     </div>
                 </div>
             </div>
@@ -159,6 +153,39 @@
         </div>
       </section>
 
+        <!-- <section class="founders padding-y">
+            <div class="founders-content container">
+                <div class="team-wrappers">
+                <div class="team-wrapper ">
+                        <div class="sec-heading">
+                            <h2>meet the masterminds</h2>
+                        </div>
+                    </div>
+                    <div class="team-wrapper">
+                        <div class="team-image">
+                            <img src="{{ url('images/team-member-1.webp') }}" alt="contact image">
+                        </div>
+                        <div class="team-info">
+                            <h5>Harshit Bisht</h5>
+                            <h6>founder</h6>
+                            <p>Lorem Ipsum is simply dummy text of the for printing and typesetting industry. Lorem</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-wrapper">
+                        <div class="team-info">
+                            <h5>Priyanka Kaur</h5>
+                            <h6>co founder & director</h6>
+                            <p>Lorem Ipsum is simply dummy text of the for printing and typesetting industry. Lorem</p>
+                        </div>
+                        <div class="team-image">
+                            <img src="{{ url('images/team-member-2.webp') }}" alt="contact image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
         <section class="founders padding-y">
             <div class="founders-content container">
                 <div class="team-wrappers">
@@ -177,11 +204,7 @@
                             <p>Lorem Ipsum is simply dummy text of the for printing and typesetting industry. Lorem</p>
                         </div>
                     </div>
-                    <!-- <div class="team-wrapper ">
-                        <div class="sec-heading">
-                            <h2>meet the masterminds</h2>
-                        </div>
-                    </div> -->
+                    
                     <div class="team-wrapper">
                         <div class="team-info">
                             <h5>Priyanka Kaur</h5>

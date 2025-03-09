@@ -16,8 +16,11 @@
                         <i class="fa-solid fa-xmark"></i>
                     </div>
                     <div class="pop-up-content">
+                        <div class="popup-image">
+                        <img src="{{ url('images/safe-workplace.png') }}" alt="image">
+                        </div>
                         <div class="contact-form">
-                        <form method="post" id="contact" action="http://localhost:8000/contact-submit">
+                          <form method="post" id="contact" action="http://localhost:8000/contact-submit">
                             <input type="hidden" name="_token" value="5Avxhwq0e2VhqzEnR0nTQRaCSUjSUwJWXaBmwwnk">                        
                             <div class="heading">
                                 <p>What are you looking for?</p>

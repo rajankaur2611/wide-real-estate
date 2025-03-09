@@ -96,17 +96,21 @@
         </div>
     </section>
 
-    <section class="about-us padding-y">
+    <section class="about-us padding-y fade-up">
         <div class="about-us-content container">
             <!-- <div class="about-us-image fade-left">
                 <img src="{{ url('images/safe-workplace.png') }}" alt="image">
             </div> -->
-            <div class="about-us-info fade-right">
+            <div class="about-us-info ">
                 <div class="sec-heading">
+                    <p>welcome to</p>
                     <h2>wide real estate</h2>
-                    <p>Creating safe workplaces involves developing an environment where employees feel physically, emotionally, and mentally secure. This includes implementing safety protocols, ergonomic designs, and emergency preparedness plans to prevent
+                    <p><strong><a href="#">wide real estate</a></strong> is Mohali's leading real estate agency taking care of your dreams and your dreamlands. Establish in 2020 having a broad range of property services across various types of real estate, including residential, commercial, and industrial properties. These agencies often have an extensive portfolio of listings, catering to different client needs, whether it's buying, selling, renting, or property management. </p>
+                    <p><strong>Creating safe workplaces involves</strong> developing an environment where employees feel physically, emotionally, and mentally secure. This includes implementing safety protocols, ergonomic designs, and emergency preparedness plans to prevent
                         accidents and health issues.</p>
-                    <a class="btn-primary" href="#">know more</a>
+                </div>
+                <div class="about-btn">
+                <a class="btn-primary" href="#">know more</a>
                 </div>
             </div>
         </div>
@@ -396,13 +400,13 @@
                 <p>Explore our prime properties based on your need.</p>
             </div>
             <div class="properties-widgets">
-                <div class="property-widget">
+                <div class="property-widget" >
                     <a href="#">
                         <div class="image">
                             <img src="http://localhost:8000/images/featured-prop-1.webp" alt="property image">
                         </div>
                         <div class="content">
-                            <h5>new projects</h5>
+                            <h5>new projects 1</h5>
                             <p>20 properties</p>
                         </div>
                     </a>
@@ -413,7 +417,7 @@
                     <img src="http://localhost:8000/images/featured-prop-1.webp" alt="property image">
                     </div>
                     <div class="content">
-                        <h5>ready to move</h5>
+                        <h5>ready to move 2</h5>
                         <p>20 properties</p>
                     </div>
                     </a>
@@ -424,7 +428,7 @@
                     <img src="http://localhost:8000/images/featured-prop-1.webp" alt="property image">
                     </div>
                     <div class="content">
-                        <h5>luxury </h5>
+                        <h5>luxury 3</h5>
                         <p>20 properties</p>
                     </div>
                     </a>
@@ -435,7 +439,7 @@
                     <img src="http://localhost:8000/images/featured-prop-1.webp" alt="property image">
                     </div>
                     <div class="content">
-                        <h5>Independent villas</h5>
+                        <h5>Independent villas 4</h5>
                         <p>20 properties</p>
                     </div>
                     </a>
@@ -446,7 +450,7 @@
                     <img src="http://localhost:8000/images/featured-prop-1.webp" alt="property image">
                     </div>
                     <div class="content">
-                        <h5>Plots</h5>
+                        <h5>Plots 5</h5>
                         <p>20 properties</p>
                     </div>
                     </a>
@@ -457,7 +461,7 @@
                     <img src="http://localhost:8000/images/featured-prop-1.webp" alt="property image">
                     </div>
                     <div class="content">
-                        <h5>commercial</h5>
+                        <h5>commercial 6</h5>
                         <p>20 properties</p>
                     </div>
                     </a>
