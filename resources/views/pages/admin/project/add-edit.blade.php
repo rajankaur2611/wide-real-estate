@@ -31,23 +31,23 @@
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Categories</label>
                                         <select class="form-control" name="category" value="{{ old('category', $project->category) }}">
-                                            <option value="1">Residential</option>
-                                            <option value="2">Commercial</option>
-                                            <option value="3">Farmhouse/Villas</option>
-                                            <option value="4">Investments</option>
+                                            <option value="1"  @if($project->category == 1){{'selected'}}@endif>Residential</option>
+                                            <option value="2"  @if($project->category == 2){{'selected'}}@endif>Commercial</option>
+                                            <option value="3"  @if($project->category == 3){{'selected'}}@endif>Farmhouse/Villas</option>
+                                            <option value="4"  @if($project->category == 4){{'selected'}}@endif>Investments</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Prime Categories</label>
-                                        <select class="form-control" name="category" value="{{ old('category', $project->category) }}">
-                                            <option value="new-projects">New Projects</option>
-                                            <option value="Ready-to-Move">Ready to Move</option>
-                                            <option value="luxury">Luxury</option>
-                                            <option value="independent-villas">Independent Villas</option>
-                                            <option value="plots">Plots</option>
-                                            <option value="commercial">Commercial</option>
+                                        <select class="form-control" name="prime_category" value="{{ old('prime_category', $project->prime_category) }}">
+                                            <option value="new-projects" @if($project->prime_category == 'new-projects'){{'selected'}}@endif>New Projects</option>
+                                            <option value="ready-to-move" @if($project->prime_category == 'ready-to-move'){{'selected'}}@endif>Ready to Move</option>
+                                            <option value="luxury" @if($project->prime_category == 'luxury'){{'selected'}}@endif>Luxury</option>
+                                            <option value="independent-villas" @if($project->prime_category == 'independent-villas'){{'selected'}}@endif>Independent Villas</option>
+                                            <option value="plots" @if($project->prime_category == 'plots'){{'selected'}}@endif>Plots</option>
+                                            <option value="commercial" @if($project->prime_category == 'commercial'){{'selected'}}@endif>Commercial</option>
                                         </select>
                                     </div>
                                 </div>
@@ -82,18 +82,31 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">image</label>
-                                        <input class="form-control" type="file" name="image" value="{{ old('image',  '') }}">
+                                        <input class="form-control" type="file" name="image[]" multiple value="{{ old('image',  '') }}">
                                         @if($errors->has('image'))
                                             <div class="text-danger ps-1 pt-1">{{ $errors->first('image') }}</div>
                                         @endif
                                     </div>
                                 </div>
-                                <!-- <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">Last name</label>
-                                        <input class="form-control" type="text" name="lastname" value="{{ old('lastname', auth()->user()->lastname) }}">
+                                @if(!$images->isEmpty())
+                                <div class="col-md-12">
+                                    <div class="card-body pt-4 p-3">
+                                        <ul class="list-group">
+                                            @foreach($images as $image)
+                                            <li class="list-group-item gallery-img border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
+                                                <div class="d-flex flex-column">
+                                                    <div><img src="{{url('images/small/'.$image->image)}}" alt="gallery"></div>
+                                                </div>
+                                                <div class="ms-auto text-end">
+                                                    <a data-id="{{$image->id}}" data-image="{{$image->image}}" class="delete btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;">
+                                                        <i class="far fa-trash-alt me-2"></i>Delete</a>
+                                                </div>
+                                            </li>
+                                            @endforeach
+                                        </ul>
                                     </div>
-                                </div> -->
+                                </div>
+                                @endif
                             </div>
                         </div>
                     </form>
@@ -104,3 +117,35 @@
         @include('layouts.footers.auth.footer')
     </div>
 @endsection
+@push('js')
+<script>
+    $(document).ready(function (){
+        $('.gallery-img .delete').click(function(){
+            if (confirm('Are you sure want to delete this image?')) {
+                $(this).closest('.gallery-img').remove();
+                var data = {
+                    id : $(this).data('id'),
+                    image : $(this).data('image'),
+                    _token: "{{ csrf_token() }}",
+                }
+                console.log(data)
+                $.ajax({
+                    type: 'POST',
+                    url: '/admin/project-image-delete',
+                    data: data,
+                    success: function success(data) {
+                        console.log('hhh',data)
+                        alert('Image deleted Successfully!');
+                    },
+                    error: function error(data) {
+                
+                    }
+                });
+            } else {
+                alert('Why did you press cancel? You should have confirmed');
+            }
+            
+        })
+    })
+</script>
+@endpush

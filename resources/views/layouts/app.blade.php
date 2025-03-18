@@ -52,6 +52,7 @@
     @endauth
 
     <!--   Core JS Files   -->
+    <script src="{{url('assets/js/plugins/jquery-3.7.1.min.js')}}"></script>
     <script src="{{url('/assets/js/core/popper.min.js')}}"></script>
     <script src="{{url('/assets/js/core/bootstrap.min.js')}}"></script>
     <script src="{{url('/assets/js/plugins/perfect-scrollbar.min.js')}}"></script>

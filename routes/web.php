@@ -54,7 +54,8 @@ Route::group(['prefix'=>'admin'], function() {
 		Route::post('/project-save', [ProjectController::class, 'save'])->name('create-project');
 		Route::get('/project-edit/{id}', [ProjectController::class, 'edit'])->name('edit-project');
 		Route::get('/project-delete/{id}', [ProjectController::class, 'destroy'])->name('delete-project');
-		
+		Route::post('/project-image-delete', [ProjectController::class, 'image_delete'])->name('delete-project-image');
+
 		Route::get('/news-listing', [NewsController::class, 'index'])->name('news-list');
 		Route::get('/news-add', [NewsController::class, 'add'])->name('add-news');
 		Route::post('/news-save', [NewsController::class, 'save'])->name('create-news');
@@ -74,7 +75,7 @@ Route::group(['prefix'=>'admin'], function() {
 		// Route::get('/profile-static', [PageController::class, 'profile'])->name('profile-static'); 
 		// Route::get('/sign-in-static', [PageController::class, 'signin'])->name('sign-in-static');
 		// Route::get('/sign-up-static', [PageController::class, 'signup'])->name('sign-up-static'); 
-		// Route::get('/{page}', [PageController::class, 'index'])->name('page');
+		Route::get('/{page}', [PageController::class, 'index'])->name('page');
 		Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 	});
 });

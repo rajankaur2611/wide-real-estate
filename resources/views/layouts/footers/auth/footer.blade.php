@@ -7,7 +7,7 @@
                     <script>
                         document.write(new Date().getFullYear())
                     </script>,
-                    All Right Reserved By Wed real Estate
+                    All Right Reserved By Wide real Estate
                 </div>
             </div>
         </div>
