@@ -3,16 +3,18 @@
 @import 'variables.scss';
 
 /*-----Contact-----*/
-.contact{
+.contact {
   position: fixed;
   z-index: 99;
   right: -80px;
   top: 50%;
   transition: $transition;
-  &:hover{
+
+  &:hover {
     right: 0
   }
-  a{
+
+  a {
     display: flex;
     color: $white;
     text-transform: capitalize;
@@ -23,13 +25,15 @@
     padding: 8px;
     border-top-left-radius: 60px;
     border-bottom-left-radius: 60px;
-    .contact-image{
-      img{
+
+    .contact-image {
+      img {
         width: 40px;
       }
     }
   }
 }
+
 /*-----End Contact-----*/
 /*-----Main -----*/
 main {
@@ -43,6 +47,7 @@ main {
     overflow: hidden;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
+
     @media screen and (max-width: 575px) {
       min-height: 450px;
       height: 100%;
@@ -157,7 +162,7 @@ main {
             text-transform: uppercase;
 
             @media screen and (max-width: 575px) {
-            font-size: 18px;
+              font-size: 18px;
               width: 160px;
               line-height: 30px;
               height: 50px;
@@ -171,18 +176,19 @@ main {
   /*-----End Main -----*/
 
   /*-----Sponsers -----*/
-  .sponsers{
+  .sponsers {
     .sec-heading {
       font-size: 24px;
       text-align: center;
       margin: 0 auto;
       margin-bottom: 50px;
     }
+
     .sponsers-slider {
       .sponser-slide {
         display: flex !important;
         justify-content: center;
-  
+
         .slide-content {
           position: relative;
           width: 250px;
@@ -194,11 +200,11 @@ main {
           align-items: center;
           justify-content: center;
           // border-radius: $radius;
-  
+
           @media screen and (max-width: 575px) {
             margin: 14px;
           }
-  
+
           img {
             padding: 10px;
             width: 100%;
@@ -209,15 +215,78 @@ main {
       }
     }
   }
-  
+
 
   /*-----End Sponsers -----*/
 
+  /*----- About Real Estate -----*/
+  .about-us {
+    position: relative;
+    background-image: url('/public/images/choose-us-bg.png');
+    background-image: url('/public/images/about-us-bg5.webp');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: rgba($color: #ffffff, $alpha: .9);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .about-us-content {
+      position: relative;
+
+      .about-us-info {
+        .sec-heading {
+
+          p:first-child {
+            background: $gradient-color ;
+            font-weight: 300;
+            color: $white;
+            text-transform: uppercase;
+            padding: 1px 12px 1px 12px;
+            max-width: 200px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+          }
+
+          p {
+            strong {
+              a {
+                text-transform: capitalize;
+
+                &::first-letter {
+                  font-size: 40px;
+                }
+              }
+            }
+          }
+        }
+
+        .about-btn {
+          .btn-primary {
+            margin-top: 30px;
+          }
+        }
+
+      }
+    }
+  }
+
+  /*----- End About Real Estate -----*/
 
   /*-----Our Featured Properties -----*/
   .featured-properties {
     background-color: #f7f8f9;
     padding: 70px 0 120px;
+
     .featured-properties-content {
       .sec-heading {
         text-align: center;
@@ -304,6 +373,7 @@ main {
 
             .property-slider {
               display: block;
+
               .property-slide-content {
                 border-radius: 8px;
                 overflow: hidden;
@@ -397,107 +467,105 @@ main {
 
   /*-----End Our Featured Properties -----*/
 
-
   /*----- Our Services (What We Do)-----*/
-  .our-services {
-    padding: 130px 0px 60px;
+  // .our-services {
+  //   padding: 130px 0px 60px;
 
-    @media screen and (max-width: 991px) {
-      padding: 100px 0;
-    }
+  //   @media screen and (max-width: 991px) {
+  //     padding: 100px 0;
+  //   }
 
-    @media screen and (max-width: 768px) {
-      padding: 100px 0 0px;
-    }
+  //   @media screen and (max-width: 768px) {
+  //     padding: 100px 0 0px;
+  //   }
 
-    .our-services-content {
-      display: grid;
-      gap: 5px;
-      grid-template-columns: 25% 75%;
+  //   .our-services-content {
+  //     display: grid;
+  //     gap: 5px;
+  //     grid-template-columns: 25% 75%;
 
-      @media screen and (max-width: 991px) {
-        grid-template-columns: 100%;
-        gap: 40px;
-      }
+  //     @media screen and (max-width: 991px) {
+  //       grid-template-columns: 100%;
+  //       gap: 40px;
+  //     }
 
-      .service {
-        position: relative;
-        display: flex;
-        gap: 20px;
-        border-top: 1px solid rgba($color: #000000, $alpha: .3);
-        padding: 30px 0;
+  //     .service {
+  //       position: relative;
+  //       display: flex;
+  //       gap: 20px;
+  //       border-top: 1px solid rgba($color: #000000, $alpha: .3);
+  //       padding: 30px 0;
 
-        @media screen and (max-width: 575px) {
-          flex-direction: column;
-          gap: 0;
-          padding: 50px 0px 20px;
-        }
+  //       @media screen and (max-width: 575px) {
+  //         flex-direction: column;
+  //         gap: 0;
+  //         padding: 50px 0px 20px;
+  //       }
 
-        >p {
-          transform: rotate(-90deg);
-          position: absolute;
-          left: -10px;
-          transform-origin: bottom;
-          top: 10%;
-          color: $primary-color;
+  //       >p {
+  //         transform: rotate(-90deg);
+  //         position: absolute;
+  //         left: -10px;
+  //         transform-origin: bottom;
+  //         top: 10%;
+  //         color: $primary-color;
 
-          @media screen and (max-width: 575px) {
-            transform: rotate(0deg);
-            top: 10px;
-            left: 0;
-          }
-        }
+  //         @media screen and (max-width: 575px) {
+  //           transform: rotate(0deg);
+  //           top: 10px;
+  //           left: 0;
+  //         }
+  //       }
 
-        .service-heading {
-          flex-basis: 50%;
-          position: relative;
-          padding-left: 40px;
+  //       .service-heading {
+  //         flex-basis: 50%;
+  //         position: relative;
+  //         padding-left: 40px;
 
-          @media screen and (max-width: 575px) {
-            padding-left: 0;
-          }
+  //         @media screen and (max-width: 575px) {
+  //           padding-left: 0;
+  //         }
 
-          h3 {
-            font-size: clamp(30px, 4.4vw, 40px);
-            font-weight: 400;
-          }
-        }
+  //         h3 {
+  //           font-size: clamp(30px, 4.4vw, 40px);
+  //           font-weight: 400;
+  //         }
+  //       }
 
-        .service-info {
-          flex-basis: 50%;
-          color: $text-color;
+  //       .service-info {
+  //         flex-basis: 50%;
+  //         color: $text-color;
 
-          ul {
-            margin-bottom: 20px;
+  //         ul {
+  //           margin-bottom: 20px;
 
-            p {
-              margin-bottom: 0;
-            }
+  //           p {
+  //             margin-bottom: 0;
+  //           }
 
-            li {
-              padding-left: 10px;
+  //           li {
+  //             padding-left: 10px;
 
-              &::before {
-                content: "- ";
-              }
-            }
-          }
-        }
+  //             &::before {
+  //               content: "- ";
+  //             }
+  //           }
+  //         }
+  //       }
 
-        .research {
-          left: -56px;
-          top: 32%;
+  //       .research {
+  //         left: -56px;
+  //         top: 32%;
 
-          @media screen and (max-width: 575px) {
-            transform: rotate(0deg);
-            top: 10px;
-            left: 0;
-          }
-        }
-      }
-    }
-  }
-
+  //         @media screen and (max-width: 575px) {
+  //           transform: rotate(0deg);
+  //           top: 10px;
+  //           left: 0;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
   /*----- End Our Services (What We Do)-----*/
 
   /*------ Explore Properties------*/
@@ -509,10 +577,10 @@ main {
       }
 
       .properties-widgets {
-        margin-top: 72px;
+        margin-top: 52px;
         display: grid;
-        gap: 10px;
-        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        // grid-template-columns: repeat(4, 1fr);
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
         .property-widget {
@@ -522,6 +590,7 @@ main {
           transition: $transition;
           border-radius: 6px;
           overflow: hidden;
+          height: 250px;
 
           &:hover {
             scale: 1.05;
@@ -533,14 +602,19 @@ main {
 
           a {
             display: block;
+            background-color: lightblue;
+            height: 100%;
 
             .image {
               display: flex;
               filter: brightness(.5);
               transition: $transition;
+              width: inherit;
+              height: inherit;
 
               img {
                 border-radius: 6px;
+                object-fit: cover;
               }
             }
 
@@ -566,6 +640,56 @@ main {
             }
           }
 
+          &:nth-child(2) {
+            grid-column: span 2 / span 2;
+          }
+
+          &:nth-child(3) {
+            grid-column-start: 4;
+          }
+
+          &:nth-child(4) {
+            grid-row-start: 2
+          }
+
+          &:nth-child(5) {
+            grid-row-start: 2
+          }
+
+          &:nth-child(6) {
+            grid-column: span 2 / span 2;
+            grid-row-start: 2;
+          }
+
+          @media screen and (max-width: 991px) {
+            &:nth-child(2) {
+              // grid-column: span 1 / span 1;
+              grid-column: initial;
+            }
+
+            &:nth-child(3) {
+              // grid-column-start: 3;
+              grid-column-start: initial;
+
+            }
+
+            &:nth-child(4) {
+              // grid-row-start: 2;
+              grid-row-start: initial;
+            }
+
+            &:nth-child(5) {
+              // grid-row-start: 2;
+              grid-row-start: initial;
+            }
+
+            &:nth-child(6) {
+              // grid-column: span 1 / span 1;
+              grid-column: initial;
+              // grid-row-start: 2;
+              grid-row-start: initial;
+            }
+          }
         }
       }
     }
@@ -1197,19 +1321,23 @@ main {
   background: black;
   float: left;
   width: 100%;
+
   .popularareas_inner {
     &::before {
       display: table;
       content: " ";
     }
+
     .row {
       margin-right: -15px;
       margin-left: -15px;
+
       &::before {
         display: table;
         content: " ";
       }
-      .specialityBox{
+
+      .specialityBox {
         ul {
           padding: 18px 0px;
           /* margin: 0 20px; */
@@ -1219,6 +1347,7 @@ main {
           height: 85px;
           width: calc(100% - 40px);
           text-align: center;
+
           li {
             /* padding: 7px 50px; */
             display: inline-block;
@@ -1231,14 +1360,15 @@ main {
             width: 16%;
             letter-spacing: .4px;
             text-align: center;
+
             img {
               width: 30px;
               height: 100%;
             }
-            
+
           }
         }
-      } 
+      }
     }
   }
 }

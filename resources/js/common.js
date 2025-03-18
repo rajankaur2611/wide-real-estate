@@ -1,17 +1,18 @@
-$(window).on('load', function(){
-    $(".property-slide-footer .btn-primary").click(function(){
+$(window).on("load", function () {
+    $(".property-slide-footer .btn-primary").click(function () {
         $(".request-info-popup-overlay").addClass("show-popup");
         $("body").addClass("show-popup");
-    })
-})
+    });
+});
 $(document).ready(function () {
     /*-----Header ----- */
+
     $(".nav-btn i").click(function () {
         $(".navMenus").toggleClass("active");
         $(this).toggleClass("fa-bars");
         $(this).toggleClass("fa-xmark");
     });
-    
+
     $(".request-info-popup-overlay").click(function () {
         $(this).removeClass("show-popup");
         $("body").removeClass("show-popup");
@@ -24,7 +25,7 @@ $(document).ready(function () {
     $(".popup-form").click(function (event) {
         event.stopPropagation();
     });
-    
+
     var lastScrollTop = 0;
 
     $(window).scroll(function () {
@@ -38,6 +39,35 @@ $(document).ready(function () {
 
         lastScrollTop = scrollTop;
     });
+
+      
+    /*----- NavMenus ----- */
+
+    var path = window.location.href;  
+
+    $(".navMenus li a").each(function() {
+        if (this.href === path) {
+            $(this).addClass("active");
+        }
+    });
+
+    $(".navMenus li").each(function() {
+        $(this).on('mouseenter', function() {
+            if (!$(this).children('a').hasClass('active')) {
+                $(this).children('a').addClass('active');
+            }
+        });
+
+        $(this).on('mouseleave', function() {
+            var currentURL = window.location.href;
+            var linkURL = $(this).children('a').prop('href');
+            if (linkURL !== currentURL) {
+                $(this).children('a').removeClass('active');
+            }
+        });
+    });
+    /*----- End NavMenus ----- */
+
     /*-----End Header ----- */
 
     /*----- Main ----- */
@@ -124,7 +154,6 @@ $(document).ready(function () {
 
     /*----- Featured Property---- */
 
-    
     $(".properties-slider").slick({
         slidesToShow: 3,
         // autoplay: true,
@@ -163,7 +192,7 @@ $(document).ready(function () {
         easing: "easeInOut",
         infinite: true,
         vertical: true,
-        verticalSwiping: true
+        verticalSwiping: true,
     });
     /*----- End News Slider ----- */
     /*----- Testimonials ----- */
@@ -196,7 +225,8 @@ $(document).ready(function () {
     /*===== Contact Page   ===== */
     /*----- End Contact Form  ----- */
 
-    $(".contact-form form label:not(:contains('Villa')):not(:contains('apartment')):not(:contains('comerical'))"
+    $(
+        ".contact-form form label:not(:contains('Villa')):not(:contains('apartment')):not(:contains('comerical'))"
     ).click(function () {
         $(this).addClass("active");
         $(this).next().focus();

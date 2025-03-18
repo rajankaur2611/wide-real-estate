@@ -3,69 +3,69 @@
 // main {
 //   background: #000;
 // }
-.section-top {
-  position: relative;
-  background-image: url('/public/images/contact-top-section.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom-right-radius: 60px;
-  border-bottom-left-radius: 60px;
-  overflow: hidden;
+// .section-top {
+//   position: relative;
+//   background-image: url('/public/images/contact-top-section.png');
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+//   background-attachment: fixed;
+//   width: 100%;
+//   height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   border-bottom-right-radius: 60px;
+//   border-bottom-left-radius: 60px;
+//   overflow: hidden;
 
-  &::before {
-    content: "";
-    position: absolute;
-    background-color: rgba($color: #000000, $alpha: .5);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     background-color: rgba($color: #000000, $alpha: .5);
+//     width: 100%;
+//     height: 100%;
+//     top: 0;
+//     left: 0;
+//   }
 
-  .section-top-content {
-    position: relative;
-    color: $white;
+//   .section-top-content {
+//     position: relative;
+//     color: $white;
 
-    .top-headings {
-      text-align: center;
+//     .top-headings {
+//       text-align: center;
 
-      p {
-        color: $white;
-        margin-bottom: 0;
-        text-transform: uppercase;
-        text-decoration: underline;
-      }
+//       p {
+//         color: $white;
+//         margin-bottom: 0;
+//         text-transform: uppercase;
+//         text-decoration: underline;
+//       }
 
-      h1 {
-        color: $white;
-      }
-    }
+//       h1 {
+//         color: $white;
+//       }
+//     }
 
-    .locate {
-      text-align: center;
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      justify-content: center;
+//     .locate {
+//       text-align: center;
+//       display: flex;
+//       gap: 12px;
+//       align-items: center;
+//       justify-content: center;
 
-      a {
-        color: $white;
-        text-transform: capitalize;
+//       a {
+//         color: $white;
+//         text-transform: capitalize;
 
-        &.active {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-}
+//         &.active {
+//           text-decoration: underline;
+//         }
+//       }
+//     }
+//   }
+// }
 
 /*----- End Section Top ----- */
 
