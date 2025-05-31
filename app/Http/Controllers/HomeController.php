@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\News;
+use App\Models\ImportantLinks;
+use App\Models\Project;
 
 class HomeController extends Controller
 {
@@ -23,7 +26,24 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.frontend.index');
+        $newses = News::getAll(5);
+        $importantLinks = ImportantLinks::getAll(5);
+        
+        $categorieslist = Project::categories();
+        $categories = Project::getdata();
+       
+        $allCats = [];
+
+        foreach ($categorieslist as $category) {
+            $allCats[] = [
+                'category_name' => $category,
+                'project_count' => $categories[$category] ?? 0,
+            ];
+        }
+        $data['allCats'] = $allCats;
+        $data['newses'] = $newses;
+        $data['importantLinks'] = $importantLinks;
+        return view('pages.frontend.index')->with($data);
     }
 
     public function about()

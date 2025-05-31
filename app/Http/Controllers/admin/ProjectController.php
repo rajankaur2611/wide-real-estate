@@ -19,6 +19,7 @@ class ProjectController extends Controller
     public function add()
     {
         $project = new Project();
+        //$project['images'] = [];
         return view('pages.admin.project.add-edit', compact("project"));
     }
     public function edit($id)
@@ -27,22 +28,23 @@ class ProjectController extends Controller
         $projectid = base64_decode($id);
         $project = Project::find($projectid);
         $images = Images::where('project_id', $projectid)->get();
+        $project['images'] = $images;
+        // print_r($project);
+        // die();
         return view('pages.admin.project.add-edit', compact("project", "images"));
     }
     public function save(Request $request)
     {   
-        // print_r($request->all());
-        // die();
+        
         $rules = [
         'category' => 'required',
             'prime_category' => 'required',
             'title' => 'required',
             'description' => 'required',
             'price' => 'required',
+            'image.*' => 'image|mimes:jpeg,png,jpg,gif,webp|max:5000'
         ];
-        if($request->input('id') == null) {
-            $rules['image'] = 'required|image|mimes:jpg,jpeg,png,svg,gif|max:5000';
-        }
+        
         $validator = Validator::make($request->all(), $rules);
         if($validator->fails()){
             return back()->withErrors($validator->errors())->withInput();
@@ -53,6 +55,7 @@ class ProjectController extends Controller
             $project = Project::find(base64_decode($request->input('id')));
             $projectstatus = 'updated';
         } 
+        
         $project->category = $request->input('category');
         $project->prime_category = $request->input('prime_category');
         $project->title = $request->input('title');
@@ -60,6 +63,7 @@ class ProjectController extends Controller
         $project->price = $request->input('price');
         $project->save();
         $project->id;
+
         if($request->file('image')) {
             
             $files = $request->file('image');

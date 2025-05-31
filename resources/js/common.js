@@ -154,31 +154,31 @@ $(document).ready(function () {
 
     /*----- Featured Property---- */
 
-    $(".properties-slider").slick({
-        slidesToShow: 3,
-        // autoplay: true,
-        autoplaySpeed: 2000,
-        responsive: [
-            {
-                breakpoint: 1400,
-                settings: {
-                    slidesToShow: 3,
-                },
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-        ],
-    });
+    // $(".properties-slider").slick({
+    //     slidesToShow: 3,
+    //     // autoplay: true,
+    //     autoplaySpeed: 2000,
+    //     responsive: [
+    //         {
+    //             breakpoint: 1400,
+    //             settings: {
+    //                 slidesToShow: 3,
+    //             },
+    //         },
+    //         {
+    //             breakpoint: 992,
+    //             settings: {
+    //                 slidesToShow: 2,
+    //             },
+    //         },
+    //         {
+    //             breakpoint: 576,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //             },
+    //         },
+    //     ],
+    // });
     /*----- End Featured Property---- */
     /*----- News Slider ----- */
     $(".news-slides").slick({
@@ -247,28 +247,7 @@ $(document).ready(function () {
         }
     );
     /*===== End Contact Page   ===== */
-    /*----- Featured Property---- */
-    $(".property-type ul li").click(function () {
-        $(".property-type ul li").removeClass("active");
-        $(this).addClass("active");
-    });
-
-    $(".property-type li").click(function () {
-        var type = $(this).data("type");
-
-        // Remove active class from all list items and content
-        $(".property-type li").removeClass("active");
-        $(".content").removeClass("active");
-
-        // Add active class to clicked list item and corresponding content
-        $(this).addClass("active");
-        $("#" + type).addClass("active");
-    });
-
-    // Set the first list item and content as active by default
-    $(".property-type li").first().addClass("active");
-    $(".content").first().addClass("active");
-    /*----- End Featured Property---- */
+   
 });
 
 /*----- Footer ----- */
@@ -307,7 +286,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const handleScroll = () => {
         fadeUpSections.forEach((section) => {
             const rect = section.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 150 && rect.bottom > 0) {
+            if (rect.top < window.innerHeight - 0 && rect.bottom > 0) {
                 section.classList.add("visible");
             }
         });

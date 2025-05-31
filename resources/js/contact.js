@@ -1,6 +1,5 @@
 (function(){
     $(function () {
-        console.log('hi');
         new contactSubmit($('#contact'));
     })
     var contactSubmit = function contactSubmit(obj) {

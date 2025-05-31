@@ -308,13 +308,24 @@ main {
             text-transform: capitalize;
             font-size: 22px;
             cursor: pointer;
-            padding-bottom: 10px;
+            padding: 0 10px 10px;
             transition: $transition;
             border-bottom: 2px solid transparent;
 
             &.active {
-              color: $primary-color;
-              border-bottom: 2px solid $primary-color;
+              color: #CD9E68;
+              // border-bottom: 2px solid $primary-color;
+            }
+            &:first-child {
+              position: relative;
+              &::before {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                background-color: #CD9E68;
+                right: -10%;
+              }   
             }
           }
         }
@@ -1292,7 +1303,7 @@ main {
           h5 {
             color: $white;
             font-size: 24px;
-            margin-bottom: 0;
+            margin-bottom: 10px;
           }
 
           p {
@@ -1317,7 +1328,7 @@ main {
 /*-----End News-----*/
 /* ---------rle_popularareas_wrapper -----*/
 .popularareas_wrapper {
-  margin-top: 30px;
+  // margin-top: 30px;
   background: black;
   float: left;
   width: 100%;
@@ -1362,8 +1373,10 @@ main {
             text-align: center;
 
             img {
+              max-width: 100%;
               width: 30px;
               height: 100%;
+              vertical-align: middle;
             }
 
           }

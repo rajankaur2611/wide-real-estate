@@ -23,10 +23,11 @@
             </div>
             <div class="footer-wrapper">
                 <ul class="navMenus">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">our projects</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="/contact">contact</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about">About us</a></li>
+                    <li><a href="/contact">Contact us</a></li>
+                    <li><a href="/our-project">Projects</a></li>
+                    <li><a href="#">Trending</a></li>
                 </ul>
                 <ul class="footer-social">
                     <li><a href="https://www.facebook.com" target="_blank">

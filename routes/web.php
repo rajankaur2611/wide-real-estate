@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\admin\ProjectController;
 use App\Http\Controllers\admin\NewsController;
+use App\Http\Controllers\admin\ImportantLinksController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjectsController;
@@ -35,6 +36,8 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/our-project', [ProjectsController::class, 'index'])->name('our-project');
 Route::get('/our-project/{category}', [ProjectsController::class, 'index'])->name('our-project');
 Route::get('/project/commerical/{id}', [ProjectsController::class, 'single'])->name('single-project');
+
+Route::post('/getproject', [ProjectsController::class, 'getProjects'])->name('get-project');
 
 Route::get('/admin/', function () {return redirect('/admin/dashboard');})->middleware('auth');
 Route::group(['prefix'=>'admin'], function() {
@@ -61,6 +64,12 @@ Route::group(['prefix'=>'admin'], function() {
 		Route::post('/news-save', [NewsController::class, 'save'])->name('create-news');
 		Route::get('/news-edit/{id}', [NewsController::class, 'edit'])->name('edit-news');
 		Route::get('/news-delete/{id}', [NewsController::class, 'destroy'])->name('delete-news');
+
+		Route::get('/important-links-listing', [ImportantLinksController::class, 'index'])->name('important-links-list');
+		Route::get('/important-links-add', [ImportantLinksController::class, 'add'])->name('add-important-links');
+		Route::post('/important-links-save', [ImportantLinksController::class, 'save'])->name('create-important-links');
+		Route::get('/important-links-edit/{id}', [ImportantLinksController::class, 'edit'])->name('edit-important-links');
+		Route::get('/important-links-delete/{id}', [ImportantLinksController::class, 'destroy'])->name('delete-important-links');
 
 		Route::get('/user-delete/{id}', [AdminController::class, 'destroy'])->name('delete-contact');
 		Route::get('/user-management', [AdminController::class, 'contact_list'])->name('user-list');

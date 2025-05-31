@@ -81,19 +81,19 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">image</label>
+                                        <label for="example-text-input" class="form-control-label">Image</label>
                                         <input class="form-control" type="file" name="image[]" multiple value="{{ old('image',  '') }}">
                                         @if($errors->has('image'))
                                             <div class="text-danger ps-1 pt-1">{{ $errors->first('image') }}</div>
                                         @endif
                                     </div>
                                 </div>
-                                @if(!$images->isEmpty())
+                                @if($project['images'] && !$project['images']->isEmpty())
                                 <div class="col-md-12">
                                     <div class="card-body pt-4 p-3">
                                         <ul class="list-group">
-                                            @foreach($images as $image)
-                                            <li class="list-group-item gallery-img border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
+                                            @foreach($project['images'] as $image)
+                                           <li class="list-group-item gallery-img border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
                                                 <div class="d-flex flex-column">
                                                     <div><img src="{{url('images/small/'.$image->image)}}" alt="gallery"></div>
                                                 </div>

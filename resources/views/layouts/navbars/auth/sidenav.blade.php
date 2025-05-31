@@ -36,7 +36,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ str_contains(request()->url(), 'listing') == true ? 'active' : '' }}" href="{{ route('project-list') }}">
+                <a class="nav-link {{ str_contains(request()->url(), 'project-listing') == true ? 'active' : '' }}" href="{{ route('project-list') }}">
                     <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="ni ni-bullet-list-67 text-dark text-sm opacity-10"></i>
                     </div>
@@ -44,11 +44,19 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ str_contains(request()->url(), 'newslisting') == true ? 'active' : '' }}" href="{{ route('news-list') }}">
+                <a class="nav-link {{ str_contains(request()->url(), 'news-listing') == true ? 'active' : '' }}" href="{{ route('news-list') }}">
                     <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="ni ni-bullet-list-67 text-dark text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text ms-1">News List</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ str_contains(request()->url(), 'important-links-listing') == true ? 'active' : '' }}" href="{{ route('important-links-list') }}">
+                    <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="ni ni-bullet-list-67 text-dark text-sm opacity-10"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Important Links</span>
                 </a>
             </li>
             

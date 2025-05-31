@@ -1,8 +1,12 @@
-@extends('layouts/frontend/default') @section('styles')
+@extends('layouts/frontend/default') 
+@section('styles')
+<meta name="csrf_token" id="csrf-token" content="{{ csrf_token() }}" /> 
 <link rel="stylesheet" href="{{ url('assets/css/slick-theme.css') }}">
 <link rel="stylesheet" href="{{ url('assets/css/slick.min.css') }}">
-<link rel="stylesheet" href="{{ url('assets/css/slick.min.css.map') }}"> 
-@vite(['resources/scss/home.scss']) @endsection @section('content')
+<link rel="stylesheet" href="{{ url('assets/css/slick.min.css.map') }}">
+
+@vite(['resources/scss/home.scss']) @endsection 
+@section('content')
 <main>
     <div class="contact">
         <div>
@@ -50,8 +54,8 @@
                     </div>
                 </div>
                 <div class="main-btns">
-                    <a class="btn-primary" href="#">residential</a>
-                    <a class="btn-primary" href="#">commercial</a>
+                    <a class="btn-primary" href="{{url('/our-project/residential')}}">residential</a>
+                    <a class="btn-primary" href="{{url('/our-project/commercial')}}">commercial</a>
                 </div>
             </div>
         </div>
@@ -124,191 +128,34 @@
             </div>
             <div class="property-type">
                 <ul>
-                    <li data-type="residential">Residential</li>
-                    <li data-type="commercial">Commercial</li>
+                    <li data-type="residential" data-category="1">Residential</li>
+                    <li data-type="commercial" data-category="2">Commercial</li>
                 </ul>
             </div>
             <div class="tab-content">
                 <div class="content" id="residential">
-                    <div class="properties-slider">
-                        <div class="property-slider">
-                            <div class="property-slide-content ">
-                                <div class="property-slide-header">
-                                    <img src="{{ url('images/featured-prop-1.webp') }}" alt="property image">
-                                </div>
-                                <div class="property-slide-body">
-                                    <div class="property-title">
-                                        <h3>Anwa by Omniyat 1</h3>
-                                        <p>residential 104, Gurgaon</p>
-                                    </div>
-                                    <div class="area">
-                                        <div><span>Area :</span><span> 6967 - 8750 sq. ft.  </span></div>
-                                        <div>3BHK and 4BHK</div>
-                                    </div>
-                                    <div class="property-slider-footer">
-                                        <div class="price"><strong><span>60.00Lacs - 90.00Lac</span></strong></div>
-                                        <div class="button"><a class="btn-secondary" href="/project/commerical/1">view detail &nbsp; 
-                                        <span class="arrow">&rarr;</span></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="property-slider">
-                            
-                            <div class="property-slide-content ">
-                                <div class="property-slide-header">
-                                    <img src="{{ url('images/featured-prop-1.webp') }}" alt="property image">
-                                </div>
-                                <div class="property-slide-body">
-                                    <div class="property-title">
-                                        <h3>Anwa by Omniyat 1</h3>
-                                        <p>residential 104, Gurgaon</p>
-                                    </div>
-                                    <div class="area">
-                                        <div><span>Area :</span><span> 6967 - 8750 sq. ft.  </span></div>
-                                        <div>3BHK and 4BHK</div>
-                                    </div>
-                                    <div class="property-slider-footer">
-                                        <div class="price"><strong><span>60.00Lacs - 90.00Lac</span></strong></div>
-                                        <div class="button"><a class="btn-secondary" href="/project/commerical/1">view detail &nbsp; 
-                                        <span class="arrow">&rarr;</span></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="property-slider">
-                            <div class="property-slide-content ">
-                                <div class="property-slide-header">
-                                    <img src="{{ url('images/featured-prop-1.webp') }}" alt="property image">
-                                </div>
-                                <div class="property-slide-body">
-                                    <div class="property-title">
-                                        <h3>Anwa by Omniyat 1</h3>
-                                        <p>residential 104, Gurgaon</p>
-                                    </div>
-                                    <div class="area">
-                                        <div><span>Area :</span><span> 6967 - 8750 sq. ft.  </span></div>
-                                        <div>3BHK and 4BHK</div>
-                                    </div>
-                                    <div class="property-slider-footer">
-                                        <div class="price"><strong><span>60.00Lacs - 90.00Lac</span></strong></div>
-                                        <div class="button"><a class="btn-secondary" href="/project/commerical/1">view detail &nbsp; 
-                                        <span class="arrow">&rarr;</span></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="property-slider">
-                            <div class="property-slide-content ">
-                                <div class="property-slide-header">
-                                    <img src="{{ url('images/featured-prop-1.webp') }}" alt="property image">
-                                </div>
-                                <div class="property-slide-body">
-                                    <div class="property-title">
-                                        <h3>Anwa by Omniyat 1</h3>
-                                        <p>residential 104, Gurgaon</p>
-                                    </div>
-                                    <div class="area">
-                                        <div><span>Area :</span><span> 6967 - 8750 sq. ft.  </span></div>
-                                        <div>3BHK and 4BHK</div>
-                                    </div>
-                                    <div class="property-slider-footer">
-                                        <div class="price"><strong><span>60.00Lacs - 90.00Lac</span></strong></div>
-                                        <div class="button"><a class="btn-secondary" href="/project/commerical/1">view detail &nbsp; 
-                                        <span class="arrow">&rarr;</span></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="properties-slider"></div>
                 </div>
-                <div class="content" id="commercial">
-                    <div class="properties-slider">
-                        <div class="property-slider">
-                            <div class="property-slide-content ">
-                                <div class="property-slide-header">
-                                    <img src="{{ url('images/featured-prop-1.webp') }}" alt="property image">
-                                </div>
-                                <div class="property-slide-body">
-                                    <div class="property-title">
-                                        <h3>Anwa by Omniyat 1</h3>
-                                        <p>commercial 104, Gurgaon</p>
-                                    </div>
-                                    <div class="area">
-                                        <div><span>Area :</span><span> 6967 - 8750 sq. ft.  </span></div>
-                                        <div>3BHK and 4BHK</div>
-                                    </div>
-                                    <div class="property-slider-footer">
-                                        <div class="price"><strong><span>60.00Lacs - 90.00Lac</span></strong></div>
-                                        <div class="button"><a class="btn-secondary" href="/project/commerical/1">view detail &nbsp; 
-                                        <span class="arrow">&rarr;</span></a></div>
-                                    </div>
-                                </div>
+                
+                <div class="clone-data" style="display:none">
+                    <div class="property-slider">
+                        <div class="property-slide-content ">
+                            <div class="property-slide-header">
+                                <img src="{{ url('images/featured-prop-1.webp') }}" alt="property image">
                             </div>
-                        </div>
-                        <div class="property-slider">
-                            <div class="property-slide-content ">
-                                <div class="property-slide-header">
-                                    <img src="{{ url('images/featured-prop-1.webp') }}" alt="property image">
+                            <div class="property-slide-body">
+                                <div class="property-title">
+                                    <h3>Anwa by Omniyat 1</h3>
+                                    <p>residential 104, Gurgaon</p>
                                 </div>
-                                <div class="property-slide-body">
-                                    <div class="property-title">
-                                        <h3>Anwa by Omniyat 1</h3>
-                                        <p>commercial 104, Gurgaon</p>
-                                    </div>
-                                    <div class="area">
-                                        <div><span>Area :</span><span> 6967 - 8750 sq. ft.  </span></div>
-                                        <div>3BHK and 4BHK</div>
-                                    </div>
-                                    <div class="property-slider-footer">
-                                        <div class="price"><strong><span>60.00Lacs - 90.00Lac</span></strong></div>
-                                        <div class="button"><a class="btn-secondary" href="/project/commerical/1">view detail &nbsp; 
-                                        <span class="arrow">&rarr;</span></a></div>
-                                    </div>
+                                <div class="area">
+                                    <div><span>Area :</span><span> 6967 - 8750 sq. ft.  </span></div>
+                                    <div>3BHK and 4BHK</div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="property-slider">
-                            <div class="property-slide-content ">
-                                <div class="property-slide-header">
-                                    <img src="{{ url('images/featured-prop-1.webp') }}" alt="property image">
-                                </div>
-                                <div class="property-slide-body">
-                                    <div class="property-title">
-                                        <h3>Anwa by Omniyat 1</h3>
-                                        <p>commercial 104, Gurgaon</p>
-                                    </div>
-                                    <div class="area">
-                                        <div><span>Area :</span><span> 6967 - 8750 sq. ft.  </span></div>
-                                        <div>3BHK and 4BHK</div>
-                                    </div>
-                                    <div class="property-slider-footer">
-                                        <div class="price"><strong><span>60.00Lacs - 90.00Lac</span></strong></div>
-                                        <div class="button"><a class="btn-secondary" href="/project/commerical/1">view detail &nbsp; 
-                                        <span class="arrow">&rarr;</span></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="property-slider">
-                            <div class="property-slide-content ">
-                                <div class="property-slide-header">
-                                    <img src="{{ url('images/featured-prop-1.webp') }}" alt="property image">
-                                </div>
-                                <div class="property-slide-body">
-                                    <div class="property-title">
-                                        <h3>Anwa by Omniyat 1</h3>
-                                        <p>commercial 104, Gurgaon</p>
-                                    </div>
-                                    <div class="area">
-                                        <div><span>Area :</span><span> 6967 - 8750 sq. ft.  </span></div>
-                                        <div>3BHK and 4BHK</div>
-                                    </div>
-                                    <div class="property-slider-footer">
-                                        <div class="price"><strong><span>60.00Lacs - 90.00Lac</span></strong></div>
-                                        <div class="button"><a class="btn-secondary" href="/project/commerical/1">view detail &nbsp; 
-                                        <span class="arrow">&rarr;</span></a></div>
-                                    </div>
+                                <div class="property-slider-footer">
+                                    <div class="price"><strong><span>60.00Lacs - 90.00Lac</span></strong></div>
+                                    <div class="button"><a class="btn-secondary" href="/project/commerical/1">view detail &nbsp; 
+                                    <span class="arrow">&rarr;</span></a></div>
                                 </div>
                             </div>
                         </div>
@@ -335,8 +182,6 @@
                             Inventory</strong> </li>
                         <li><img src="https://www.realtimerealtors.in/user/images/icon/project-site-visit.png" class="figure-img img-fluid rounded" alt="img"> <strong>Project <br>
                             Site Visits</strong> </li>
-                        <!--<li><em class="icon-negotiation-documentation"><span class="path1"></span><span class="path2"></span></em> <strong>Negotiation &amp; <br>Documentation</strong> </li>-->
-                        
                         <li><img src="https://www.realtimerealtors.in/user/images/icon/post-sale.png" class="figure-img img-fluid rounded" alt="img"> <strong>Post Sales <br>
                             Services</strong> </li>
                         </ul>
@@ -346,53 +191,8 @@
             </div>
         </div>
     </section>
-    <!-- <section class="our-services fade-up">
-        <div class="our-services-content container">
-            <div class="sec-heading">
-                <h2>what we do</h2>
-            </div>
-            <div class="services-content">
-                <div class="service fade-up">
-                    <p class="research">Insights & Research</p>
-                    <div class="service-heading">
-                        <h3>Deliver market knowledge and global insights</h3>
-                    </div>
-                    <div class="service-info">
-                        <p>Our 500 global researchers offer actionable intelligence and a multi-dimensional perspective that is unparalleled in the industry.</p>
-                        <a class="btn-secondary" href="#">Explore Insights & Research</a>
-                    </div>
-                </div>
-                <div class="service fade-up">
-                    <p>Services</p>
-                    <div class="service-heading">
-                        <h3>Create the real estate solutions of tomorrow</h3>
-                    </div>
-                    <div class="service-info">
-                        <ul>
-                            <p>Let's help you:</p>
-                            <li>Invest in real estate</li>
-                            <li>Plan, lease & occupy</li>
-                            <li>Design & build</li>
-                            <li>Manage properties & portfolios</li>
-                            <li>Transform business outcomes</li>
-                        </ul>
-                        <a class="btn-secondary" href="#">Explore services</a>
-                    </div>
-                </div>
-                <div class="service fade-up">
-                    <p>Careers</p>
-                    <div class="service-heading">
-                        <h3>join us</h3>
-                    </div>
-                    <div class="service-info">
-                        <p>We don't just realise the potential in real estate. We help you realise your potential.</p>
-                        <a class="btn-secondary" href="#">Explore Careers</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
+    
+    @if($allCats)
     <section class="explore-properties padding-y">
         <div class="explore-properties-content container">
             <div class="sec-heading ">
@@ -400,79 +200,78 @@
                 <p>Explore our prime properties based on your need.</p>
             </div>
             <div class="properties-widgets">
+                @foreach($allCats as $cat)
                 <div class="property-widget" >
+                    <a href="{{url('/our-project/'.$cat['category_name'])}}">
+                        <div class="image">
+                            <img src="http://localhost:8000/images/featured-prop-1.webp" alt="property image">
+                        </div>
+                        <div class="content">
+                            <h5>{{preg_replace('~-~', ' ', $cat['category_name'])}}</h5>
+                            <p>{{$cat['project_count']}} properties</p>
+                        </div>
+                    </a>
+                </div>
+                @endforeach
+                <!-- <div class="property-widget">
                     <a href="#">
                         <div class="image">
                             <img src="http://localhost:8000/images/featured-prop-1.webp" alt="property image">
                         </div>
                         <div class="content">
-                            <h5>new projects 1</h5>
+                            <h5>ready to move</h5>
                             <p>20 properties</p>
                         </div>
                     </a>
                 </div>
                 <div class="property-widget">
                     <a href="#">
-                    <div class="image">
-                    <img src="http://localhost:8000/images/featured-prop-1.webp" alt="property image">
-                    </div>
-                    <div class="content">
-                        <h5>ready to move 2</h5>
-                        <p>20 properties</p>
-                    </div>
+                        <div class="image">
+                            <img src="http://localhost:8000/images/featured-prop-1.webp" alt="property image">
+                        </div>
+                        <div class="content">
+                            <h5>luxury</h5>
+                            <p>20 properties</p>
+                        </div>
                     </a>
                 </div>
                 <div class="property-widget">
                     <a href="#">
-                    <div class="image">
-                    <img src="http://localhost:8000/images/featured-prop-1.webp" alt="property image">
-                    </div>
-                    <div class="content">
-                        <h5>luxury 3</h5>
-                        <p>20 properties</p>
-                    </div>
+                        <div class="image">
+                            <img src="http://localhost:8000/images/featured-prop-1.webp" alt="property image">
+                        </div>
+                        <div class="content">
+                            <h5>Independent villas</h5>
+                            <p>20 properties</p>
+                        </div>
                     </a>
                 </div>
                 <div class="property-widget">
                     <a href="#">
-                    <div class="image">
-                    <img src="http://localhost:8000/images/featured-prop-1.webp" alt="property image">
-                    </div>
-                    <div class="content">
-                        <h5>Independent villas 4</h5>
-                        <p>20 properties</p>
-                    </div>
+                        <div class="image">
+                            <img src="http://localhost:8000/images/featured-prop-1.webp" alt="property image">
+                        </div>
+                        <div class="content">
+                            <h5>Plots</h5>
+                            <p>20 properties</p>
+                        </div>
                     </a>
                 </div>
                 <div class="property-widget">
                     <a href="#">
-                    <div class="image">
-                    <img src="http://localhost:8000/images/featured-prop-1.webp" alt="property image">
-                    </div>
-                    <div class="content">
-                        <h5>Plots 5</h5>
-                        <p>20 properties</p>
-                    </div>
+                        <div class="image">
+                            <img src="http://localhost:8000/images/featured-prop-1.webp" alt="property image">
+                        </div>
+                        <div class="content">
+                            <h5>commercial</h5>
+                            <p>20 properties</p>
+                        </div>
                     </a>
-                </div>
-                <div class="property-widget">
-                    <a href="#">
-                    <div class="image">
-                    <img src="http://localhost:8000/images/featured-prop-1.webp" alt="property image">
-                    </div>
-                    <div class="content">
-                        <h5>commercial 6</h5>
-                        <p>20 properties</p>
-                    </div>
-                    </a>
-                </div>
-                
+                </div> -->
             </div>
-
         </div>
     </section>
-    
-
+    @endif
     <section class="leadership-culture padding-y fade-up">
         <div class="leadership-culture-content container">
             <div class="leadership-sec-heading fade-down">
@@ -490,44 +289,25 @@
             <div class="news-content">
                 <div class="latest-news">
                     <h3>latest news</h3>
-                        <div class="news-slides">
+                    <div class="news-slides">
+                        @if($newses)
+                        @foreach($newses as $news)
                         <div class="news-widget">
                             <div class="news-image">
-                            <img src="https://images.pexels.com/photos/30885924/pexels-photo-30885924/free-photo-of-wooden-letter-tiles-spelling-trash-tv-news.jpeg" alt="img">
+                                <img src="https://images.pexels.com/photos/30885924/pexels-photo-30885924/free-photo-of-wooden-letter-tiles-spelling-trash-tv-news.jpeg" alt="img">
                             </div>
                             <div class="news-content">
-                                <div class="date">01 march, 2025</div>
+                                <div class="date">{{date_format($news->created_at,"d M Y")}}</div>
                                 <div class="title-content">
-                                <div class="title">Sohna: 25 farmhouses get demolition notices</div>
-                                <a href="#">read more &rarr;</a>
+                                    <div class="title">{{$news->title}}</div>
+                                    <a href="{{$news->link}}" target="_blank">read more &rarr;</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="news-widget">
-                            <div class="news-image">
-                            <img src="https://images.pexels.com/photos/30885924/pexels-photo-30885924/free-photo-of-wooden-letter-tiles-spelling-trash-tv-news.jpeg" alt="img">
-                            </div>
-                            <div class="news-content">
-                                <div class="date">02 march, 2025</div>
-                                <div class="title-content">
-                                <div class="title">Share market update: Realty shares fall, Godrej Properties dips 3%</div>
-                                <a href="#">read more &rarr;</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news-widget">
-                            <div class="news-image">
-                            <img src="https://images.pexels.com/photos/30885924/pexels-photo-30885924/free-photo-of-wooden-letter-tiles-spelling-trash-tv-news.jpeg" alt="img">
-                            </div>
-                            <div class="news-content">
-                                <div class="date">03 march, 2025</div>
-                                <div class="title-content">
-                                <div class="title">Sohna: 25 farmhouses get demolition notices</div>
-                                <a href="#">read more &rarr;</a>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
+                        @endforeach
+                        
+                        @endif
+                    </div>
                 </div>
                 <div class="customers-say">
                     <h3>Testimonials</h3>
@@ -576,37 +356,23 @@
                 </div>
                 <div class="property-blogs">
                     <h3>Important Links</h3>
-                        <div class="blog-slides">
+                    <div class="blog-slides">
+                    
+                    @if($importantLinks)
+                    
+                    @foreach($importantLinks as $importantLink)
                         <div class="property-blog-widget">
                             <div class="blog-image">
-                            <img src="https://images.pexels.com/photos/30885924/pexels-photo-30885924/free-photo-of-wooden-letter-tiles-spelling-trash-tv-news.jpeg" alt="img">
+                                <img src="https://images.pexels.com/photos/30885924/pexels-photo-30885924/free-photo-of-wooden-letter-tiles-spelling-trash-tv-news.jpeg" alt="img">
                             </div>
                             <div class="blog-content">
-                                <h5 class="title">Sohna: 25 farmhouses get demolition notices</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                                <a href="#">read more &rarr;</a>
+                                <h5 class="title">{{$importantLink->title}}</h5>
+                                <p>{{$importantLink->description}}</p>
+                                <a href="{{$news->link}}">read more &rarr;</a>
                             </div>
                         </div>
-                        <div class="property-blog-widget">
-                            <div class="blog-image">
-                            <img src="https://images.pexels.com/photos/30885924/pexels-photo-30885924/free-photo-of-wooden-letter-tiles-spelling-trash-tv-news.jpeg" alt="img">
-                            </div>
-                            <div class="blog-content">
-                                <h5 class="title">Sohna: 25 farmhouses get demolition notices</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                                <a href="#">read more &rarr;</a>
-                            </div>
-                        </div>
-                        <div class="property-blog-widget">
-                            <div class="blog-image">
-                            <img src="https://images.pexels.com/photos/30885924/pexels-photo-30885924/free-photo-of-wooden-letter-tiles-spelling-trash-tv-news.jpeg" alt="img">
-                            </div>
-                            <div class="blog-content">
-                                <h5 class="title">Sohna: 25 farmhouses get demolition notices</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                                <a href="#">read more &rarr;</a>
-                            </div>
-                        </div>
+                    @endforeach
+                    @endif    
                     </div>
                         
                 </div>
@@ -623,4 +389,7 @@
      
 
 </main>
+@endsection
+@section('js')
+    @vite(['resources/js/index.js'])
 @endsection
