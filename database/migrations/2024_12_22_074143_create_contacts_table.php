@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone')->nullable();
             $table->longText('message')->nullable();
+            $table->string('property_type')->nullable();
+            $table->integer('pid')->nullable();
             $table->boolean('status')->default(0);
             $table->timestamps();
         });

@@ -1,5 +1,6 @@
 @extends('layouts/frontend/default')
 @section('styles')
+<meta name="csrf_token" id="csrf-token" content="{{ csrf_token() }}" /> 
 <link rel="stylesheet" href="{{ url('assets/css/slick-theme.css') }}">
 <link rel="stylesheet" href="{{ url('assets/css/slick.min.css') }}">
 <link rel="stylesheet" href="{{ url('assets/css/slick.min.css.map') }}">
@@ -21,7 +22,7 @@
                </div>
             </div>
          </section>
-         <section class="our-projects padding-y">
+         <section class="our-projects filters padding-y">
             <div class="our-projects-content container">
                <div class="sec-heading">
                   <h2>properties</h2>
@@ -31,10 +32,10 @@
                      <div class="select">
                         <select name="prop-catg" id="prop-catg">
                            <option value="" hidden>select</option>
-                           <option value="residential">residential</option>
-                           <option value="commercial">commercial</option>
-                           <option value="villas">villas</option>
-                           <option value="lnvestments">investments</option>
+                           <option value="1">Residential</option>
+                           <option value="2">Commercial</option>
+                           <option value="3">Villas</option>
+                           <option value="4">Investments</option>
                         </select>
                      </div>
                   </div>
@@ -69,7 +70,7 @@
                            </div>
                            <div class="project-list-footer">
                               <div class="price"><strong><span>60.00Lacs - 90.00Lac</span></strong></div>
-                              <div class="button"><a class="btn-secondary" href="/contact">view detail &nbsp; 
+                              <div class="button"><a class="btn-secondary link" href="/contact">view detail &nbsp; 
                               <span class="arrow">&rarr;</span></a></div>
                            </div>
                         </div>
@@ -83,17 +84,5 @@
    
 @endsection
 @section('js')
-    <script>
-      $(document).ready(function () {
-         show_estates();
-         $('.view-more-estate').click(function() {
-            show_estates();
-         })
-      })
-      function show_estates() {
-         for(var i = 0; i < 6; i++){
-            $(".clone-data .project-list-widget").clone().appendTo(".projects-list-widgets");
-         }
-      }
-    </script>
+   @vite(['resources/js/properties.js'])
 @endsection

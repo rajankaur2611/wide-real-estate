@@ -29,7 +29,8 @@
                     //validspan = element.next("span");
         
                 if (!valid) {
-                element.removeClass("valid").addClass("invalid");
+                  
+                  element.removeClass("valid").addClass("invalid");
                 // validspan.removeClass("valid").addClass("invalid");
         
                 if (element.attr('type') == 'hidden') {
@@ -46,12 +47,12 @@
     
           if (!_error_free) {
             event.preventDefault();
-            console.log('form_data===',element);
+            console.log('form_data===',_forms.serializeArray());
             console.log('error');
           } else {
-            console.log('hi===');
-            // _button.attr('disabled', true);
-            // _forms.find('.loader').addClass('active');
+            console.log('hi=== valid');
+            _button.attr('disabled', true);
+            _forms.find('.loader').addClass('active');
             $.ajax({
                 type: 'POST',
                 url: _forms.attr('action'),
@@ -60,7 +61,7 @@
                     console.log('submit===', data);
                    
 
-                    // _forms[0].reset();
+                    _forms[0].reset();
 
                     // _forms.find('.loader').removeClass('active');
 

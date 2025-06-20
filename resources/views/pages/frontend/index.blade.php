@@ -22,40 +22,40 @@
                 <div class="hero-slides">
                     <div class="main-slide main-slide-image-1">
                         <div class="residential-image">                        
-                            <img src="{{ url('https://images.pexels.com/photos/3709404/pexels-photo-3709404.jpeg') }}" alt="image">
+                            <img src="{{ url('images/banner1left.png') }}" alt="image">
                         </div>
                         <div class="commercial-image">
-                            <img src="{{ url('https://images.pexels.com/photos/3288102/pexels-photo-3288102.png') }}" alt="image">
+                            <img src="{{ url('images/banner1right.png') }}" alt="image">
                         </div>
                     </div>
                     <div class="main-slide main-slide-image-2">
                         <div class="residential-image"> 
-                            <img src="{{ url('https://images.pexels.com/photos/3288102/pexels-photo-3288102.png') }}" alt="image">                    
+                            <img src="{{ url('images/banner1right.png') }}" alt="image">                    
                         </div>
                         <div class="commercial-image">
-                            <img src="{{ url('https://images.pexels.com/photos/3709404/pexels-photo-3709404.jpeg') }}" alt="image">
+                            <img src="{{ url('images/banner1left.png') }}" alt="image">
                         </div>
                     </div>
                     <div class="main-slide main-slide-image-3">
                         <div class="residential-image">                        
-                            <img src="{{ url('https://images.pexels.com/photos/3709404/pexels-photo-3709404.jpeg') }}" alt="image">
+                            <img src="{{ url('images/banner1left.png') }}" alt="image">
                         </div>
                         <div class="commercial-image">
-                            <img src="{{ url('https://images.pexels.com/photos/3288102/pexels-photo-3288102.png') }}" alt="image">
+                            <img src="{{ url('images/banner1right.png') }}" alt="image">
                         </div>
                     </div>
                     <div class="main-slide main-slide-image-4">
                         <div class="residential-image"> 
-                            <img src="{{ url('https://images.pexels.com/photos/3288102/pexels-photo-3288102.png') }}" alt="image">                    
+                            <img src="{{ url('images/banner1right.png') }}" alt="image">                    
                         </div>
                         <div class="commercial-image">
-                            <img src="{{ url('https://images.pexels.com/photos/3709404/pexels-photo-3709404.jpeg') }}" alt="image">
+                            <img src="{{ url('images/banner1left.png') }}" alt="image">
                         </div>
                     </div>
                 </div>
                 <div class="main-btns">
-                    <a class="btn-primary" href="{{url('/our-project/residential')}}">residential</a>
-                    <a class="btn-primary" href="{{url('/our-project/commercial')}}">commercial</a>
+                    <a class="btn-primary" href="{{url('/our-project/residential/1')}}">residential</a>
+                    <a class="btn-primary" href="{{url('/our-project/commercial/2')}}">commercial</a>
                 </div>
             </div>
         </div>
@@ -114,7 +114,7 @@
                         accidents and health issues.</p>
                 </div>
                 <div class="about-btn">
-                <a class="btn-primary" href="#">know more</a>
+                <a class="btn-primary" href="{{url('/about')}}">know more</a>
                 </div>
             </div>
         </div>
@@ -154,7 +154,7 @@
                                 </div>
                                 <div class="property-slider-footer">
                                     <div class="price"><strong><span>60.00Lacs - 90.00Lac</span></strong></div>
-                                    <div class="button"><a class="btn-secondary" href="/project/commerical/1">view detail &nbsp; 
+                                    <div class="button"><a class="btn-secondary link" href="/project/commerical/1">view detail &nbsp; 
                                     <span class="arrow">&rarr;</span></a></div>
                                 </div>
                             </div>

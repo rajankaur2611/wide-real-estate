@@ -41,6 +41,7 @@ class ProjectController extends Controller
             'prime_category' => 'required',
             'title' => 'required',
             'description' => 'required',
+            'address' => 'required',
             'price' => 'required',
             'image.*' => 'image|mimes:jpeg,png,jpg,gif,webp|max:5000'
         ];
@@ -60,6 +61,8 @@ class ProjectController extends Controller
         $project->prime_category = $request->input('prime_category');
         $project->title = $request->input('title');
         $project->description = $request->input('description');
+        $project->address = $request->input('address');
+        $project->size = $request->input('size');
         $project->price = $request->input('price');
         $project->save();
         $project->id;

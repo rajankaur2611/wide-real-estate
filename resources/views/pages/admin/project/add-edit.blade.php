@@ -60,12 +60,31 @@
                                         @endif
                                     </div>
                                 </div>
+                                
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Description</label>
-                                        <input class="form-control" type="text" name="description" value="{{ old('description',  $project->description) }}">
+                                        <textarea class="form-control" type="text" name="description">{{ old('description',  $project->description) }}</textarea>
                                         @if($errors->has('description'))
                                             <div class="text-danger ps-1 pt-1">{{ $errors->first('description') }}</div>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="example-text-input" class="form-control-label">Address</label>
+                                        <input class="form-control" type="text" name="address" value="{{ old('address', $project->address) }}">
+                                        @if($errors->has('address'))
+                                            <div class="text-danger ps-1 pt-1">{{ $errors->first('address') }}</div>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="example-text-input" class="form-control-label">Size</label>
+                                        <input class="form-control" type="text" name="size" value="{{ old('size', $project->size) }}">
+                                        @if($errors->has('size'))
+                                            <div class="text-danger ps-1 pt-1">{{ $errors->first('size') }}</div>
                                         @endif
                                     </div>
                                 </div>

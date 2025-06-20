@@ -77,10 +77,14 @@
         var $cntPropertyBlock = $(".clone-data .property-slider").clone();
         $cntPropertyBlock.attr('id' , 'cntPropertyBlock_' + estate.id);
         var title = estate.title;
+        var address = estate.address;
         var price = estate.price;
+        var cat = estate.prime_category;
         console.log(price);
         $('.property-title h3' , $cntPropertyBlock).html(title);
+        $('.property-title p' , $cntPropertyBlock).html(address);
         $('.property-slider-footer .price span' , $cntPropertyBlock).html(price);
+        $('.property-slider-footer .button .link' , $cntPropertyBlock).attr('href', '/project/'+cat+'/'+estate.id);
         $('.properties-slider').append($cntPropertyBlock);
     }
 })();

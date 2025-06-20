@@ -10,10 +10,10 @@
                 <li>
                     <a>Properties <span class="caret"></span></a>
                     <ul class="dropdown">
-                        <li><a href="/our-project/residential">Residential</a></li>
-                        <li><a href="/our-project/commerical">Commercial</a></li>
-                        <li> <a href="/our-project/villas">Farmhouse/villas</a></li>
-                        <li> <a href="/our-project/investments">Investments</a></li>                        
+                        <li><a href="/our-project/residential/1">Residential</a></li>
+                        <li><a href="/our-project/commerical/2">Commercial</a></li>
+                        <li> <a href="/our-project/villas/3">Farmhouse/villas</a></li>
+                        <li> <a href="/our-project/investments/4">Investments</a></li>                        
                         </li>
                     </ul>
                 </li>

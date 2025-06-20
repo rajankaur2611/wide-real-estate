@@ -25,6 +25,8 @@ class ContactController extends Controller
         $contact->email = $request->input('email');
         $contact->phone = $request->input('number');
         $contact->message = $request->input('message');
+        $contact->property_type = $request->input('property_type');
+        $contact->pid = $request->input('pid');
         $data = $request->all();
         $status = 200;
         if($contact->save()) {

@@ -10,10 +10,24 @@ use Illuminate\Support\Facades\DB;
 class Project extends Model
 {
     use HasFactory;
-    protected function getAll($category = null)
+    protected function getAll()
     {
-        $query = Project::select('id','title','description','price');
-        if($category != null) $query = $query->where('category', $category);
+        return Project::select('id','title','address','price')->get();
+
+    }
+    protected function getsearchdata($category, $subcat = null,  $index = null, $limit = null)
+    {
+        $query = Project::select('id', 'category', 'prime_category', 'title','description','address', 'size','price');
+        if($category != null) {
+            if(is_numeric($category)) {
+                $query = $query->where('category', $category);
+            } else {
+                $query = $query->where('prime_category', $category);
+            }
+        } 
+        if($index != null && $limit != null){
+            $query = $query->skip($index)->take($limit);
+        }
         return $query->get();
 
     }

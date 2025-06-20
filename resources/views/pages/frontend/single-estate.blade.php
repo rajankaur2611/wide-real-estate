@@ -20,21 +20,21 @@
                         <img src="{{ url('images/safe-workplace.png') }}" alt="image">
                         </div>
                         <div class="contact-form">
-                          <form method="post" id="contact" action="http://localhost:8000/contact-submit">
-                            <input type="hidden" name="_token" value="5Avxhwq0e2VhqzEnR0nTQRaCSUjSUwJWXaBmwwnk">                        
+                          <form method="post" id="contact" action="{{ route('contact-submit') }}">
+                            @csrf
                             <div class="heading">
                                 <p>What are you looking for?</p>
                                 <div class="property-type">
                                     <div class="item-name">
-                                    <p> <input type="radio" name="property" id="villa" value="villa"> </p>
+                                    <p> <input type="radio" name="property_type" id="contact_property_type" value="villa"> </p>
                                     <p><label for="villa">Villa</label></p>
                                     </div>
                                     <div class="item-name">
-                                    <p><input type="radio" name="property" id="apartment" value="apartment"></p>
+                                    <p><input type="radio" name="property_type" id="contact_property_type" value="apartment"></p>
                                     <p><label for="apartment">apartment</label></p>
                                     </div>
                                     <div class="item-name">
-                                    <p> <input type="radio" name="property" id="comerical" value="comercial"></p>
+                                    <p> <input type="radio" name="property_type" id="contact_property_type" value="comercial"></p>
                                     <p> <label for="comerical">comerical</label></p>
                                     </div>
                                 </div>
@@ -69,13 +69,14 @@
             <section class="single-property-detail ">
                 <div class="single-property-detail-data">
                     <div class="single-property-detail-slider">
-                        <div class="single-property-detail-slide">
+                        <!-- <div class="single-property-detail-slide">
                             <div class="single-property-detail-slide-content">
                                 <div class="single-property-detail-slide-image">                        
                                     <img src="{{ url('https://images.pexels.com/photos/3709404/pexels-photo-3709404.jpeg') }}" alt="image">
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
+                        @if($images->isEmpty())
                         <div class="single-property-detail-slide">
                             <div class="single-property-detail-slide-content">
                                 <div class="single-property-detail-slide-image">                        
@@ -83,18 +84,22 @@
                                 </div>
                             </div>
                         </div>
+                        @else
+                        @foreach($images as $image)
                         <div class="single-property-detail-slide">
                             <div class="single-property-detail-slide-content">
                                 <div class="single-property-detail-slide-image">                        
-                                    <img src="{{ url('https://images.pexels.com/photos/3709404/pexels-photo-3709404.jpeg') }}" alt="image">
+                                    <img src="{{ url('images/large/'.$image->image) }}" alt="image">
                                 </div>
                             </div>
                         </div>
+                        @endforeach
+                        @endif
                     </div>
                     <div class="single-property-detail">
                         <div class="single-property-detail-content">
                         <div class="heading">
-                        <h3>Mapsko MountVille</h3>
+                        <h3>@if($project->title){{$project->title}}@endif</h3>
                         <p><span>by</span> <span class="owner"><a href="#">Mapsko Builders</a></span></p>
                         </div>
                         <div class="location">
@@ -103,15 +108,15 @@
                         <ul class="amenities">
                             <li>
                                 <div><i class="fa-solid fa-building"></i></div>
-                                <div>property type: residential</div>
+                                <div>property type: @if($project->category == '1'){{'Residential'}}@elseif($project->category == '2'){{'Commercial'}}@elseif($project->category == '3'){{'Farmhouse/Villas'}}@elseif($project->category == '4'){{'Investments'}}@endif</div>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <div><i class="fa-solid fa-circle-notch"></i></div>
                                 <div>status: booking open</div>
-                            </li>
+                            </li> -->
                             <li>
                                 <div><i class="fa-solid fa-coins"></i></div>
-                                <div>83 lac</div>
+                                <div>@if($project->price){{$project->price}}@endif</div>
                             </li>
                             <li>
                                 <div><i class="fa-solid fa-maximize"></i></div>
@@ -134,11 +139,9 @@
                     <h2>overview</h2>
                     <div class="overview-features">
                         <div class="features-text">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit esse fugiat quisquam ex fugit cum enim ut obcaecati voluptas repudiandae modi qui, nesciunt tenetur, quia doloremque saepe veritatis cupiditate asperiores.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet mollitia molestiae enim dolorem possimus itaque quo repellendus voluptatem exercitationem pariatur omnis, commodi nemo, obcaecati corrupti vero quaerat placeat incidunt unde facilis fugit odio necessitatibus asperiores voluptatum. Maxime odit magnam vero beatae incidunt delectus doloremque cupiditate soluta voluptate numquam? Aliquam officiis eligendi provident pariatur, totam rem voluptas sit qui similique iste cupiditate nostrum porro quibusdam est tenetur repellat eius necessitatibus ea. Quos, laborum. Rem illum eius earum ducimus accusamus! Consequuntur, mollitia!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nihil distinctio maiores nisi officiis! Magni iste quia nihil illo reprehenderit itaque numquam reiciendis atque quo incidunt aut culpa animi, totam nisi praesentium id repudiandae et tempore non. Consequatur ipsum, labore, atque ut aliquid corrupti quia autem repellendus quibusdam cum sed!</p>
+                        <p>@if($project->description){{$project->description}}@endif</p>
                         </div>
-                        <div class="feature-items">
+                        <!-- <div class="feature-items">
                             <h4>features</h4>
                             <ul>
                                 <li>Luxurious Resort Living </li>
@@ -149,10 +152,13 @@
                             <li>Structure Raised by Shapoorji Pallonji</li>
                             <li>Exclusive Terrace Apartments</li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </section>
         </div>
     </main>
+@endsection
+@section('js')
+    @vite(['resources/js/contact.js'])
 @endsection

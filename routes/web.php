@@ -34,8 +34,9 @@ Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact-submit', [ContactController::class, 'save'])->name('contact-submit');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/our-project', [ProjectsController::class, 'index'])->name('our-project');
-Route::get('/our-project/{category}', [ProjectsController::class, 'index'])->name('our-project');
-Route::get('/project/commerical/{id}', [ProjectsController::class, 'single'])->name('single-project');
+Route::get('/our-project/{category}/{catid?}', [ProjectsController::class, 'index'])->name('our-project');
+
+Route::get('/project/{category}/{id}', [ProjectsController::class, 'single'])->name('single-project');
 
 Route::post('/getproject', [ProjectsController::class, 'getProjects'])->name('get-project');
 

@@ -16,7 +16,8 @@ export default defineConfig({
                 'resources/js/app.js',
                 'resources/js/common.js',
                 'resources/js/contact.js',
-                'resources/js/index.js'
+                'resources/js/index.js',
+                'resources/js/properties.js'
             ],
             refresh: true,
         }),
